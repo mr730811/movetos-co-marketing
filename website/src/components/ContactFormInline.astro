@@ -109,8 +109,12 @@
 </div>
 
 <script>
+  // API-Endpoint URL — anpassen wenn der Contact-API-Server deployed ist
+  const CONTACT_API_URL = 'https://api.movetos.de';
+
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const success = document.getElementById('contact-form-success') as HTMLElement;
+  const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -124,17 +128,43 @@
     data.consent_version = '2026-03-01';
     data.consent_source = window.location.pathname;
 
-    // TODO: In Produktion durch echten API-Endpoint ersetzen
-    // Beispiel:
-    // await fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(data),
-    // });
+    // Button deaktivieren während des Sendens
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Wird gesendet…';
+    }
 
-    console.log('Form submission (connect API endpoint):', data);
+    try {
+      const response = await fetch(`${CONTACT_API_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-    form.classList.add('hidden');
-    success?.classList.remove('hidden');
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.error || 'Serverfehler');
+      }
+
+      form.classList.add('hidden');
+      success?.classList.remove('hidden');
+    } catch (err) {
+      // Fallback: mailto-Link öffnen bei API-Fehler
+      const subject = encodeURIComponent(`Kontaktanfrage von ${data.name || 'Website'}`);
+      const body = encodeURIComponent(
+        `Name: ${data.name}\nUnternehmen: ${data.company || '—'}\nE-Mail: ${data.email}\nEinsatz-Typ: ${data.eventType || '—'}\nPersonenzahl: ${data.visitors || '—'}\n\nNachricht:\n${data.message || '—'}`
+      );
+      const fallback = confirm(
+        'Die Nachricht konnte leider nicht automatisch gesendet werden.\n\nMöchten Sie die Anfrage stattdessen per E-Mail senden?'
+      );
+      if (fallback) {
+        window.location.href = `mailto:kontakt@movetos.de?subject=${subject}&body=${body}`;
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Demo anfragen &rarr;';
+      }
+    }
   });
 </script>
