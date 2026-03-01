@@ -112,9 +112,28 @@
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const success = document.getElementById('contact-form-success') as HTMLElement;
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    // In production: send to API endpoint
+
+    const formData = new FormData(form);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => { data[key] = value.toString(); });
+
+    // DSGVO-konformes Consent-Logging
+    data.consent_timestamp = new Date().toISOString();
+    data.consent_version = '2026-03-01';
+    data.consent_source = window.location.pathname;
+
+    // TODO: In Produktion durch echten API-Endpoint ersetzen
+    // Beispiel:
+    // await fetch('/api/contact', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(data),
+    // });
+
+    console.log('Form submission (connect API endpoint):', data);
+
     form.classList.add('hidden');
     success?.classList.remove('hidden');
   });
