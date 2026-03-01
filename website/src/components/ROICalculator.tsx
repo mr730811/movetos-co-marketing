@@ -93,7 +93,7 @@ export default function ROICalculator() {
         </div>
 
         <a
-          href={`${base}/senseops/demo/`}
+          href={`${base}/terrops/demo/`}
           style={{
             display: 'inline-flex',
             alignItems: 'center',

@@ -9,19 +9,19 @@ const currentPath = Astro.url.pathname;
 
     <ul class="hidden lg:flex items-center gap-1">
       <li class="relative group">
-        <a  href={`${import.meta.env.BASE_URL}/senseops/`} class:list={["px-3 py-2 text-sm rounded-md transition-colors", currentPath.startsWith('/senseops') ? 'text-brand-orange' : 'text-text-secondary hover:text-text-primary']}>
+        <a  href={`${import.meta.env.BASE_URL}/terrops/`} class:list={["px-3 py-2 text-sm rounded-md transition-colors", currentPath.startsWith('/terrops') ? 'text-brand-orange' : 'text-text-secondary hover:text-text-primary']}>
           Lösungen
           <svg class="inline-block w-3 h-3 ml-0.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </a>
         <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
           <div class="bg-dark-card border border-dark-border rounded-xl p-3 min-w-[220px] shadow-2xl">
-            <a  href={`${import.meta.env.BASE_URL}/senseops/`} class="block px-3 py-2 text-sm text-text-secondary hover:text-brand-orange rounded-md hover:bg-brand-orange-glow transition-colors">SenseOps Platform</a>
+            <a  href={`${import.meta.env.BASE_URL}/terrops/`} class="block px-3 py-2 text-sm text-text-secondary hover:text-brand-orange rounded-md hover:bg-brand-orange-glow transition-colors">TerrOps Platform</a>
             <div class="border-t border-dark-border my-1.5"></div>
             <a  href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="block px-3 py-2 text-sm text-text-secondary hover:text-brand-orange rounded-md hover:bg-brand-orange-glow transition-colors">Events & Festivals</a>
             <a  href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="block px-3 py-2 text-sm text-text-secondary hover:text-brand-orange rounded-md hover:bg-brand-orange-glow transition-colors">Unternehmen</a>
             <a  href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="block px-3 py-2 text-sm text-text-secondary hover:text-brand-orange rounded-md hover:bg-brand-orange-glow transition-colors">Kritische Infrastruktur</a>
             <div class="border-t border-dark-border my-1.5"></div>
-            <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="block px-3 py-2 text-sm text-text-secondary hover:text-brand-orange rounded-md hover:bg-brand-orange-glow transition-colors">Live-Demo buchen</a>
+            <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="block px-3 py-2 text-sm text-text-secondary hover:text-brand-orange rounded-md hover:bg-brand-orange-glow transition-colors">Live-Demo buchen</a>
           </div>
         </div>
       </li>
@@ -50,7 +50,7 @@ const currentPath = Astro.url.pathname;
         </a>
       </li>
       <li class="ml-3">
-        <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary btn-sm">Demo buchen</a>
+        <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary btn-sm">Demo buchen</a>
       </li>
     </ul>
 
@@ -64,14 +64,14 @@ const currentPath = Astro.url.pathname;
   <!-- Mobile Menu -->
   <div class="lg:hidden hidden bg-dark-card border-t border-dark-border" id="mobile-menu">
     <div class="px-6 py-4 flex flex-col gap-2">
-      <a  href={`${import.meta.env.BASE_URL}/senseops/`} class="py-2 text-sm text-text-secondary hover:text-brand-orange">SenseOps Platform</a>
+      <a  href={`${import.meta.env.BASE_URL}/terrops/`} class="py-2 text-sm text-text-secondary hover:text-brand-orange">TerrOps Platform</a>
       <a  href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="py-2 text-sm text-text-muted hover:text-brand-orange pl-3">Events & Festivals</a>
       <a  href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="py-2 text-sm text-text-muted hover:text-brand-orange pl-3">Unternehmen</a>
       <a  href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="py-2 text-sm text-text-muted hover:text-brand-orange pl-3">Kritische Infrastruktur</a>
       <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="py-2 text-sm text-text-secondary hover:text-brand-orange">Infrastruktur</a>
       <a  href={`${import.meta.env.BASE_URL}/referenzen/`} class="py-2 text-sm text-text-secondary hover:text-brand-orange">Referenzen</a>
       <a  href={`${import.meta.env.BASE_URL}/unternehmen/`} class="py-2 text-sm text-text-secondary hover:text-brand-orange">Über uns</a>
-      <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary btn-sm mt-2 text-center justify-center">Demo buchen</a>
+      <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary btn-sm mt-2 text-center justify-center">Demo buchen</a>
     </div>
   </div>
 </nav>
