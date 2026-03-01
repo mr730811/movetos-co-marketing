@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ContactForm from '../../components/ContactForm';
+import ContactFormInline from '../../components/ContactFormInline.astro';
 ---
 <BaseLayout
-  title="CrowdOps Live-Demo buchen | MOVETOS"
-  description="Erleben Sie CrowdOps live in einer 30-minütigen Demo. Wir zeigen Ihnen die Plattform mit Ihrem Szenario — unverbindlich."
+  title="SenseOps Live-Demo buchen | MOVETOS"
+  description="Erleben Sie SenseOps live in einer 30-minütigen Demo. Wir zeigen Ihnen die Plattform mit Ihrem Szenario — unverbindlich."
 >
 
 <section class="pt-32 pb-20">
@@ -12,20 +12,20 @@ import ContactForm from '../../components/ContactForm';
     <div class="grid lg:grid-cols-2 gap-16 items-start">
       <div>
         <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
-          <a href="/" class="hover:text-text-secondary transition-colors">MOVETOS</a>
+          <a  href={`${import.meta.env.BASE_URL}/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
           <span>/</span>
-          <a href="/crowdops/" class="hover:text-text-secondary transition-colors">CrowdOps</a>
+          <a  href={`${import.meta.env.BASE_URL}/senseops/`} class="hover:text-text-secondary transition-colors">SenseOps</a>
           <span>/</span>
           <span class="text-brand-orange">Demo</span>
         </nav>
 
         <div class="label mb-4">Jetzt starten</div>
         <h1 class="section-title">
-          Erleben Sie CrowdOps<br>
+          Erleben Sie SenseOps<br>
           <span class="text-brand-orange">live.</span>
         </h1>
         <p class="section-desc mt-4">
-          30 Minuten. Ihr Szenario. Unverbindlich. Wir zeigen Ihnen, wie CrowdOps Ihren Veranstaltungsbetrieb transformiert.
+          30 Minuten. Ihr Szenario. Unverbindlich. Wir zeigen Ihnen, wie SenseOps Ihren operativen Betrieb transformiert.
         </p>
 
         <div class="mt-10 flex flex-col gap-5">
@@ -33,14 +33,14 @@ import ContactForm from '../../components/ContactForm';
             <span class="w-8 h-8 rounded-lg bg-accent-green-dim flex items-center justify-center text-sm shrink-0">&#10003;</span>
             <div>
               <h4 class="font-display text-sm font-semibold">Live-Demonstration</h4>
-              <p class="text-xs text-text-muted mt-0.5">Sehen Sie CrowdOps im laufenden Betrieb — mit echten Daten aus vergangenen Events.</p>
+              <p class="text-xs text-text-muted mt-0.5">Sehen Sie SenseOps im laufenden Betrieb — mit echten Daten aus vergangenen Einsätzen.</p>
             </div>
           </div>
           <div class="flex items-start gap-3">
             <span class="w-8 h-8 rounded-lg bg-accent-blue-dim flex items-center justify-center text-sm shrink-0">&#128200;</span>
             <div>
               <h4 class="font-display text-sm font-semibold">Ihr Szenario</h4>
-              <p class="text-xs text-text-muted mt-0.5">Wir besprechen Ihre Anforderungen und zeigen, wie CrowdOps in Ihrem Kontext funktioniert.</p>
+              <p class="text-xs text-text-muted mt-0.5">Wir besprechen Ihre Anforderungen und zeigen, wie SenseOps in Ihrem Kontext funktioniert.</p>
             </div>
           </div>
           <div class="flex items-start gap-3">
@@ -61,7 +61,7 @@ import ContactForm from '../../components/ContactForm';
       </div>
 
       <div class="lg:sticky lg:top-24">
-        <ContactForm client:visible />
+        <ContactFormInline />
       </div>
     </div>
   </div>

@@ -9,9 +9,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <section class="pt-32 pb-20">
   <div class="max-w-[1200px] mx-auto px-6">
     <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
-      <a href="/" class="hover:text-text-secondary transition-colors">MOVETOS</a>
+      <a  href={`${import.meta.env.BASE_URL}/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
       <span>/</span>
-      <a href="/infrastruktur/" class="hover:text-text-secondary transition-colors">Infrastruktur</a>
+      <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="hover:text-text-secondary transition-colors">Infrastruktur</a>
       <span>/</span>
       <span class="text-brand-orange">Kamerasysteme</span>
     </nav>
@@ -57,10 +57,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <div>
-        <h2 class="font-display text-2xl font-bold mb-6">Im Zusammenspiel mit CrowdOps</h2>
+        <h2 class="font-display text-2xl font-bold mb-6">Im Zusammenspiel mit SenseOps</h2>
         <div class="glass-card p-6 mb-6">
           <p class="text-sm text-text-secondary leading-relaxed">
-            Jede MOVETOS-Kamera wird automatisch von CrowdOps erfasst. Die KI-gestützte Analyse beginnt sofort — Besucherzählung, Dichteanalyse und Bewegungsmuster. Kein Setup, keine Konfiguration.
+            Jede MOVETOS-Kamera wird automatisch von SenseOps erfasst. Die KI-gestützte Analyse beginnt sofort — Besucherzählung, Dichteanalyse und Bewegungsmuster. Kein Setup, keine Konfiguration.
           </p>
         </div>
         <div class="flex flex-col gap-3">
@@ -90,8 +90,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
     <p class="section-desc text-center mx-auto mt-4">Wir planen Ihre Kameraabdeckung individuell — von 5 bis 50+ Standorten.</p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a href="/kontakt/" class="btn btn-primary">Beratung anfragen &rarr;</a>
-      <a href="/infrastruktur/" class="btn btn-ghost">&larr; Alle Systeme</a>
+      <a  href={`${import.meta.env.BASE_URL}/kontakt/`} class="btn btn-primary">Beratung anfragen &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="btn btn-ghost">&larr; Alle Systeme</a>
     </div>
   </div>
 </section>

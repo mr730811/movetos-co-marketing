@@ -12,7 +12,7 @@ interface Props {
 
 const { name, category, visitors, quote, quotePerson, quoteRole, highlight, tags = [] } = Astro.props;
 ---
-<div class="reveal bg-dark-card border border-dark-border rounded-2xl p-7 hover:border-brand-orange/20 hover:-translate-y-0.5 transition-all group">
+<div class="reveal ref-card bg-dark-card border border-dark-border rounded-2xl p-7 hover:border-brand-orange/20 hover:-translate-y-0.5 transition-all group" data-category={category}>
   <div class="flex items-center gap-2 mb-4">
     <span class="font-mono text-[9px] px-2 py-0.5 bg-brand-orange-glow text-brand-orange rounded">{category}</span>
     <span class="font-mono text-[9px] text-text-muted">{visitors} Besucher</span>

@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SocialProofBar from '../../components/SocialProofBar.astro';
+import ROICalculator from '../../components/ROICalculatorInline.astro';
+import ReferenceCard from '../../components/ReferenceCard.astro';
+---
+<BaseLayout
+  title="Crowd Management für Großveranstaltungen | MOVETOS"
+  description="KI-gestütztes Crowd Management für Festivals, Stadtfeste und Sportevents. Besucherströme in Echtzeit steuern, Kapazitäten optimieren, Sicherheit gewährleisten. Bewährt bei über 150 Events."
+>
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-accent-green/[0.03] via-transparent to-accent-blue/[0.02] pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-3xl">
+      <div class="label mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent-green"></span>
+        Crowd Management
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-800 tracking-tight leading-[1.08]">
+        Crowd Management für<br>
+        <span class="text-accent-green">Großveranstaltungen.</span>
+      </h1>
+      <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+        Besucherströme in Echtzeit erkennen, bewerten und steuern — mit KI-gestützter Analyse und kabelloser Infrastruktur. Aufgebaut in unter 5 Stunden. Bewährt bei Festivals, Stadtfesten und internationalen Sportevents.
+      </p>
+      <div class="flex flex-wrap items-center gap-3 mt-8">
+        <a href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+        <a href={`${import.meta.env.BASE_URL}/referenzen/`} class="btn btn-ghost">Referenzen ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== HERAUSFORDERUNGEN ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Die Herausforderung</div>
+    <div class="section-title">Tausende Besucher. Hunderte Entscheidungen.<br><span class="text-brand-orange">Ein Bauchgefühl?</span></div>
+    <p class="section-desc">
+      Veranstaltungsleiter stehen vor einer unmöglichen Aufgabe: Ein dynamisches Gelände mit zehntausenden Menschen überwachen — oft mit Funksprüchen, Erfahrung und Hoffnung. MOVETOS macht Schluss mit dem Blindflug.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      {[
+        { icon: '&#128101;', title: 'Unübersichtliche Besucherströme', desc: 'Wo sind Engpässe? Wo ist Platz? Ohne Echtzeitdaten bleiben diese Fragen unbeantwortet — bis es zu spät ist.' },
+        { icon: '&#9888;', title: 'Sicherheitsrisiken erkennen', desc: 'Kritische Personendichten entstehen in Minuten. Wer sie zu spät erkennt, kann nicht mehr steuern.' },
+        { icon: '&#128196;', title: 'Compliance & Dokumentation', desc: 'MVStättVO, Genehmigungsauflagen, Behörden-Nachweise — alles muss dokumentiert werden. Manuell ist das kaum möglich.' },
+      ].map(item => (
+        <div class="reveal glass-card p-7">
+          <div class="text-2xl mb-3" set:html={item.icon}></div>
+          <h3 class="font-display text-base font-bold mb-2">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== LÖSUNG ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Die Lösung</div>
+    <div class="section-title">Ein System für den gesamten<br><span class="text-accent-green">Crowd-Management-Regelkreis.</span></div>
+    <p class="section-desc">
+      MOVETOS verbindet KI-Software (SenseOps) mit kabelloser Hardware (MOVETOS SET) zu einem geschlossenen Regelkreis: Erkennen → Bewerten → Steuern.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { icon: '&#128247;', title: 'Echtzeit-Besucheranalyse', desc: 'KI-gestützte Auswertung aller Kamerastandorte. Besucherströme, Personendichten und Auslastungsgrade — live auf dem Dashboard.' },
+        { icon: '&#128680;', title: 'Automatische Sicherheits-Alerts', desc: 'Schwellenwerte definieren, automatische Frühwarnung bei kritischer Auslastung. Handlungsempfehlungen direkt im System.' },
+        { icon: '&#128226;', title: 'Gezielte Besucherlenkung', desc: 'Vom Kamerabild zur gezielten Durchsage — per Bereichsdurchsage (BDS) oder Notdurchsage (NDS). Ohne Medienbruch.' },
+        { icon: '&#128196;', title: 'Compliance-Dokumentation', desc: 'Lückenlose Protokollierung aller Maßnahmen, Schwellenwerte und Alerts. Export-fertig für Behörden und Genehmigungsverfahren.' },
+        { icon: '&#128506;', title: 'Interaktives Lagebild', desc: 'Kartenbasierte Echtzeitansicht des gesamten Geländes. Kameras, Zonen, Auslastung und Alerts auf einen Blick.' },
+        { icon: '&#9889;', title: 'Aufbau in unter 5 Stunden', desc: 'Kabellose Mastsysteme, netzautarke Stromversorgung, Plug & Play. Das gesamte System steht, bevor der erste Besucher kommt.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-4 p-5 bg-surface border border-dark-border rounded-xl">
+          <div class="text-xl shrink-0 mt-0.5" set:html={item.icon}></div>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== ROI CALCULATOR ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="label">Ihr Mehrwert in Zahlen</div>
+        <div class="section-title">Was bringt Ihnen<br><span class="text-brand-orange">Crowd Management?</span></div>
+        <p class="section-desc">
+          Schon eine moderate Kapazitätsoptimierung von 10% kann erhebliche Mehrerlöse bedeuten. Rechnen Sie selbst — mit Ihren Zahlen.
+        </p>
+      </div>
+      <div>
+        <ROICalculator />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== REFERENZEN ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Bewährt in der Praxis</div>
+    <div class="section-title">Events, die auf<br><span class="text-accent-green">MOVETOS vertrauen.</span></div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+      <ReferenceCard
+        name="BMW Motorrad Days"
+        category="Festival"
+        visitors="40.000+"
+        highlight="Kapazitätsauslastung +12% gegenüber Vorjahr"
+        quote="Mit SenseOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen."
+        quotePerson="Thomas M."
+        quoteRole="Veranstaltungsleiter"
+        tags={['MOVETOS SET', 'SenseOps', '15 Kameras', '3 Tage']}
+      />
+      <ReferenceCard
+        name="Christkindlmarkt München"
+        category="Stadtfest"
+        visitors="3 Mio.+"
+        highlight="Setup in unter 4 Stunden"
+        quote="Die Kombination aus Echtzeit-Lagebild und gezielten Durchsagen hat uns eine völlig neue Steuerungsqualität gegeben."
+        quotePerson="Dr. Sarah K."
+        quoteRole="Stadtmarketing"
+        tags={['MOVETOS SET', 'SenseOps', 'BDS', '28 Tage']}
+      />
+      <ReferenceCard
+        name="UCI Rad WM"
+        category="Festival"
+        visitors="120.000+"
+        highlight="8 Km Strecke, 22 Kamerastandorte"
+        quote="Eine Radsport-WM über eine ganze Stadtregion zu managen ist eine logistische Meisterleistung. SenseOps war dabei unser wichtigstes Werkzeug."
+        quotePerson="Andreas L."
+        quoteRole="Projektleiter Sicherheit"
+        tags={['MOVETOS SET', 'SenseOps', '22 Kameras', '7 Tage']}
+      />
+    </div>
+
+    <div class="text-center mt-10">
+      <a href={`${import.meta.env.BASE_URL}/referenzen/`} class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Jetzt starten</div>
+    <div class="section-title mx-auto" style="max-width: 540px;">
+      30 Minuten. Ein Lagebild.<br>
+      <span class="text-brand-orange">Ihre Entscheidung.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+      In einer persönlichen Live-Demo zeigen wir Ihnen, wie SenseOps und MOVETOS SET bei Ihrem Event funktionieren — inklusive individueller ROI-Berechnung.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

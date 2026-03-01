@@ -1,0 +1,86 @@
+---
+---
+<div class="roi-calc bg-white border border-dark-border rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+  <div class="grid grid-cols-3 gap-4 mb-6">
+    <div>
+      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Erwartete Besucher</label>
+      <input type="number" id="roi-visitors" value="50000" class="w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
+    </div>
+    <div>
+      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Ticketpreis (Ø)</label>
+      <div class="relative">
+        <input type="number" id="roi-ticket" value="35" class="w-full px-3.5 py-2.5 pr-9 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
+        <span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-sm text-text-muted">€</span>
+      </div>
+    </div>
+    <div>
+      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Gastro / Besucher</label>
+      <div class="relative">
+        <input type="number" id="roi-gastro" value="12" class="w-full px-3.5 py-2.5 pr-9 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
+        <span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-sm text-text-muted">€</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-dark-border pt-5 mt-2">
+    <p class="font-mono text-[10px] uppercase tracking-widest text-text-muted mb-4">Bei 10% besserer Kapazitätsauslastung</p>
+
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center gap-2 text-sm text-text-secondary">
+        <span class="text-accent-green text-xs">&#10003;</span>
+        <span>+ <span id="roi-add-visitors">5.000</span> zusätzliche Besucher</span>
+      </div>
+      <div class="flex items-center gap-2 text-sm text-text-secondary">
+        <span class="text-accent-green text-xs">&#10003;</span>
+        <span>+ <span id="roi-ticket-rev">175.000</span> € Ticket-Mehrerlös</span>
+      </div>
+      <div class="flex items-center gap-2 text-sm text-text-secondary">
+        <span class="text-accent-green text-xs">&#10003;</span>
+        <span>+ <span id="roi-gastro-rev">60.000</span> € Gastro-Mehrerlös</span>
+      </div>
+    </div>
+
+    <div class="mt-5 pt-4 border-t-2 border-brand-orange flex justify-between items-baseline">
+      <span class="font-display text-sm font-semibold text-text-primary">Geschätzter Mehrerlös pro Event</span>
+      <span class="font-display text-[28px] font-800 text-accent-green"><span id="roi-total">235.000</span> €</span>
+    </div>
+
+    <a href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary w-full justify-center mt-5">
+      Individuelle Berechnung anfragen &rarr;
+    </a>
+  </div>
+</div>
+
+<script>
+  function initROI() {
+    const visitors = document.getElementById('roi-visitors') as HTMLInputElement;
+    const ticket = document.getElementById('roi-ticket') as HTMLInputElement;
+    const gastro = document.getElementById('roi-gastro') as HTMLInputElement;
+
+    if (!visitors || !ticket || !gastro) return;
+
+    const fmt = (n: number) => n.toLocaleString('de-DE');
+
+    function calc() {
+      const v = Number(visitors.value) || 0;
+      const t = Number(ticket.value) || 0;
+      const g = Number(gastro.value) || 0;
+
+      const addVisitors = Math.round(v * 0.10);
+      const ticketRev = addVisitors * t;
+      const gastroRev = addVisitors * g;
+      const total = ticketRev + gastroRev;
+
+      document.getElementById('roi-add-visitors')!.textContent = fmt(addVisitors);
+      document.getElementById('roi-ticket-rev')!.textContent = fmt(ticketRev);
+      document.getElementById('roi-gastro-rev')!.textContent = fmt(gastroRev);
+      document.getElementById('roi-total')!.textContent = fmt(total);
+    }
+
+    visitors.addEventListener('input', calc);
+    ticket.addEventListener('input', calc);
+    gastro.addEventListener('input', calc);
+  }
+
+  initROI();
+</script>

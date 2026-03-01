@@ -3,15 +3,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout
   title="Durchsagesysteme (BDS/NDS) — Gezielte Besucherkommunikation | MOVETOS"
-  description="Bereichsspezifische PA-Systeme für Großveranstaltungen. Sektoral steuerbar, wetterfest, automatisch über CrowdOps ansteuerbar."
+  description="Bereichsspezifische PA-Systeme für Großveranstaltungen. Sektoral steuerbar, wetterfest, automatisch über SenseOps ansteuerbar."
 >
 
 <section class="pt-32 pb-20">
   <div class="max-w-[1200px] mx-auto px-6">
     <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
-      <a href="/" class="hover:text-text-secondary transition-colors">MOVETOS</a>
+      <a  href={`${import.meta.env.BASE_URL}/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
       <span>/</span>
-      <a href="/infrastruktur/" class="hover:text-text-secondary transition-colors">Infrastruktur</a>
+      <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="hover:text-text-secondary transition-colors">Infrastruktur</a>
       <span>/</span>
       <span class="text-brand-orange">Durchsagesysteme</span>
     </nav>
@@ -21,7 +21,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       Die richtige Information<br>am <span class="text-brand-orange">richtigen Ort.</span>
     </h1>
     <p class="section-desc mt-4 max-w-2xl">
-      Bereichsspezifische Beschallungs- und Durchsagesysteme (BDS/NDS) für gezielte Besucherkommunikation. Einzeln steuerbar, automatisch über CrowdOps auslösbar.
+      Bereichsspezifische Beschallungs- und Durchsagesysteme (BDS/NDS) für gezielte Besucherkommunikation. Einzeln steuerbar, automatisch über SenseOps auslösbar.
     </p>
   </div>
 </section>
@@ -39,7 +39,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             { label: 'Schallpegel', value: 'Bis 120 dB SPL', desc: 'Deutlich hörbar auch bei hohem Umgebungsgeräusch' },
             { label: 'Steuerung', value: 'Sektoral adressierbar', desc: 'Jeder Lautsprecher einzeln oder in Gruppen ansprechbar' },
             { label: 'Schutzklasse', value: 'IP65+ Wetterfest', desc: 'Zuverlässig bei jeder Witterung' },
-            { label: 'Sprachsynthese', value: 'TTS-Integration', desc: 'Automatische Durchsagen in mehreren Sprachen via CrowdOps' },
+            { label: 'Sprachsynthese', value: 'TTS-Integration', desc: 'Automatische Durchsagen in mehreren Sprachen via SenseOps' },
             { label: 'Vorlagen', value: 'Template-System', desc: 'Vordefinierte Durchsagetexte für typische Szenarien' },
           ].map((spec, i) => (
             <div class="reveal flex items-start gap-4 p-4 bg-dark-card border border-dark-border rounded-xl" style={`transition-delay: ${i * 0.06}s`}>
@@ -56,10 +56,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <div>
-        <h2 class="font-display text-2xl font-bold mb-6">Intelligent mit CrowdOps</h2>
+        <h2 class="font-display text-2xl font-bold mb-6">Intelligent mit SenseOps</h2>
         <div class="glass-card p-6 mb-6">
           <p class="text-sm text-text-secondary leading-relaxed">
-            CrowdOps steuert die Durchsagesysteme bereichsgenau. Bei steigender Auslastung kann automatisch eine Wegeempfehlung im betroffenen Sektor ausgelöst werden — oder der Operator bestätigt den Vorschlag per Klick.
+            SenseOps steuert die Durchsagesysteme bereichsgenau. Bei steigender Auslastung kann automatisch eine Wegeempfehlung im betroffenen Sektor ausgelöst werden — oder der Operator bestätigt den Vorschlag per Klick.
           </p>
         </div>
         <div class="flex flex-col gap-3">
@@ -91,8 +91,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
     <p class="section-desc text-center mx-auto mt-4">Wir planen Ihre Beschallung individuell — von einzelnen Zonen bis zur Vollabdeckung.</p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a href="/kontakt/" class="btn btn-primary">Beratung anfragen &rarr;</a>
-      <a href="/infrastruktur/" class="btn btn-ghost">&larr; Alle Systeme</a>
+      <a  href={`${import.meta.env.BASE_URL}/kontakt/`} class="btn btn-primary">Beratung anfragen &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="btn btn-ghost">&larr; Alle Systeme</a>
     </div>
   </div>
 </section>

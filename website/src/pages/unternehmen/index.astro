@@ -14,7 +14,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       die ohne uns nicht <span class="text-brand-orange">stattfinden könnten.</span>
     </h1>
     <p class="section-desc mt-4 max-w-2xl">
-      MOVETOS Germany GmbH entwickelt und fertigt kabellose, netzunabhängige Infrastruktursysteme, die Veranstaltungen und kritische Standorte operativ handlungsfähig machen — überall dort, wo keine feste Infrastruktur existiert.
+      MOVETOS Germany GmbH entwickelt die mobile All-in-One Lösung für Crowd Management: KI-gestützte Software und kabellose, netzautarke Infrastruktur — für Veranstaltungen und kritische Standorte, überall dort, wo keine feste Infrastruktur existiert.
     </p>
   </div>
 </section>
@@ -32,13 +32,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           Wir glauben, dass großartige Veranstaltungen eine großartige operative Grundlage verdienen. Deshalb entwickeln wir Technologie, die Betreibern das Werkzeug gibt, vorausschauend zu steuern statt blind zu reagieren.
         </p>
         <p class="text-sm text-text-secondary leading-relaxed mt-4">
-          Unser Ansatz: Hardware und Software als ein System. MOVETOS SET liefert die physische Infrastruktur — kabellos, netzautark, in Stunden aufgebaut. CrowdOps liefert die Intelligenz — KI-gestützte Besucheranalyse, Echtzeit-Lagebild und eingebaute Compliance.
+          Unser Ansatz: Hardware und Software als ein System. MOVETOS SET liefert die physische Infrastruktur — kabellos, netzautark, in Stunden aufgebaut. SenseOps liefert die Intelligenz — KI-gestützte Besucheranalyse, Echtzeit-Lagebild und eingebaute Compliance.
         </p>
       </div>
       <div class="reveal glass-card p-8">
         <div class="grid grid-cols-2 gap-6">
           {[
-            { value: '2014', label: 'Gegründet' },
+            { value: '2017', label: 'Gegründet' },
             { value: '150+', label: 'Events' },
             { value: '8 Mio.+', label: 'Besucher' },
             { value: 'Pöcking', label: 'Standort' },
@@ -103,7 +103,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       82343 Pöcking
     </p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a href="/kontakt/" class="btn btn-primary">Kontakt aufnehmen &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/kontakt/`} class="btn btn-primary">Kontakt aufnehmen &rarr;</a>
       <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
     </div>
   </div>

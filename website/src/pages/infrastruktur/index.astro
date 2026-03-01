@@ -9,13 +9,13 @@ import SocialProofBar from '../../components/SocialProofBar.astro';
 
 <section class="pt-32 pb-20">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label mb-4">MOVETOS SET-System</div>
+    <div class="label mb-4">Hardware für Crowd Management</div>
     <h1 class="section-title">
       Infrastruktur, die sich dem<br>
       Event anpasst — <span class="text-brand-orange">nicht umgekehrt.</span>
     </h1>
     <p class="section-desc mt-4 max-w-2xl">
-      Das Event bestimmt den Standort. Nicht die Steckdose. MOVETOS SET ist kabellose, netzautarke Infrastruktur — aufgebaut in unter 5 Stunden, überall einsetzbar.
+      Das Event bestimmt den Standort. Nicht die Steckdose. MOVETOS SET ist die kabellose, netzautarke Hardware-Basis für professionelles Crowd Management — aufgebaut in unter 5 Stunden, überall einsetzbar.
     </p>
   </div>
 </section>
@@ -33,21 +33,21 @@ import SocialProofBar from '../../components/SocialProofBar.astro';
           icon: '&#128247;',
           title: 'Kamerasysteme',
           desc: 'Kabellose Mastsysteme mit HD-Kameras. Flexible Positionierung, wetterfest, mit Nachtsicht. Jeder Standort wird zum Beobachtungspunkt.',
-          link: '/infrastruktur/kamerasysteme/',
+          link: `${import.meta.env.BASE_URL}/infrastruktur/kamerasysteme/`,
           specs: ['Full HD / 4K', 'Wetterfest IP67', 'Nachtsicht', 'Bis 8m Masthöhe'],
         },
         {
           icon: '&#128227;',
           title: 'Durchsagesysteme',
-          desc: 'Bereichsspezifische PA-Systeme (BDS/NDS) für gezielte Besucherkommunikation. Einzeln oder automatisch über CrowdOps steuerbar.',
-          link: '/infrastruktur/durchsagesysteme/',
+          desc: 'Bereichsspezifische PA-Systeme (BDS/NDS) für gezielte Besucherkommunikation. Einzeln oder automatisch über SenseOps steuerbar.',
+          link: `${import.meta.env.BASE_URL}/infrastruktur/durchsagesysteme/`,
           specs: ['100V-Technik', 'Bis 120 dB SPL', 'Sektoral steuerbar', 'Wetterfest'],
         },
         {
           icon: '&#127981;',
           title: 'Mobile Leitstelle (OCC)',
-          desc: 'Ihre operative Zentrale vor Ort. Voll ausgestattet mit Bildschirmen, Netzwerk und CrowdOps-Zugang. Sofort einsatzbereit.',
-          link: '/infrastruktur/leitstelle/',
+          desc: 'Ihre operative Zentrale vor Ort. Voll ausgestattet mit Bildschirmen, Netzwerk und SenseOps-Zugang. Sofort einsatzbereit.',
+          link: `${import.meta.env.BASE_URL}/infrastruktur/leitstelle/`,
           specs: ['Schlüsselfertig', 'Multi-Monitor', 'Klimatisiert', 'Netzautark'],
         },
       ].map((item, i) => (
@@ -96,17 +96,17 @@ import SocialProofBar from '../../components/SocialProofBar.astro';
 
 <div class="divider"></div>
 
-<!-- CrowdOps Integration -->
+<!-- SenseOps Integration -->
 <section class="py-14">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="reveal bg-gradient-to-br from-accent-blue/[0.06] to-accent-blue/[0.02] border border-accent-blue/10 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
       <div>
-        <h3 class="font-display text-xl font-bold mb-2">Noch smarter mit CrowdOps</h3>
+        <h3 class="font-display text-xl font-bold mb-2">Noch smarter mit SenseOps</h3>
         <p class="text-sm text-text-secondary max-w-lg">
-          MOVETOS SET liefert die Augen und Ohren. CrowdOps liefert das Gehirn. Zusammen entsteht ein geschlossener Regelkreis — vom Erkennen bis zum Steuern.
+          MOVETOS SET liefert die Augen und Ohren. SenseOps liefert das Gehirn. Zusammen entsteht ein geschlossener Regelkreis — vom Erkennen bis zum Steuern.
         </p>
       </div>
-      <a href="/crowdops/" class="btn btn-primary btn-sm whitespace-nowrap">CrowdOps kennenlernen &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/senseops/`} class="btn btn-primary btn-sm whitespace-nowrap">SenseOps kennenlernen &rarr;</a>
     </div>
   </div>
 </section>
@@ -124,7 +124,7 @@ import SocialProofBar from '../../components/SocialProofBar.astro';
       Jedes Event ist anders. Wir beraten Sie individuell — von der Planung bis zur Umsetzung.
     </p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a href="/kontakt/" class="btn btn-primary">Beratung anfragen &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/kontakt/`} class="btn btn-primary">Beratung anfragen &rarr;</a>
       <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
     </div>
   </div>

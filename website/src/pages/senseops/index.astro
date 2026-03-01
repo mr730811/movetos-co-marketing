@@ -4,11 +4,11 @@ import SocialProofBar from '../../components/SocialProofBar.astro';
 import DashboardMockup from '../../components/DashboardMockup.astro';
 import FeatureCard from '../../components/FeatureCard.astro';
 import ReferenceCard from '../../components/ReferenceCard.astro';
-import ROICalculator from '../../components/ROICalculator';
+
 ---
 <BaseLayout
-  title="CrowdOps — Operations Intelligence für Live-Events | MOVETOS"
-  description="CrowdOps gibt Betreibern von Großveranstaltungen ein KI-gestütztes Echtzeit-Lagebild. Kapazitätsoptimierung, Besucherlenkung und eingebaute Compliance — bewährt bei über 150 Events."
+  title="SenseOps — Operations Intelligence Platform | MOVETOS"
+  description="SenseOps ist die KI-gestützte Operations Intelligence Plattform für Lagebildführung, Personenstromanalyse und operative Steuerung — für Events, Unternehmen und kritische Infrastruktur."
 >
 
 <!-- ===== HERO ===== -->
@@ -19,31 +19,31 @@ import ROICalculator from '../../components/ROICalculator';
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
         <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
-          <a href="/" class="hover:text-text-secondary transition-colors">MOVETOS</a>
+          <a  href={`${import.meta.env.BASE_URL}/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
           <span>/</span>
-          <a href="/crowdops/" class="hover:text-text-secondary transition-colors">Lösungen</a>
+          <a  href={`${import.meta.env.BASE_URL}/senseops/`} class="hover:text-text-secondary transition-colors">Lösungen</a>
           <span>/</span>
-          <span class="text-brand-orange">CrowdOps</span>
+          <span class="text-brand-orange">SenseOps</span>
         </nav>
 
         <div class="label mb-4">
           <span class="live-dot"></span>
-          Operations Intelligence für Live-Events
+          Operations Intelligence Platform
         </div>
 
         <h1 class="font-display text-5xl md:text-6xl font-800 tracking-tight leading-[1.05]">
-          Crowd<span class="text-brand-orange">Ops</span><br>
+          Sense<span class="text-brand-orange">Ops</span><br>
           <span class="text-3xl md:text-4xl font-600 text-text-secondary leading-snug block mt-2">
             Wissen, was passiert.<br>Steuern, was zählt.
           </span>
         </h1>
 
         <p class="text-base text-text-secondary leading-relaxed mt-6 max-w-lg">
-          Die KI-Plattform, die Betreibern von Großveranstaltungen ein Echtzeit-Lagebild ihres gesamten Geländes gibt — für vorausschauende Entscheidungen statt Blindflug.
+          Die KI-Plattform für operative Lageführung. Echtzeit-Lagebild, Personenstromanalyse und gezielte Steuerung — für vorausschauende Entscheidungen statt Blindflug.
         </p>
 
         <div class="flex flex-wrap gap-3 mt-8">
-          <a href="/crowdops/demo/" class="btn btn-primary">Live-Demo vereinbaren &rarr;</a>
+          <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Live-Demo vereinbaren &rarr;</a>
           <a href="#how" class="btn btn-ghost">So funktioniert's</a>
         </div>
       </div>
@@ -66,7 +66,7 @@ import ROICalculator from '../../components/ROICalculator';
     <div class="max-w-2xl mx-auto text-center">
       <div class="label justify-center">Die Herausforderung</div>
       <div class="section-title mx-auto mt-4">
-        Wer 50.000 Menschen betreut,<br>braucht mehr als Funksprüche.
+        Wer Verantwortung für Gelände und Menschen trägt,<br>braucht mehr als Funksprüche.
       </div>
       <p class="section-desc text-center mx-auto mt-4">
         Hunderte Entscheidungen pro Stunde — die meisten auf Basis von Bauchgefühl und fragmentierten Informationen.
@@ -75,9 +75,9 @@ import ROICalculator from '../../components/ROICalculator';
 
     <div class="grid md:grid-cols-2 gap-4 mt-14 max-w-3xl mx-auto">
       {[
-        { q: 'Wo staut es sich gerade?', a: 'Funkspruch — wenn es zu spät ist' },
-        { q: 'Wie viele Besucher im Bereich?', a: 'Manuelle Zähltruppe, alle 30 Min.' },
-        { q: 'Ist Zone C voll oder geht noch was?', a: 'Schätzung vom Ordner' },
+        { q: 'Wo ist die Lage kritisch?', a: 'Funkspruch — wenn es zu spät ist' },
+        { q: 'Wie viele Personen im Bereich?', a: 'Manuelle Zählung, Zeitversatz' },
+        { q: 'Ist der Bereich ausgelastet?', a: 'Schätzung vom Sicherheitspersonal' },
         { q: 'Was ist vor 2 Stunden passiert?', a: 'Niemand weiß es genau' },
       ].map((item, i) => (
         <div class="reveal glass-card p-5" style={`transition-delay: ${i * 0.08}s`}>
@@ -92,7 +92,7 @@ import ROICalculator from '../../components/ROICalculator';
 
     <div class="reveal text-center mt-10">
       <p class="text-lg font-display font-semibold text-brand-orange">
-        CrowdOps macht Schluss mit dem Blindflug.
+        SenseOps macht Schluss mit dem Blindflug.
       </p>
     </div>
   </div>
@@ -106,7 +106,7 @@ import ROICalculator from '../../components/ROICalculator';
     <div class="label">So funktioniert's</div>
     <div class="section-title">Von der Erkennung zur Steuerung<br>— in Echtzeit.</div>
     <p class="section-desc">
-      CrowdOps schließt den Regelkreis zwischen Erkennen, Einordnen und gezieltem Handeln — automatisch oder vom Operator bestätigt.
+      SenseOps schließt den Regelkreis zwischen Erkennen, Einordnen und gezieltem Handeln — automatisch oder vom Operator bestätigt.
     </p>
 
     <div class="grid md:grid-cols-3 gap-0 mt-14 relative">
@@ -118,7 +118,7 @@ import ROICalculator from '../../components/ROICalculator';
           step: '01',
           icon: '&#128200;',
           title: 'Erkennen',
-          desc: 'CrowdOps erfasst Besucherzahlen, Auslastung und Bewegungsmuster über alle Kamerastandorte — kontinuierlich und in Echtzeit.',
+          desc: 'SenseOps erfasst Personenzahlen, Auslastung und Bewegungsmuster über alle Kamerastandorte — kontinuierlich und in Echtzeit.',
           badge: 'bg-gradient-to-br from-brand-orange/15 to-brand-orange/5 border-brand-orange/20',
         },
         {
@@ -132,7 +132,7 @@ import ROICalculator from '../../components/ROICalculator';
           step: '03',
           icon: '&#128227;',
           title: 'Steuern',
-          desc: 'Bei Bedarf löst CrowdOps gezielte Maßnahmen aus — von bereichsspezifischen Durchsagen bis zur Evakuierungskommunikation. Automatisch oder per Operator.',
+          desc: 'Bei Bedarf löst SenseOps gezielte Maßnahmen aus — von bereichsspezifischen Durchsagen bis zur Evakuierungskommunikation. Automatisch oder per Operator.',
           badge: 'bg-gradient-to-br from-accent-green/15 to-accent-green/5 border-accent-green/20',
         },
       ].map((item, i) => (
@@ -149,7 +149,7 @@ import ROICalculator from '../../components/ROICalculator';
 
     <div class="reveal text-center mt-12 p-5 bg-surface border border-dark-border rounded-xl max-w-2xl mx-auto">
       <p class="text-sm text-text-secondary">
-        <strong class="text-brand-orange">Entscheidend:</strong> CrowdOps verbindet Erkennung und Steuerung zu einem geschlossenen Regelkreis. Kein Medienbruch. Keine Verzögerung. Ihr Team behält die Kontrolle.
+        <strong class="text-brand-orange">Entscheidend:</strong> SenseOps verbindet Erkennung und Steuerung zu einem geschlossenen Regelkreis. Kein Medienbruch. Keine Verzögerung. Ihr Team behält die Kontrolle.
       </p>
     </div>
   </div>
@@ -157,13 +157,13 @@ import ROICalculator from '../../components/ROICalculator';
 
 <div class="divider"></div>
 
-<!-- ===== CROWD SAFETY ===== -->
+<!-- ===== SAFETY INTELLIGENCE ===== -->
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label">Crowd Safety</div>
+    <div class="label">Safety Intelligence</div>
     <div class="section-title">Sicherheit ist kein Add-on —<br><span class="text-brand-orange">sie ist eingebaut.</span></div>
     <p class="section-desc">
-      CrowdOps erkennt kritische Situationen, bevor sie eskalieren. MOVETOS SET ermöglicht sofortige Reaktion — gezielt, dokumentiert, nachvollziehbar.
+      SenseOps erkennt kritische Situationen, bevor sie eskalieren. MOVETOS SET ermöglicht sofortige Reaktion — gezielt, dokumentiert, nachvollziehbar.
     </p>
 
     <div class="grid md:grid-cols-3 gap-5 mt-14">
@@ -198,9 +198,9 @@ import ROICalculator from '../../components/ROICalculator';
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label">Der Mehrwert</div>
-    <div class="section-title">Was CrowdOps für Ihren<br>Betrieb bedeutet.</div>
+    <div class="section-title">Was SenseOps für Ihren<br>Betrieb bedeutet.</div>
     <p class="section-desc">
-      Nicht Features zählen — sondern Ergebnisse. CrowdOps verändert, wie Sie Ihren Veranstaltungsbetrieb führen.
+      Nicht Features zählen — sondern Ergebnisse. SenseOps verändert, wie Sie Ihren operativen Betrieb führen.
     </p>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
@@ -208,14 +208,14 @@ import ROICalculator from '../../components/ROICalculator';
         <div class="text-2xl mb-4">&#128176;</div>
         <h3 class="font-display text-base font-bold mb-2">Mehr Kapazität nutzen</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Wissen, wo Platz ist. Bereiche nicht unnötig sperren. 10-15% mehr Kapazitätsauslastung bedeuten direkt mehr Besucher und mehr Umsatz.
+          Wissen, wo Platz ist. Bereiche nicht unnötig sperren. 10-15% mehr Kapazitätsauslastung bedeuten bessere Auslastung und höhere Effizienz.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.08s">
         <div class="text-2xl mb-4">&#11088;</div>
-        <h3 class="font-display text-base font-bold mb-2">Besseres Erlebnis schaffen</h3>
+        <h3 class="font-display text-base font-bold mb-2">Abläufe optimieren</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Weniger Staus, kluge Wegführung, kürzere Wartezeiten. Mehr Sicherheit durch frühzeitige Entlastung kritischer Bereiche.
+          Engpässe vermeiden, Abläufe verbessern, Ressourcen gezielt einsetzen. Frühzeitige Entlastung kritischer Bereiche.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.16s">
@@ -236,7 +236,7 @@ import ROICalculator from '../../components/ROICalculator';
         <div class="text-2xl mb-4">&#129309;</div>
         <h3 class="font-display text-base font-bold mb-2">Team befähigen</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          CrowdOps ist der Co-Pilot für Ihr Sicherheits- und Betriebsteam. Bessere Informationen für bessere Entscheidungen — der Mensch behält die Kontrolle.
+          SenseOps ist der Co-Pilot für Ihr Sicherheits- und Betriebsteam. Bessere Informationen für bessere Entscheidungen — der Mensch behält die Kontrolle.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.4s">
@@ -252,16 +252,42 @@ import ROICalculator from '../../components/ROICalculator';
 
 <div class="divider"></div>
 
-<!-- ===== ROI KALKULATOR ===== -->
+<!-- ===== SENSEOPS FÜR IHRE BRANCHE ===== -->
 <section class="py-20 md:py-28 bg-dark-card">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label">Ihr Mehrwert in Zahlen</div>
-    <div class="section-title">Was bringt Ihnen CrowdOps?</div>
+    <div class="label">SenseOps für Ihre Branche</div>
+    <div class="section-title">Ein System.<br>Drei Einsatzfelder.</div>
     <p class="section-desc">
-      Schon eine moderate Kapazitätsoptimierung von 10% kann erhebliche Mehrerlöse bedeuten. Rechnen Sie selbst.
+      SenseOps passt sich Ihrem Szenario an — ob Großveranstaltung, Firmenevent oder kritische Infrastruktur.
     </p>
-    <div class="mt-10 max-w-2xl">
-      <ROICalculator client:visible />
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <a href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
+        <div class="w-10 h-10 rounded-xl bg-accent-green-dim flex items-center justify-center text-lg mb-4">&#128737;</div>
+        <h3 class="font-display text-base font-bold text-text-primary group-hover:text-accent-green transition-colors mb-2">Events & Festivals</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Besucherströme in Echtzeit steuern, Kapazitäten optimieren, Sicherheit gewährleisten. Inklusive ROI-Calculator.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
+      </a>
+
+      <a href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
+        <div class="w-10 h-10 rounded-xl bg-accent-blue-dim flex items-center justify-center text-lg mb-4">&#127970;</div>
+        <h3 class="font-display text-base font-bold text-text-primary group-hover:text-accent-blue transition-colors mb-2">Corporate</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Compliance-konforme Überwachung für Firmenevents und Werkssicherheit. Lückenlose Dokumentation für HSE und Behörden.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
+      </a>
+
+      <a href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
+        <div class="w-10 h-10 rounded-xl bg-brand-orange-glow flex items-center justify-center text-lg mb-4">&#128274;</div>
+        <h3 class="font-display text-base font-bold text-text-primary group-hover:text-brand-orange transition-colors mb-2">Kritische Infrastruktur</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          24/7-Lagebild für Perimeterschutz und operative Steuerung. Integration in bestehende Leitstellensysteme.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
@@ -278,14 +304,14 @@ import ROICalculator from '../../components/ROICalculator';
     </p>
 
     <div class="grid md:grid-cols-2 gap-3 mt-14">
-      <FeatureCard icon="&#128200;" title="Echtzeit-Besucheranalyse" description="Besucherzahlen, Auslastung und Verweildauer über alle Bereiche — kontinuierlich und in Echtzeit." color="green" />
-      <FeatureCard icon="&#127758;" title="Besucherstrom-Visualisierung" description="Sehen Sie, wohin sich Besucher bewegen, wo Stauungen entstehen und wo Kapazität frei ist." color="blue" />
-      <FeatureCard icon="&#128227;" title="Gezielte Besucherlenkung" description="Bereichsspezifische Durchsagen über MOVETOS-Lautsprecher. Die richtige Info am richtigen Ort." color="orange" />
+      <FeatureCard icon="&#128200;" title="Echtzeit-Personenanalyse" description="Personenzahlen, Auslastung und Verweildauer über alle Bereiche — kontinuierlich und in Echtzeit." color="green" />
+      <FeatureCard icon="&#127758;" title="Personenstrom-Visualisierung" description="Sehen Sie, wohin sich Personen bewegen, wo Stauungen entstehen und wo Kapazität frei ist." color="blue" />
+      <FeatureCard icon="&#128227;" title="Gezielte Steuerung & Durchsagen" description="Bereichsspezifische Durchsagen über MOVETOS-Lautsprecher. Die richtige Info am richtigen Ort." color="orange" />
       <FeatureCard icon="&#128506;" title="Operatives Echtzeit-Cockpit" description="Ihr gesamtes Gelände auf einer interaktiven Karte. Alle Kennzahlen, alle Systeme, ein Blick." color="blue" />
       <FeatureCard icon="&#128196;" title="Dokumentation, die mitläuft" description="Automatische Protokollierung aller Vorgänge. Audit-Trail, Exportfunktionen, Behördenberichte." color="yellow" />
       <FeatureCard icon="&#128274;" title="Datenschutz als Designprinzip" description="Keine Gesichtserkennung. Privacy-Zonen. Automatische Maskierung. DSGVO-konform by Design." color="red" />
       <FeatureCard icon="&#128680;" title="Sicherheits-Alerts" description="Automatische Warnungen bei kritischer Personendichte. Stufenweise Eskalation mit Handlungsempfehlungen." color="red" />
-      <FeatureCard icon="&#128101;" title="Team-Management" description="Rollenbasierte Zugänge, Event-Einladungen, Aufgabenverteilung. Ihr ganzes Team auf einer Plattform." color="purple" />
+      <FeatureCard icon="&#128101;" title="Team-Management" description="Rollenbasierte Zugänge, Einsatz-Einladungen, Aufgabenverteilung. Ihr ganzes Team auf einer Plattform." color="purple" />
     </div>
   </div>
 </section>
@@ -297,15 +323,15 @@ import ROICalculator from '../../components/ROICalculator';
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label">Nahtlose Integration</div>
     <div class="section-title">Software und Hardware<br>als ein System.</div>
-    <p class="section-desc">CrowdOps entfaltet sein volles Potenzial im Zusammenspiel mit der kabellosen MOVETOS-Infrastruktur.</p>
+    <p class="section-desc">SenseOps entfaltet sein volles Potenzial im Zusammenspiel mit der kabellosen MOVETOS-Infrastruktur.</p>
 
     <div class="grid lg:grid-cols-[1fr_auto_1fr] gap-6 items-center mt-14">
       <div class="reveal glass-card p-7">
         <div class="flex items-center gap-3 mb-3">
-          <h3 class="font-display text-lg font-bold">CrowdOps</h3>
+          <h3 class="font-display text-lg font-bold">SenseOps</h3>
           <span class="font-mono text-[9px] px-2 py-0.5 bg-accent-blue-dim text-accent-blue rounded font-medium">SOFTWARE</span>
         </div>
-        <p class="text-sm text-text-secondary leading-relaxed mb-4">KI-Besucheranalyse, Operations-Dashboard, Durchsage-Steuerung, Compliance-Dokumentation.</p>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">KI-Personenanalyse, Operations-Dashboard, Durchsage-Steuerung, Compliance-Dokumentation.</p>
         <div class="flex flex-col gap-1.5">
           {['Echtzeit-Analyse aller Kamerastreams', 'Automatische Handlungsempfehlungen', 'Interaktives Lagebild', 'Rollenbasiertes Team-Management', 'Audit-Trail & Dokumentation'].map(f => (
             <div class="flex items-center gap-2 text-xs text-text-secondary">
@@ -372,19 +398,19 @@ import ROICalculator from '../../components/ROICalculator';
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label">Bewährt in der Praxis</div>
-    <div class="section-title">CrowdOps im Einsatz.</div>
-    <p class="section-desc">Von Festivals über Stadtfeste bis hin zu Corporate Events — CrowdOps ist dort im Einsatz, wo es zählt.</p>
+    <div class="section-title">SenseOps im Einsatz.</div>
+    <p class="section-desc">Von Festivals über Corporate Events bis zur kritischen Infrastruktur — SenseOps ist dort im Einsatz, wo es zählt.</p>
 
-    <div class="grid md:grid-cols-3 gap-5 mt-14">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
       <ReferenceCard
         name="BMW Motorrad Days"
         category="Festival"
         visitors="40.000+"
         highlight="Kapazitätsauslastung +12% gegenüber Vorjahr"
-        quote="Mit CrowdOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen. Das hat unsere Planung grundlegend verändert."
+        quote="Mit SenseOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen."
         quotePerson="Thomas M."
         quoteRole="Veranstaltungsleiter"
-        tags={['MOVETOS SET', 'CrowdOps', '15 Kameras']}
+        tags={['MOVETOS SET', 'SenseOps', '15 Kameras']}
       />
       <ReferenceCard
         name="Christkindlmarkt München"
@@ -394,7 +420,7 @@ import ROICalculator from '../../components/ROICalculator';
         quote="Die Kombination aus Echtzeit-Lagebild und gezielten Durchsagen hat uns eine völlig neue Steuerungsqualität gegeben."
         quotePerson="Dr. Sarah K."
         quoteRole="Stadtmarketing"
-        tags={['MOVETOS SET', 'CrowdOps', 'BDS', '28 Tage']}
+        tags={['MOVETOS SET', 'SenseOps', 'BDS', '28 Tage']}
       />
       <ReferenceCard
         name="VW Wolfsburg"
@@ -404,12 +430,22 @@ import ROICalculator from '../../components/ROICalculator';
         quote="Für uns als Industrieunternehmen ist die automatische Dokumentation Gold wert. Jede Maßnahme ist nachvollziehbar."
         quotePerson="Michael R."
         quoteRole="HSE Manager"
-        tags={['CrowdOps', 'Perimeterschutz', 'Compliance']}
+        tags={['SenseOps', 'Perimeterschutz', 'Compliance']}
+      />
+      <ReferenceCard
+        name="Flughafen München"
+        category="KRITIS"
+        visitors="Fortlaufend"
+        highlight="24/7 Betrieb auf kritischer Infrastruktur"
+        quote="Die Integration in unsere bestehenden Systeme verlief reibungslos. SenseOps ergänzt unsere operative Steuerung ideal."
+        quotePerson="Dirk S."
+        quoteRole="Head of Operations"
+        tags={['SenseOps', 'KRITIS', 'Perimeter', '24/7']}
       />
     </div>
 
     <div class="text-center mt-10">
-      <a href="/referenzen/" class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/referenzen/`} class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
     </div>
   </div>
 </section>
@@ -423,10 +459,10 @@ import ROICalculator from '../../components/ROICalculator';
       <div>
         <h3 class="font-display text-xl font-bold mb-2">Noch keine MOVETOS-Hardware?</h3>
         <p class="text-sm text-text-secondary max-w-lg">
-          CrowdOps entfaltet sein volles Potenzial im Zusammenspiel mit dem MOVETOS SET-System — kabellos, netzautark, in unter 5 Stunden einsatzbereit.
+          SenseOps entfaltet sein volles Potenzial im Zusammenspiel mit dem MOVETOS SET-System — kabellos, netzautark, in unter 5 Stunden einsatzbereit.
         </p>
       </div>
-      <a href="/infrastruktur/" class="btn btn-primary btn-sm whitespace-nowrap">MOVETOS SET entdecken &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="btn btn-primary btn-sm whitespace-nowrap">MOVETOS SET entdecken &rarr;</a>
     </div>
   </div>
 </section>
@@ -438,14 +474,14 @@ import ROICalculator from '../../components/ROICalculator';
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label justify-center">Jetzt starten</div>
     <div class="section-title mx-auto" style="max-width: 540px;">
-      Erleben Sie CrowdOps<br>
+      Erleben Sie SenseOps<br>
       <span class="text-brand-orange">live.</span>
     </div>
     <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
-      30 Minuten Live-Demo. Wir zeigen Ihnen CrowdOps mit Ihrem Szenario — unverbindlich.
+      30 Minuten Live-Demo. Wir zeigen Ihnen SenseOps mit Ihrem Szenario — unverbindlich.
     </p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a href="/crowdops/demo/" class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
       <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
     </div>
   </div>
@@ -453,7 +489,7 @@ import ROICalculator from '../../components/ROICalculator';
 
 <!-- ===== STICKY MOBILE CTA ===== -->
 <div class="fixed bottom-0 left-0 right-0 lg:hidden bg-white/95 backdrop-blur-lg border-t border-dark-border p-3 z-40">
-  <a href="/crowdops/demo/" class="btn btn-primary w-full justify-center">Demo buchen &rarr;</a>
+  <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary w-full justify-center">Demo buchen &rarr;</a>
 </div>
 
 </BaseLayout>

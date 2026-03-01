@@ -5,27 +5,28 @@ interface Props {
 const { compact = false } = Astro.props;
 
 const references = [
-  'BMW Motorrad Days',
-  'Christkindlmarkt München',
-  'UCI Rad WM',
-  'VW Wolfsburg',
-  'Tag der Deutschen Einheit',
-  'Flughafen München',
-  'Airbus',
-  'Plärrer Augsburg',
-  'Stoppelmarkt Vechta',
+  { name: 'BMW Motorrad Days', short: 'BMW' },
+  { name: 'Christkindlmarkt München', short: 'Christkindlmarkt' },
+  { name: 'UCI Rad WM', short: 'UCI WM' },
+  { name: 'VW Wolfsburg', short: 'VW' },
+  { name: 'Tag der Deutschen Einheit', short: 'Tag d. Dt. Einheit' },
+  { name: 'Flughafen München', short: 'MUC Airport' },
+  { name: 'Airbus', short: 'Airbus' },
+  { name: 'Plärrer Augsburg', short: 'Plärrer' },
+  { name: 'Stoppelmarkt Vechta', short: 'Stoppelmarkt' },
 ];
 ---
 <div class:list={["w-full", compact ? "py-6" : "py-10"]}>
   <div class="max-w-[1200px] mx-auto px-6">
     <p class="font-mono text-[10px] font-medium uppercase tracking-[2px] text-text-muted text-center mb-5">
-      Bewährt bei führenden Veranstaltern
+      Bewährt bei über 150 Einsätzen — u.a. bei
     </p>
-    <div class="flex flex-wrap justify-center gap-3">
+    <div class="flex flex-wrap justify-center gap-2.5">
       {references.map(ref => (
-        <span class="font-mono text-[11px] px-4 py-2 bg-dark-card border border-dark-border rounded-md text-text-muted hover:text-text-secondary hover:border-dark-border-hover transition-all cursor-default">
-          {ref}
-        </span>
+        <a href={`${import.meta.env.BASE_URL}/referenzen/`} class="inline-flex items-center gap-1.5 font-mono text-[11px] px-4 py-2.5 bg-dark-card border border-dark-border rounded-lg text-text-secondary hover:text-text-primary hover:border-brand-orange/30 hover:bg-brand-orange/[0.03] transition-all no-underline">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent-green shrink-0"></span>
+          {ref.name}
+        </a>
       ))}
     </div>
   </div>

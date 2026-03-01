@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ContactForm from '../../components/ContactForm';
+import ContactFormInline from '../../components/ContactFormInline.astro';
 ---
 <BaseLayout
   title="Kontakt — MOVETOS Germany GmbH"
@@ -46,7 +46,7 @@ import ContactForm from '../../components/ContactForm';
       </div>
 
       <div class="lg:sticky lg:top-24">
-        <ContactForm client:visible />
+        <ContactFormInline />
       </div>
     </div>
   </div>

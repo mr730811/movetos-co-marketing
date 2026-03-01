@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+const base = import.meta.env.BASE_URL || '';
+
 export default function ROICalculator() {
   const [visitors, setVisitors] = useState(50000);
   const [ticketPrice, setTicketPrice] = useState(35);
@@ -18,11 +20,11 @@ export default function ROICalculator() {
   return (
     <div
       style={{
-        background: 'rgba(248,248,250,0.8)',
-        backdropFilter: 'blur(12px)',
+        background: '#FFFFFF',
         border: '1px solid var(--color-dark-border)',
         borderRadius: '14px',
         padding: '32px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
       }}
     >
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '24px' }}>
@@ -91,7 +93,7 @@ export default function ROICalculator() {
         </div>
 
         <a
-          href="/crowdops/demo/"
+          href={`${base}/senseops/demo/`}
           style={{
             display: 'inline-flex',
             alignItems: 'center',

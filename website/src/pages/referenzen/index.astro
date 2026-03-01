@@ -4,18 +4,18 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 ---
 <BaseLayout
   title="Referenzen — Bewährt bei den Großen | MOVETOS"
-  description="MOVETOS und CrowdOps im Einsatz bei BMW, VW, UCI, Christkindlmarkt München und vielen mehr. Über 150 Großveranstaltungen. Mehr als 8 Mio. Besucher."
+  description="MOVETOS und SenseOps im Einsatz bei BMW, VW, UCI, Christkindlmarkt München und vielen mehr. Über 150 Großveranstaltungen. Mehr als 8 Mio. Besucher."
 >
 
 <section class="pt-32 pb-10">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label mb-4">Referenzen</div>
+    <div class="label mb-4">Crowd Management Referenzen</div>
     <h1 class="section-title">
       Bewährt bei den Großen.<br>
       Bereit für <span class="text-brand-orange">Ihr Event.</span>
     </h1>
     <p class="section-desc mt-4 max-w-2xl">
-      Über 150 Großveranstaltungen. Mehr als 8 Millionen Besucher. Von Festivals über Stadtfeste bis hin zu Corporate Events und KRITIS — MOVETOS und CrowdOps sind dort im Einsatz, wo es zählt.
+      Über 150 Großveranstaltungen. Mehr als 8 Millionen Besucher. Von Festivals über Stadtfeste bis hin zu Corporate Events und KRITIS — unser Crowd Management System ist dort im Einsatz, wo es zählt.
     </p>
   </div>
 </section>
@@ -26,11 +26,12 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
     <!-- Filter -->
-    <div class="flex flex-wrap gap-2 mb-10">
+    <div id="ref-filters" class="flex flex-wrap gap-2 mb-10">
       {['Alle', 'Festival', 'Stadtfest', 'Corporate', 'KRITIS'].map((cat, i) => (
         <button
+          data-filter={cat}
           class:list={[
-            "font-mono text-[11px] px-4 py-2 rounded-md border transition-all cursor-pointer",
+            "ref-filter font-mono text-[11px] px-4 py-2 rounded-md border transition-all cursor-pointer",
             i === 0 ? 'bg-brand-orange text-white border-brand-orange' : 'bg-transparent text-text-muted border-dark-border hover:border-dark-border-hover hover:text-text-secondary'
           ]}
         >
@@ -45,10 +46,10 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         category="Festival"
         visitors="40.000+"
         highlight="Kapazitätsauslastung +12% gegenüber Vorjahr"
-        quote="Mit CrowdOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen. Das hat unsere Planung grundlegend verändert."
+        quote="Mit SenseOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen. Das hat unsere Planung grundlegend verändert."
         quotePerson="Thomas M."
         quoteRole="Veranstaltungsleiter"
-        tags={['MOVETOS SET', 'CrowdOps', '15 Kameras', '3 Tage']}
+        tags={['MOVETOS SET', 'SenseOps', '15 Kameras', '3 Tage']}
       />
       <ReferenceCard
         name="Christkindlmarkt München"
@@ -58,7 +59,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quote="Die Kombination aus Echtzeit-Lagebild und gezielten Durchsagen hat uns eine völlig neue Steuerungsqualität gegeben."
         quotePerson="Dr. Sarah K."
         quoteRole="Stadtmarketing"
-        tags={['MOVETOS SET', 'CrowdOps', 'BDS', '28 Tage']}
+        tags={['MOVETOS SET', 'SenseOps', 'BDS', '28 Tage']}
       />
       <ReferenceCard
         name="VW Wolfsburg"
@@ -68,17 +69,17 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quote="Für uns als Industrieunternehmen ist die automatische Dokumentation Gold wert. Jede Maßnahme ist nachvollziehbar."
         quotePerson="Michael R."
         quoteRole="HSE Manager"
-        tags={['CrowdOps', 'Perimeterschutz', 'Compliance']}
+        tags={['SenseOps', 'Perimeterschutz', 'Compliance']}
       />
       <ReferenceCard
         name="UCI Rad WM"
         category="Festival"
         visitors="120.000+"
         highlight="8 Km Strecke, 22 Kamerastandorte"
-        quote="Eine Radsport-WM über eine ganze Stadtregion zu managen ist eine logistische Meisterleistung. CrowdOps war dabei unser wichtigstes Werkzeug."
+        quote="Eine Radsport-WM über eine ganze Stadtregion zu managen ist eine logistische Meisterleistung. SenseOps war dabei unser wichtigstes Werkzeug."
         quotePerson="Andreas L."
         quoteRole="Projektleiter Sicherheit"
-        tags={['MOVETOS SET', 'CrowdOps', '22 Kameras', '7 Tage']}
+        tags={['MOVETOS SET', 'SenseOps', '22 Kameras', '7 Tage']}
       />
       <ReferenceCard
         name="Plärrer Augsburg"
@@ -88,47 +89,47 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quote="Wir hatten erstmals ein klares Bild der Besucherströme. Das hat die Zusammenarbeit mit den Genehmigungsbehörden deutlich vereinfacht."
         quotePerson="Christina H."
         quoteRole="Veranstaltungsleiterin"
-        tags={['MOVETOS SET', 'CrowdOps', '14 Tage']}
+        tags={['MOVETOS SET', 'SenseOps', '14 Tage']}
       />
       <ReferenceCard
         name="Tag der Deutschen Einheit"
         category="Stadtfest"
         visitors="1 Mio.+"
         highlight="Nationale Sicherheitsanforderungen erfüllt"
-        quote="Bei einer Veranstaltung dieser politischen Bedeutung gibt es keine Kompromisse. MOVETOS und CrowdOps haben alle Anforderungen übertroffen."
+        quote="Bei einer Veranstaltung dieser politischen Bedeutung gibt es keine Kompromisse. MOVETOS und SenseOps haben alle Anforderungen übertroffen."
         quotePerson="Dr. Peter W."
         quoteRole="Sicherheitskoordinator"
-        tags={['MOVETOS SET', 'CrowdOps', 'BDS/NDS', '3 Tage']}
+        tags={['MOVETOS SET', 'SenseOps', 'BDS/NDS', '3 Tage']}
       />
       <ReferenceCard
         name="Flughafen München"
         category="KRITIS"
         visitors="Fortlaufend"
         highlight="24/7 Betrieb auf kritischer Infrastruktur"
-        quote="Die Integration in unsere bestehenden Systeme verlief reibungslos. CrowdOps ergänzt unsere operative Steuerung ideal."
+        quote="Die Integration in unsere bestehenden Systeme verlief reibungslos. SenseOps ergänzt unsere operative Steuerung ideal."
         quotePerson="Dirk S."
         quoteRole="Head of Operations"
-        tags={['CrowdOps', 'KRITIS', 'Perimeter', '24/7']}
+        tags={['SenseOps', 'KRITIS', 'Perimeter', '24/7']}
       />
       <ReferenceCard
         name="Airbus Pioneer Day"
         category="Corporate"
         visitors="15.000+"
         highlight="Werksevent auf sensiblem Gelände"
-        quote="Auf einem Airbus-Werksgelände gelten besondere Sicherheitsanforderungen. CrowdOps hat uns die nötige Transparenz gegeben."
+        quote="Auf einem Airbus-Werksgelände gelten besondere Sicherheitsanforderungen. SenseOps hat uns die nötige Transparenz gegeben."
         quotePerson="Julia F."
         quoteRole="Event Management"
-        tags={['MOVETOS SET', 'CrowdOps', 'Perimeter']}
+        tags={['MOVETOS SET', 'SenseOps', 'Perimeter']}
       />
       <ReferenceCard
         name="Stoppelmarkt Vechta"
         category="Stadtfest"
         visitors="800.000+"
         highlight="Größtes Volksfest Nordwestdeutschlands"
-        quote="Bei einem Volksfest dieser Größe ist CrowdOps inzwischen unverzichtbar. Die Echtzeit-Daten sind für unsere Einsatzleitung eine enorme Hilfe."
+        quote="Bei einem Volksfest dieser Größe ist SenseOps inzwischen unverzichtbar. Die Echtzeit-Daten sind für unsere Einsatzleitung eine enorme Hilfe."
         quotePerson="Markus D."
         quoteRole="Einsatzleiter"
-        tags={['MOVETOS SET', 'CrowdOps', 'BDS', '5 Tage']}
+        tags={['MOVETOS SET', 'SenseOps', 'BDS', '5 Tage']}
       />
     </div>
   </div>
@@ -144,13 +145,45 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
       <span class="text-brand-orange">hier stehen.</span>
     </div>
     <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
-      Erzählen Sie uns von Ihrem Projekt. Wir zeigen Ihnen, was MOVETOS und CrowdOps für Sie leisten können.
+      Erzählen Sie uns von Ihrem Projekt. Wir zeigen Ihnen, was MOVETOS und SenseOps für Sie leisten können.
     </p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a href="/crowdops/demo/" class="btn btn-primary">Demo vereinbaren &rarr;</a>
-      <a href="/kontakt/" class="btn btn-ghost">Kontakt aufnehmen</a>
+      <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/kontakt/`} class="btn btn-ghost">Kontakt aufnehmen</a>
     </div>
   </div>
 </section>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.ref-filter');
+  const cards = document.querySelectorAll<HTMLElement>('.ref-card');
+
+  const activeClasses = ['bg-brand-orange', 'text-white', 'border-brand-orange'];
+  const inactiveClasses = ['bg-transparent', 'text-text-muted', 'border-dark-border', 'hover:border-dark-border-hover', 'hover:text-text-secondary'];
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter') || 'Alle';
+
+      // Update button styles
+      buttons.forEach(b => {
+        b.classList.remove(...activeClasses);
+        b.classList.add(...inactiveClasses);
+      });
+      btn.classList.remove(...inactiveClasses);
+      btn.classList.add(...activeClasses);
+
+      // Filter cards
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category') || '';
+        if (filter === 'Alle' || category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 
 </BaseLayout>

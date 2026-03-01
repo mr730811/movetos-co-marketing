@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReferenceCard from '../../components/ReferenceCard.astro';
+---
+<BaseLayout
+  title="Veranstaltungssicherheit für Unternehmen | MOVETOS"
+  description="Compliance-konforme Veranstaltungssicherheit für Firmenevents, Werkstage und sensible Unternehmensstandorte. KI-gestützte Lagebildführung und kabellose Infrastruktur."
+>
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-accent-blue/[0.03] via-transparent to-brand-orange/[0.02] pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-3xl">
+      <div class="label mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent-blue"></span>
+        Veranstaltungssicherheit
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-800 tracking-tight leading-[1.08]">
+        Veranstaltungssicherheit<br>
+        <span class="text-accent-blue">für Unternehmen.</span>
+      </h1>
+      <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+        Firmenevents, Werkstage, Betriebsversammlungen — wenn tausende Menschen auf sensiblem Gelände zusammenkommen, brauchen Sie mehr als einen Sicherheitsdienst. Sie brauchen ein System.
+      </p>
+      <div class="flex flex-wrap items-center gap-3 mt-8">
+        <a href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+        <a href={`${import.meta.env.BASE_URL}/referenzen/`} class="btn btn-ghost">Referenzen ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== HERAUSFORDERUNGEN ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Die Herausforderung</div>
+    <div class="section-title">Sensibles Gelände. Hohe Auflagen.<br><span class="text-brand-orange">Null Kompromisse.</span></div>
+    <p class="section-desc">
+      Corporate Events auf Werksgeländen, Firmenstandorten oder in Sonderbereichen erfordern besondere Sicherheitsstandards — und lückenlose Dokumentation. MOVETOS liefert beides.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      {[
+        { icon: '&#128274;', title: 'Zugangskontrolle & Perimeter', desc: 'Wer ist auf dem Gelände? Wo sind die kritischen Bereiche? Ohne Echtzeitübersicht bleiben diese Fragen offen.' },
+        { icon: '&#128196;', title: 'Compliance-Anforderungen', desc: 'HSE-Vorgaben, Werkschutzrichtlinien, behördliche Auflagen — alles muss dokumentiert und nachweisbar sein.' },
+        { icon: '&#128257;', title: 'Temporärer Bedarf', desc: 'Ein Werksfest dauert einen Tag, nicht ein Jahr. Fest installierte Systeme sind Overkill, keine Infrastruktur ist ein Risiko.' },
+      ].map(item => (
+        <div class="reveal glass-card p-7">
+          <div class="text-2xl mb-3" set:html={item.icon}></div>
+          <h3 class="font-display text-base font-bold mb-2">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== LÖSUNG ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Die Lösung</div>
+    <div class="section-title">Mobile Sicherheitsinfrastruktur.<br><span class="text-accent-blue">Compliance inklusive.</span></div>
+    <p class="section-desc">
+      MOVETOS liefert ein temporäres Sicherheitssystem, das in wenigen Stunden steht und Enterprise-Anforderungen erfüllt — ohne permanente Installation.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { icon: '&#128247;', title: 'Echtzeit-Lagebild', desc: 'KI-gestützte Überwachung aller relevanten Bereiche. Personendichten, Zugangspunkte und Bewegungsmuster — alles auf einem Dashboard.' },
+        { icon: '&#128196;', title: 'Automatische Compliance-Dokumentation', desc: 'Jede Maßnahme, jeder Alert, jede Entscheidung wird automatisch protokolliert. Export-fertig für HSE, Werkschutz und Behörden.' },
+        { icon: '&#128274;', title: 'Perimeterschutz', desc: 'Kabellose Kamerasysteme sichern das Gelände. Kritische Bereiche werden überwacht, Unbefugte erkannt.' },
+        { icon: '&#128226;', title: 'Gezielte Kommunikation', desc: 'Bereichsspezifische Durchsagen (BDS) und Notdurchsagen (NDS) — vom Lagebild direkt zur Ansprache. Ohne Funkgeräte-Chaos.' },
+        { icon: '&#9889;', title: 'Aufbau in unter 5 Stunden', desc: 'Kabellose, netzautarke Infrastruktur. Plug & Play ohne Eingriff in bestehende IT-Systeme. Rückbau genauso schnell.' },
+        { icon: '&#128260;', title: 'Integration in bestehende Systeme', desc: 'SenseOps lässt sich in bestehende Werkschutz- und Sicherheitssysteme integrieren. API-Schnittstellen auf Anfrage.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-4 p-5 bg-surface border border-dark-border rounded-xl">
+          <div class="text-xl shrink-0 mt-0.5" set:html={item.icon}></div>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== VORTEILE ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Ihre Vorteile</div>
+    <div class="section-title">Warum Unternehmen<br><span class="text-accent-blue">MOVETOS wählen.</span></div>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { title: 'Keine permanente Installation', desc: 'Mobile Infrastruktur, die nach dem Event wieder verschwindet. Kein Umbau, keine Genehmigungsverfahren für Festinstallation.' },
+        { title: 'Enterprise-Grade Compliance', desc: 'Lückenlose Dokumentation aller sicherheitsrelevanten Maßnahmen. Audit-Trail für interne und externe Prüfungen.' },
+        { title: 'HSE-Anforderungen erfüllen', desc: 'Automatische Frühwarnung bei kritischer Auslastung. Nachweisbare Sorgfaltspflicht für Veranstaltungsleiter.' },
+        { title: 'Schnelle Entscheidungen', desc: 'Echtzeit-Lagebild statt Funksprüche. Datenbasierte Entscheidungen in Sekunden, nicht Minuten.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-3 p-5 bg-surface border border-dark-border rounded-xl">
+          <span class="text-accent-blue text-xs mt-1">&#10003;</span>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== REFERENZEN ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Bewährt bei führenden Unternehmen</div>
+    <div class="section-title">Corporate-Referenzen.</div>
+
+    <div class="grid md:grid-cols-2 gap-5 mt-14 max-w-3xl">
+      <ReferenceCard
+        name="VW Wolfsburg"
+        category="Corporate"
+        visitors="25.000+"
+        highlight="Lückenlose Compliance-Dokumentation"
+        quote="Für uns als Industrieunternehmen ist die automatische Dokumentation Gold wert. Jede Maßnahme ist nachvollziehbar."
+        quotePerson="Michael R."
+        quoteRole="HSE Manager"
+        tags={['SenseOps', 'Perimeterschutz', 'Compliance']}
+      />
+      <ReferenceCard
+        name="Airbus Pioneer Day"
+        category="Corporate"
+        visitors="15.000+"
+        highlight="Werksevent auf sensiblem Gelände"
+        quote="Auf einem Airbus-Werksgelände gelten besondere Sicherheitsanforderungen. SenseOps hat uns die nötige Transparenz gegeben."
+        quotePerson="Julia F."
+        quoteRole="Event Management"
+        tags={['MOVETOS SET', 'SenseOps', 'Perimeter']}
+      />
+    </div>
+
+    <div class="text-center mt-10">
+      <a href={`${import.meta.env.BASE_URL}/referenzen/`} class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Jetzt starten</div>
+    <div class="section-title mx-auto" style="max-width: 540px;">
+      Ihr nächstes Corporate Event.<br>
+      <span class="text-accent-blue">Sicher geplant.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+      In einer persönlichen Demo zeigen wir Ihnen, wie MOVETOS bei Ihrem nächsten Firmenevent funktioniert — zugeschnitten auf Ihre Anforderungen.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

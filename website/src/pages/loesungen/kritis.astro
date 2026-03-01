@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReferenceCard from '../../components/ReferenceCard.astro';
+---
+<BaseLayout
+  title="Perimeterschutz & Lagebildführung für KRITIS | MOVETOS"
+  description="24/7-Lagebildführung und Perimeterschutz für kritische Infrastruktur. KI-gestützte Überwachung für Flughäfen, Energieversorger und sensible Einrichtungen. Mobile oder permanente Lösung."
+>
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/[0.03] via-transparent to-accent-blue/[0.02] pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-3xl">
+      <div class="label mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+        Kritische Infrastruktur
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-800 tracking-tight leading-[1.08]">
+        Perimeterschutz &<br>
+        <span class="text-brand-orange">Lagebildführung.</span>
+      </h1>
+      <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+        KI-gestützte Überwachung und Echtzeit-Lagebild für Flughäfen, Energieversorger und kritische Infrastruktur. Mobil oder permanent. 24/7. Made in Germany.
+      </p>
+      <div class="flex flex-wrap items-center gap-3 mt-8">
+        <a href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Beratungsgespräch vereinbaren &rarr;</a>
+        <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== HERAUSFORDERUNGEN ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Die Herausforderung</div>
+    <div class="section-title">Kritische Infrastruktur schützen.<br><span class="text-brand-orange">Rund um die Uhr.</span></div>
+    <p class="section-desc">
+      Flughäfen, Energieversorger, Rechenzentren — KRITIS-Betreiber stehen vor besonderen Anforderungen an Perimeterschutz und Lagebildführung. MOVETOS liefert die Technologie dafür.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      {[
+        { icon: '&#128274;', title: 'Perimetersicherung', desc: 'Weitläufige Gelände, zahlreiche Zugangspunkte, verschiedene Sicherheitszonen — alles muss überwacht und dokumentiert werden.' },
+        { icon: '&#128337;', title: '24/7-Betrieb', desc: 'Kritische Infrastruktur kennt keine Öffnungszeiten. Überwachungssysteme müssen rund um die Uhr zuverlässig funktionieren.' },
+        { icon: '&#128200;', title: 'Echtzeit-Lagebildführung', desc: 'Im Ernstfall zählen Sekunden. Operative Entscheidungen brauchen ein aktuelles, vollständiges Lagebild — nicht Funksprüche.' },
+      ].map(item => (
+        <div class="reveal glass-card p-7">
+          <div class="text-2xl mb-3" set:html={item.icon}></div>
+          <h3 class="font-display text-base font-bold mb-2">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== LÖSUNG ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Die Lösung</div>
+    <div class="section-title">Intelligente Lagebildführung.<br><span class="text-brand-orange">Von der Kamera bis zur Maßnahme.</span></div>
+    <p class="section-desc">
+      SenseOps liefert ein KI-gestütztes Echtzeit-Lagebild mit automatischer Anomalieerkennung. MOVETOS SET ergänzt bei Bedarf die kabellose Infrastruktur — schnell deploybar, sofort einsatzbereit.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { icon: '&#128247;', title: 'KI-gestützte Videoanalyse', desc: 'Automatische Erkennung von Anomalien, Personendichten und Bewegungsmustern. Integration bestehender Kamerasysteme oder Ergänzung durch MOVETOS SET.' },
+        { icon: '&#128506;', title: 'Echtzeit-Lagebild', desc: 'Kartenbasierte Übersicht aller überwachten Bereiche. Zonen, Kameras, Alerts und Maßnahmen — alles auf einem Bildschirm.' },
+        { icon: '&#128680;', title: 'Automatische Alarmierung', desc: 'Definierte Schwellenwerte lösen automatisch Alerts aus. Handlungsempfehlungen werden direkt im System angezeigt.' },
+        { icon: '&#128226;', title: 'Integrierte Durchsagen', desc: 'Gezielte Kommunikation an definierte Bereiche. Bereichsdurchsagen und Notdurchsagen direkt aus dem Lagebild heraus.' },
+        { icon: '&#128196;', title: 'Lückenlose Dokumentation', desc: 'Automatische Protokollierung aller Vorgänge. Audit-Trail für behördliche Nachweise und interne Revisionen.' },
+        { icon: '&#128260;', title: 'Integration in OCC/Leitstelle', desc: 'SenseOps ergänzt bestehende Leitstellensysteme. Datenexport, API-Schnittstellen und Anbindung an vorhandene Infrastruktur.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-4 p-5 bg-surface border border-dark-border rounded-xl">
+          <div class="text-xl shrink-0 mt-0.5" set:html={item.icon}></div>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== EINSATZSZENARIEN ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Einsatzszenarien</div>
+    <div class="section-title">Wo MOVETOS KRITIS-Betreiber<br><span class="text-brand-orange">unterstützt.</span></div>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { title: 'Flughäfen', desc: 'Perimetersicherung, Terminal-Monitoring, Vorfeldsicherheit. Integration in bestehende Flughafen-Leitstelle.' },
+        { title: 'Energieversorger', desc: 'Überwachung von Kraftwerksgeländen, Umspannwerken und sensiblen Anlagen. Mobiler Einsatz bei Wartungsphasen.' },
+        { title: 'Rechenzentren', desc: 'Perimeterschutz und Zugangsüberwachung für hochsichere Standorte. 24/7-Monitoring mit automatischer Alarmierung.' },
+        { title: 'Behörden & öffentliche Einrichtungen', desc: 'Temporäre Sicherheitsinfrastruktur für besondere Lagen. Schnell deploybar, sofort einsatzbereit.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-3 p-5 bg-surface border border-dark-border rounded-xl">
+          <span class="text-brand-orange text-xs mt-1">&#10003;</span>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== REFERENZEN ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Bewährt bei kritischer Infrastruktur</div>
+    <div class="section-title">KRITIS-Referenz.</div>
+
+    <div class="max-w-md mt-14">
+      <ReferenceCard
+        name="Flughafen München"
+        category="KRITIS"
+        visitors="Fortlaufend"
+        highlight="24/7 Betrieb auf kritischer Infrastruktur"
+        quote="Die Integration in unsere bestehenden Systeme verlief reibungslos. SenseOps ergänzt unsere operative Steuerung ideal."
+        quotePerson="Dirk S."
+        quoteRole="Head of Operations"
+        tags={['SenseOps', 'KRITIS', 'Perimeter', '24/7']}
+      />
+    </div>
+
+    <div class="text-center mt-10">
+      <a href={`${import.meta.env.BASE_URL}/referenzen/`} class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Beratung</div>
+    <div class="section-title mx-auto" style="max-width: 540px;">
+      Ihre Infrastruktur.<br>
+      <span class="text-brand-orange">Unser Schutz.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+      KRITIS-Anforderungen sind individuell. Sprechen Sie mit unseren Experten über Ihre spezifischen Anforderungen an Perimeterschutz und Lagebildführung.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Beratungsgespräch vereinbaren &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

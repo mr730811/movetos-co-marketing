@@ -3,26 +3,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SocialProofBar from '../components/SocialProofBar.astro';
 import StatsCounter from '../components/StatsCounter.astro';
 import DashboardMockup from '../components/DashboardMockup.astro';
+
 ---
-<BaseLayout title="MOVETOS — Infrastruktur, die Events möglich macht">
+<BaseLayout title="MOVETOS — Operations Intelligence. Made in Germany." description="KI-gestützte Lagebildführung und kabellose Infrastruktur — für Großveranstaltungen, Unternehmen und kritische Infrastruktur. Bewährt bei über 150 Einsätzen.">
 
 <!-- ===== HERO ===== -->
-<section class="relative pt-32 pb-20 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-brand-orange/[0.03] via-transparent to-transparent pointer-events-none"></div>
+<section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/[0.03] via-transparent to-accent-blue/[0.02] pointer-events-none"></div>
 
   <div class="max-w-[1200px] mx-auto px-6 relative">
-    <div class="max-w-2xl">
-      <div class="label mb-4">Smart Infrastructure</div>
-      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-800 tracking-tight leading-[1.05]">
-        Infrastruktur, die<br>
-        Events <span class="text-brand-orange">möglich</span> macht.
-      </h1>
-      <p class="text-lg text-text-secondary leading-relaxed mt-6 max-w-xl">
-        Kabellose Technologie. KI-gestützte Steuerung. Bewährt bei über 150 Großveranstaltungen mit mehr als 8 Millionen Besuchern.
-      </p>
-      <div class="flex flex-wrap gap-3 mt-8">
-        <a href="/crowdops/" class="btn btn-primary">CrowdOps entdecken &rarr;</a>
-        <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <!-- Left: Messaging -->
+      <div>
+        <div class="label mb-4">Operations Intelligence. Made in Germany.</div>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-800 tracking-tight leading-[1.08]">
+          Erkennen. Bewerten.<br>
+          <span class="text-brand-orange">Steuern.</span>
+        </h1>
+        <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+          KI-gestützte Lagebildführung und kabellose Infrastruktur — für Großveranstaltungen, Unternehmen und kritische Infrastruktur. Aufgebaut in unter 5 Stunden, bewährt bei über 150 Einsätzen. Made in Germany.
+        </p>
+
+        <!-- Mini Stats -->
+        <div class="flex flex-wrap gap-5 mt-6 py-3">
+          <div>
+            <div class="font-display text-2xl font-800 text-brand-orange">150+</div>
+            <div class="text-[11px] text-text-muted font-mono">Einsätze</div>
+          </div>
+          <div class="w-px bg-dark-border"></div>
+          <div>
+            <div class="font-display text-2xl font-800 text-accent-blue">8 Mio.+</div>
+            <div class="text-[11px] text-text-muted font-mono">Personen analysiert</div>
+          </div>
+          <div class="w-px bg-dark-border"></div>
+          <div>
+            <div class="font-display text-2xl font-800 text-accent-green">&lt; 5h</div>
+            <div class="text-[11px] text-text-muted font-mono">Aufbauzeit</div>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+          <a  href={`${import.meta.env.BASE_URL}/senseops/`} class="btn btn-ghost">SenseOps entdecken</a>
+          <a href="tel:+4981572934870" class="hidden md:inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-brand-orange transition-colors ml-1">
+            &#9742; 08157 2934870
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Dashboard Mockup -->
+      <div class="reveal lg:translate-y-0" style="transition-delay: 0.15s">
+        <DashboardMockup />
       </div>
     </div>
   </div>
@@ -33,34 +65,85 @@ import DashboardMockup from '../components/DashboardMockup.astro';
 <SocialProofBar />
 <div class="divider"></div>
 
+<!-- ===== ZIELGRUPPEN-KACHELN ===== -->
+<section class="py-16 md:py-20">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center mb-3">Lösungen für Ihre Branche</div>
+    <p class="text-center text-sm text-text-muted max-w-lg mx-auto mb-10">Ein System. Drei Einsatzfelder. Finden Sie Ihren Anwendungsfall.</p>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- Events & Festivals -->
+      <a href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green hover:border-accent-green/40 transition-all group no-underline">
+        <div class="w-10 h-10 rounded-xl bg-accent-green-dim flex items-center justify-center text-lg mb-4">&#128737;</div>
+        <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-accent-green transition-colors">Events & Festivals</h3>
+        <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Crowd Management</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Besucherströme steuern, Kapazitäten optimieren, Sicherheit gewährleisten — bei Festivals, Stadtfesten und Sportevents.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          Mehr erfahren &rarr;
+        </span>
+      </a>
+
+      <!-- Corporate -->
+      <a href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue hover:border-accent-blue/40 transition-all group no-underline" style="transition-delay: 0.1s">
+        <div class="w-10 h-10 rounded-xl bg-accent-blue-dim flex items-center justify-center text-lg mb-4">&#127970;</div>
+        <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-accent-blue transition-colors">Corporate</h3>
+        <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Veranstaltungssicherheit</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Compliance-konforme Überwachung für Firmenevents, Werksgelände und sensible Unternehmensstandorte.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          Mehr erfahren &rarr;
+        </span>
+      </a>
+
+      <!-- KRITIS -->
+      <a href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange hover:border-brand-orange/40 transition-all group no-underline" style="transition-delay: 0.2s">
+        <div class="w-10 h-10 rounded-xl bg-brand-orange-glow flex items-center justify-center text-lg mb-4">&#128274;</div>
+        <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-brand-orange transition-colors">Kritische Infrastruktur</h3>
+        <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Perimeterschutz & Lagebildführung</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          24/7-Lagebildführung für Flughäfen, Energieversorger und kritische Infrastruktur — mobil oder permanent.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          Mehr erfahren &rarr;
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ===== DAS MOVETOS-SYSTEM ===== -->
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label">Das MOVETOS-System</div>
-    <div class="section-title">Software und Hardware<br>als ein System.</div>
+    <div class="section-title">Operations Intelligence aus einer Hand:<br>Software und Hardware als ein System.</div>
     <p class="section-desc">
-      MOVETOS verbindet KI-gestützte Operations Intelligence mit kabelloser, netzautarker Infrastruktur. Das Ergebnis: Ein geschlossener Regelkreis vom Erkennen bis zum Steuern.
+      MOVETOS verbindet KI-gestützte Lagebildführung mit kabelloser, netzautarker Infrastruktur. Das Ergebnis: Ein geschlossener Regelkreis für operative Lageführung — vom Erkennen bis zum Steuern.
     </p>
 
     <div class="grid md:grid-cols-2 gap-6 mt-14">
-      <!-- CrowdOps Box -->
+      <!-- SenseOps Box -->
       <div class="reveal glass-card p-8 hover:border-accent-blue/20 transition-all group">
         <div class="flex items-center gap-3 mb-4">
-          <h3 class="font-display text-xl font-bold">CrowdOps</h3>
+          <h3 class="font-display text-xl font-bold">SenseOps</h3>
           <span class="font-mono text-[9px] px-2 py-0.5 bg-accent-blue-dim text-accent-blue rounded font-medium">SOFTWARE</span>
         </div>
         <p class="text-sm text-text-secondary leading-relaxed mb-5">
-          Die KI-Plattform für Operations Intelligence. Echtzeit-Lagebild, Besucheranalyse, Kapazitätsoptimierung und eingebaute Compliance — in einem System.
+          Die KI-Plattform für Operations Intelligence. Echtzeit-Lagebild, Personenstromanalyse, Kapazitätsoptimierung und eingebaute Compliance — in einem System.
         </p>
         <div class="flex flex-col gap-2">
-          {['Echtzeit-Besucheranalyse über alle Kameras', 'Sicherheits-Alerts bei kritischer Auslastung', 'Automatische Handlungsempfehlungen', 'Interaktives Lagebild mit Kartenansicht', 'Gezielte Besucherlenkung per Durchsage', 'Lückenlose Dokumentation & Audit-Trail'].map(feat => (
+          {['KI-gestützte Echtzeit-Analyse über alle Kameras', 'Sicherheits-Alerts bei kritischer Auslastung', 'Automatische Handlungsempfehlungen', 'Interaktives Lagebild mit Kartenansicht', 'Gezielte Steuerung per Durchsage', 'Lückenlose Dokumentation & Audit-Trail'].map(feat => (
             <div class="flex items-center gap-2 text-xs text-text-secondary">
               <span class="text-accent-green text-xs">&#10003;</span>
               {feat}
             </div>
           ))}
         </div>
-        <a href="/crowdops/" class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-6 hover:text-brand-orange transition-colors">
+        <a  href={`${import.meta.env.BASE_URL}/senseops/`} class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-6 hover:text-brand-orange transition-colors">
           Mehr erfahren &rarr;
         </a>
       </div>
@@ -82,7 +165,7 @@ import DashboardMockup from '../components/DashboardMockup.astro';
             </div>
           ))}
         </div>
-        <a href="/infrastruktur/" class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-6 hover:text-brand-orange-light transition-colors">
+        <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-6 hover:text-brand-orange-light transition-colors">
           Hardware entdecken &rarr;
         </a>
       </div>
@@ -91,7 +174,7 @@ import DashboardMockup from '../components/DashboardMockup.astro';
     <!-- Connection Note -->
     <div class="reveal text-center mt-10 p-5 bg-surface border border-dark-border rounded-xl max-w-2xl mx-auto">
       <p class="text-sm text-text-secondary">
-        <strong class="text-brand-orange">Zusammen unschlagbar:</strong> CrowdOps erkennt und bewertet — MOVETOS SET reagiert. Vom Kamerabild zur gezielten Durchsage. Ohne Medienbruch. In Echtzeit.
+        <strong class="text-brand-orange">Zusammen unschlagbar:</strong> SenseOps erkennt und bewertet — MOVETOS SET reagiert. Vom Kamerabild zur gezielten Durchsage. Ohne Medienbruch. In Echtzeit.
       </p>
     </div>
   </div>
@@ -104,8 +187,8 @@ import DashboardMockup from '../components/DashboardMockup.astro';
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label mb-6 justify-center">In Zahlen</div>
     <StatsCounter stats={[
-      { value: '150+', label: 'Events betreut', color: 'var(--color-brand-orange)' },
-      { value: '8 Mio.+', label: 'Besucher analysiert', color: 'var(--color-accent-blue)' },
+      { value: '150+', label: 'Einsätze betreut', color: 'var(--color-brand-orange)' },
+      { value: '8 Mio.+', label: 'Personen analysiert', color: 'var(--color-accent-blue)' },
       { value: '< 5h', label: 'Aufbauzeit', color: 'var(--color-accent-green)' },
       { value: '12+', label: 'Jahre Erfahrung', color: 'var(--color-accent-yellow)' },
     ]} />
@@ -114,47 +197,144 @@ import DashboardMockup from '../components/DashboardMockup.astro';
 
 <div class="divider"></div>
 
-<!-- ===== CROWDOPS TEASER ===== -->
+<!-- ===== DREI MESSAGING-SÄULEN ===== -->
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <div class="label">Operations Intelligence</div>
-        <div class="section-title">
-          CrowdOps — Ihr operatives<br>
-          <span class="text-brand-orange">Echtzeit-Lagebild.</span>
-        </div>
-        <p class="section-desc">
-          Wer 50.000 Menschen betreut, trifft hunderte Entscheidungen pro Stunde. CrowdOps liefert die Datengrundlage dafür — in Echtzeit, auf einen Blick.
+    <div class="label">Warum MOVETOS</div>
+    <div class="section-title">Operations Intelligence.<br>Ein System. Drei Versprechen.</div>
+    <p class="section-desc">
+      Wo andere Software oder Hardware liefern, liefert MOVETOS den geschlossenen Regelkreis — vom Erkennen bis zum gezielten Handeln.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <!-- Säule 1: Safety Intelligence -->
+      <div class="reveal glass-card p-7 border-t-2 border-t-accent-green">
+        <div class="w-10 h-10 rounded-xl bg-accent-green-dim flex items-center justify-center text-lg mb-4">&#128737;</div>
+        <h3 class="font-display text-lg font-bold">Safety Intelligence</h3>
+        <p class="text-[13px] text-text-muted mt-1 mb-4">Sicherheit, die mitdenkt.</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Kritische Situationen erkennen, bevor sie eskalieren. Automatische Frühwarnung, gezielte Durchsagen und lückenlose Compliance-Dokumentation — in einem System.
         </p>
-        <div class="flex flex-col gap-3 mt-8">
-          <div class="reveal flex items-start gap-3">
-            <span class="w-8 h-8 rounded-lg bg-accent-blue-dim flex items-center justify-center text-sm shrink-0">&#128200;</span>
-            <div>
-              <h4 class="font-display text-sm font-semibold">Kapazität optimieren</h4>
-              <p class="text-xs text-text-muted mt-0.5">Wissen, wo Platz ist. Bereiche nicht unnötig sperren. Mehr Besucher, mehr Umsatz.</p>
-            </div>
-          </div>
-          <div class="reveal flex items-start gap-3" style="transition-delay: 0.1s">
-            <span class="w-8 h-8 rounded-lg bg-accent-green-dim flex items-center justify-center text-sm shrink-0">&#9889;</span>
-            <div>
-              <h4 class="font-display text-sm font-semibold">Vorausschauend steuern</h4>
-              <p class="text-xs text-text-muted mt-0.5">Handlungsempfehlungen, bevor Engpässe entstehen. Proaktiv statt reaktiv.</p>
-            </div>
-          </div>
-          <div class="reveal flex items-start gap-3" style="transition-delay: 0.2s">
-            <span class="w-8 h-8 rounded-lg bg-brand-orange-glow flex items-center justify-center text-sm shrink-0">&#128196;</span>
-            <div>
-              <h4 class="font-display text-sm font-semibold">Compliance eingebaut</h4>
-              <p class="text-xs text-text-muted mt-0.5">Lückenlose Dokumentation läuft automatisch mit. Genehmigungen werden einfacher.</p>
-            </div>
-          </div>
+        <div class="mt-5 pt-4 border-t border-dark-border">
+          <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
+          <p class="text-xs text-text-secondary">Christkindlmarkt München: <strong class="text-text-primary">3 Mio.+ Besucher</strong> über 28 Tage sicher betreut.</p>
         </div>
-        <a href="/crowdops/" class="btn btn-primary mt-8">CrowdOps kennenlernen &rarr;</a>
       </div>
 
-      <div class="reveal" style="transition-delay: 0.15s">
-        <DashboardMockup />
+      <!-- Säule 2: Live Intelligence -->
+      <div class="reveal glass-card p-7 border-t-2 border-t-accent-blue" style="transition-delay: 0.1s">
+        <div class="w-10 h-10 rounded-xl bg-accent-blue-dim flex items-center justify-center text-lg mb-4">&#128200;</div>
+        <h3 class="font-display text-lg font-bold">Live Intelligence</h3>
+        <p class="text-[13px] text-text-muted mt-1 mb-4">Vom Bauchgefühl zum Echtzeit-Lagebild.</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          SenseOps analysiert Personenströme, Auslastung und Bewegungsmuster in Echtzeit. Das Ergebnis: 10–15% bessere Kapazitätsauslastung und schnellere Entscheidungen.
+        </p>
+        <div class="mt-5 pt-4 border-t border-dark-border">
+          <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
+          <p class="text-xs text-text-secondary">BMW Motorrad Days: <strong class="text-text-primary">+12% Kapazität</strong> gegenüber dem Vorjahr.</p>
+        </div>
+      </div>
+
+      <!-- Säule 3: All-in-One Mobility -->
+      <div class="reveal glass-card p-7 border-t-2 border-t-brand-orange" style="transition-delay: 0.2s">
+        <div class="w-10 h-10 rounded-xl bg-brand-orange-glow flex items-center justify-center text-lg mb-4">&#128225;</div>
+        <h3 class="font-display text-lg font-bold">All-in-One Mobility</h3>
+        <p class="text-[13px] text-text-muted mt-1 mb-4">Volle Infrastruktur. Null Kabel. Unter 5 Stunden.</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Kameras, Durchsagesysteme, mobile Leitstelle und KI-Plattform — als ein System. Kabellos, netzautark, skalierbar von 5 bis 50+ Standorten. Made in Germany.
+        </p>
+        <div class="mt-5 pt-4 border-t border-dark-border">
+          <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
+          <p class="text-xs text-text-secondary">Flughafen München: <strong class="text-text-primary">24/7-Betrieb</strong>, nahtlose Integration in bestehende Leitstelle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== MESSBARE ERGEBNISSE ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Ihr Mehrwert</div>
+    <div class="section-title">Messbare Ergebnisse.<br><span class="text-brand-orange">In jeder Branche.</span></div>
+    <p class="section-desc">
+      SenseOps und MOVETOS SET liefern operative Vorteile — egal ob Festival, Firmenevent oder kritische Infrastruktur.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <!-- Events -->
+      <a href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
+        <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Events & Festivals</div>
+        <div class="font-display text-3xl font-800 text-accent-green mb-2">+10–15%</div>
+        <div class="font-display text-sm font-semibold text-text-primary mb-2">Kapazitätsauslastung</div>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Mehr Besucher zulassen, Engpässe vermeiden, Umsatz steigern — mit datenbasierter Steuerung statt Bauchgefühl.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          Event-Mehrwert berechnen &rarr;
+        </span>
+      </a>
+
+      <!-- Corporate -->
+      <a href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
+        <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Corporate</div>
+        <div class="font-display text-3xl font-800 text-accent-blue mb-2">100%</div>
+        <div class="font-display text-sm font-semibold text-text-primary mb-2">Compliance-Dokumentation</div>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Lückenlose Dokumentation aller sicherheitsrelevanten Maßnahmen. Audit-Trail für HSE, Werkschutz und Behörden — automatisch.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          Corporate-Vorteile ansehen &rarr;
+        </span>
+      </a>
+
+      <!-- KRITIS -->
+      <a href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
+        <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Kritische Infrastruktur</div>
+        <div class="font-display text-3xl font-800 text-brand-orange mb-2">24/7</div>
+        <div class="font-display text-sm font-semibold text-text-primary mb-2">Echtzeit-Lagebild</div>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Vollständiger Überblick über alle überwachten Bereiche. Automatische Alarmierung, integrierte Kommunikation, lückenlose Protokollierung.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          KRITIS-Lösung ansehen &rarr;
+        </span>
+      </a>
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-dark-border">
+      <p class="font-mono text-[10px] uppercase tracking-widest text-text-muted mb-5">Und darüber hinaus</p>
+      <div class="grid md:grid-cols-4 gap-5">
+        <div class="flex items-start gap-2.5">
+          <span class="text-accent-green text-xs mt-0.5">&#128737;</span>
+          <div>
+            <span class="text-sm font-semibold text-text-primary">Höhere Sicherheit</span>
+            <p class="text-xs text-text-muted mt-0.5">Kritische Situationen frühzeitig erkennen, bevor sie eskalieren.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="text-accent-green text-xs mt-0.5">&#128196;</span>
+          <div>
+            <span class="text-sm font-semibold text-text-primary">Eingebaute Compliance</span>
+            <p class="text-xs text-text-muted mt-0.5">Lückenlose Dokumentation für Behörden und Genehmigungsverfahren — automatisch.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="text-accent-green text-xs mt-0.5">&#11088;</span>
+          <div>
+            <span class="text-sm font-semibold text-text-primary">Optimierter Betrieb</span>
+            <p class="text-xs text-text-muted mt-0.5">Engpässe vermeiden, Abläufe verbessern, Ressourcen gezielt einsetzen.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="text-accent-green text-xs mt-0.5">&#9889;</span>
+          <div>
+            <span class="text-sm font-semibold text-text-primary">Schnellere Entscheidungen</span>
+            <p class="text-xs text-text-muted mt-0.5">Echtzeit-Lagebild statt Funksprüche und Bauchgefühl.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -167,14 +347,14 @@ import DashboardMockup from '../components/DashboardMockup.astro';
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label justify-center">Jetzt starten</div>
     <div class="section-title mx-auto" style="max-width: 540px;">
-      Erleben Sie MOVETOS<br>
-      <span class="text-brand-orange">live.</span>
+      30 Minuten. Ein Lagebild.<br>
+      <span class="text-brand-orange">Ihre Entscheidung.</span>
     </div>
-    <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
-      30 Minuten Live-Demo. Wir zeigen Ihnen, wie CrowdOps und MOVETOS SET Ihren Veranstaltungsbetrieb transformieren.
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+      In einer persönlichen Live-Demo zeigen wir Ihnen, wie SenseOps und MOVETOS SET in Ihrem Einsatzszenario funktionieren — zugeschnitten auf Ihre Anforderungen.
     </p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a href="/crowdops/demo/" class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/senseops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
       <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
     </div>
   </div>
