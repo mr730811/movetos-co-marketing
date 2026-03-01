@@ -1,0 +1,27 @@
+---
+interface Stat {
+  value: string;
+  label: string;
+  color?: string;
+}
+
+interface Props {
+  stats: Stat[];
+}
+
+const { stats } = Astro.props;
+---
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+  {stats.map((stat, i) => (
+    <div class="reveal text-center" style={`transition-delay: ${i * 0.1}s`}>
+      <div
+        class="font-display text-3xl md:text-4xl font-800 tracking-tight"
+        style={`color: ${stat.color || 'var(--color-brand-orange)'}`}
+        data-count-target={stat.value}
+      >
+        {stat.value}
+      </div>
+      <div class="text-sm text-text-muted mt-1">{stat.label}</div>
+    </div>
+  ))}
+</div>

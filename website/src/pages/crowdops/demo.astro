@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm';
+---
+<BaseLayout
+  title="CrowdOps Live-Demo buchen | MOVETOS"
+  description="Erleben Sie CrowdOps live in einer 30-minütigen Demo. Wir zeigen Ihnen die Plattform mit Ihrem Szenario — unverbindlich."
+>
+
+<section class="pt-32 pb-20">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <div>
+        <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
+          <a href="/" class="hover:text-text-secondary transition-colors">MOVETOS</a>
+          <span>/</span>
+          <a href="/crowdops/" class="hover:text-text-secondary transition-colors">CrowdOps</a>
+          <span>/</span>
+          <span class="text-brand-orange">Demo</span>
+        </nav>
+
+        <div class="label mb-4">Jetzt starten</div>
+        <h1 class="section-title">
+          Erleben Sie CrowdOps<br>
+          <span class="text-brand-orange">live.</span>
+        </h1>
+        <p class="section-desc mt-4">
+          30 Minuten. Ihr Szenario. Unverbindlich. Wir zeigen Ihnen, wie CrowdOps Ihren Veranstaltungsbetrieb transformiert.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-5">
+          <div class="flex items-start gap-3">
+            <span class="w-8 h-8 rounded-lg bg-accent-green-dim flex items-center justify-center text-sm shrink-0">&#10003;</span>
+            <div>
+              <h4 class="font-display text-sm font-semibold">Live-Demonstration</h4>
+              <p class="text-xs text-text-muted mt-0.5">Sehen Sie CrowdOps im laufenden Betrieb — mit echten Daten aus vergangenen Events.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-8 h-8 rounded-lg bg-accent-blue-dim flex items-center justify-center text-sm shrink-0">&#128200;</span>
+            <div>
+              <h4 class="font-display text-sm font-semibold">Ihr Szenario</h4>
+              <p class="text-xs text-text-muted mt-0.5">Wir besprechen Ihre Anforderungen und zeigen, wie CrowdOps in Ihrem Kontext funktioniert.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-8 h-8 rounded-lg bg-brand-orange-glow flex items-center justify-center text-sm shrink-0">&#128176;</span>
+            <div>
+              <h4 class="font-display text-sm font-semibold">Individuelle Kalkulation</h4>
+              <p class="text-xs text-text-muted mt-0.5">Wir berechnen den konkreten Mehrwert für Ihren Betrieb — transparent und nachvollziehbar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 p-5 bg-surface border border-dark-border rounded-xl">
+          <p class="text-sm text-text-secondary">
+            <strong class="text-text-primary">Lieber telefonisch?</strong><br>
+            Rufen Sie uns direkt an: <a href="tel:+4981572934870" class="text-brand-orange hover:text-brand-orange-light transition-colors">08157 2934870</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:sticky lg:top-24">
+        <ContactForm client:visible />
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

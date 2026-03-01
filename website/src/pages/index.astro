@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialProofBar from '../components/SocialProofBar.astro';
+import StatsCounter from '../components/StatsCounter.astro';
+import DashboardMockup from '../components/DashboardMockup.astro';
+---
+<BaseLayout title="MOVETOS — Infrastruktur, die Events möglich macht">
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-32 pb-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-brand-orange/[0.03] via-transparent to-transparent pointer-events-none"></div>
+
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-2xl">
+      <div class="label mb-4">Smart Infrastructure</div>
+      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-800 tracking-tight leading-[1.05]">
+        Infrastruktur, die<br>
+        Events <span class="text-brand-orange">möglich</span> macht.
+      </h1>
+      <p class="text-lg text-text-secondary leading-relaxed mt-6 max-w-xl">
+        Kabellose Technologie. KI-gestützte Steuerung. Bewährt bei über 150 Großveranstaltungen mit mehr als 8 Millionen Besuchern.
+      </p>
+      <div class="flex flex-wrap gap-3 mt-8">
+        <a href="/crowdops/" class="btn btn-primary">CrowdOps entdecken &rarr;</a>
+        <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOCIAL PROOF BAR ===== -->
+<div class="divider"></div>
+<SocialProofBar />
+<div class="divider"></div>
+
+<!-- ===== DAS MOVETOS-SYSTEM ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Das MOVETOS-System</div>
+    <div class="section-title">Software und Hardware<br>als ein System.</div>
+    <p class="section-desc">
+      MOVETOS verbindet KI-gestützte Operations Intelligence mit kabelloser, netzautarker Infrastruktur. Das Ergebnis: Ein geschlossener Regelkreis vom Erkennen bis zum Steuern.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      <!-- CrowdOps Box -->
+      <div class="reveal glass-card p-8 hover:border-accent-blue/20 transition-all group">
+        <div class="flex items-center gap-3 mb-4">
+          <h3 class="font-display text-xl font-bold">CrowdOps</h3>
+          <span class="font-mono text-[9px] px-2 py-0.5 bg-accent-blue-dim text-accent-blue rounded font-medium">SOFTWARE</span>
+        </div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-5">
+          Die KI-Plattform für Operations Intelligence. Echtzeit-Lagebild, Besucheranalyse, Kapazitätsoptimierung und eingebaute Compliance — in einem System.
+        </p>
+        <div class="flex flex-col gap-2">
+          {['Echtzeit-Besucheranalyse über alle Kameras', 'Sicherheits-Alerts bei kritischer Auslastung', 'Automatische Handlungsempfehlungen', 'Interaktives Lagebild mit Kartenansicht', 'Gezielte Besucherlenkung per Durchsage', 'Lückenlose Dokumentation & Audit-Trail'].map(feat => (
+            <div class="flex items-center gap-2 text-xs text-text-secondary">
+              <span class="text-accent-green text-xs">&#10003;</span>
+              {feat}
+            </div>
+          ))}
+        </div>
+        <a href="/crowdops/" class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-6 hover:text-brand-orange transition-colors">
+          Mehr erfahren &rarr;
+        </a>
+      </div>
+
+      <!-- MOVETOS SET Box -->
+      <div class="reveal glass-card p-8 hover:border-brand-orange/20 transition-all group" style="transition-delay: 0.1s">
+        <div class="flex items-center gap-3 mb-4">
+          <h3 class="font-display text-xl font-bold">MOVETOS SET</h3>
+          <span class="font-mono text-[9px] px-2 py-0.5 bg-brand-orange-glow text-brand-orange rounded font-medium">HARDWARE</span>
+        </div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-5">
+          Kabellose, netzautarke Sicherheitsinfrastruktur — Kameras, Lautsprecher, mobile Leitstelle. Aufgebaut in unter 5 Stunden. Überall.
+        </p>
+        <div class="flex flex-col gap-2">
+          {['Kabellose Mastsysteme mit HD-Kameras', 'Bereichsspezifische Durchsagesysteme (BDS/NDS)', 'Evakuierungskommunikation per Durchsage', 'Mobile Leitstelle (OCC)', 'Netz- und stromautark', 'Plug & Play in unter 5 Stunden'].map(feat => (
+            <div class="flex items-center gap-2 text-xs text-text-secondary">
+              <span class="text-accent-green text-xs">&#10003;</span>
+              {feat}
+            </div>
+          ))}
+        </div>
+        <a href="/infrastruktur/" class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-6 hover:text-brand-orange-light transition-colors">
+          Hardware entdecken &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Connection Note -->
+    <div class="reveal text-center mt-10 p-5 bg-surface border border-dark-border rounded-xl max-w-2xl mx-auto">
+      <p class="text-sm text-text-secondary">
+        <strong class="text-brand-orange">Zusammen unschlagbar:</strong> CrowdOps erkennt und bewertet — MOVETOS SET reagiert. Vom Kamerabild zur gezielten Durchsage. Ohne Medienbruch. In Echtzeit.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== IMPACT ZAHLEN ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label mb-6 justify-center">In Zahlen</div>
+    <StatsCounter stats={[
+      { value: '150+', label: 'Events betreut', color: 'var(--color-brand-orange)' },
+      { value: '8 Mio.+', label: 'Besucher analysiert', color: 'var(--color-accent-blue)' },
+      { value: '< 5h', label: 'Aufbauzeit', color: 'var(--color-accent-green)' },
+      { value: '12+', label: 'Jahre Erfahrung', color: 'var(--color-accent-yellow)' },
+    ]} />
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CROWDOPS TEASER ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="label">Operations Intelligence</div>
+        <div class="section-title">
+          CrowdOps — Ihr operatives<br>
+          <span class="text-brand-orange">Echtzeit-Lagebild.</span>
+        </div>
+        <p class="section-desc">
+          Wer 50.000 Menschen betreut, trifft hunderte Entscheidungen pro Stunde. CrowdOps liefert die Datengrundlage dafür — in Echtzeit, auf einen Blick.
+        </p>
+        <div class="flex flex-col gap-3 mt-8">
+          <div class="reveal flex items-start gap-3">
+            <span class="w-8 h-8 rounded-lg bg-accent-blue-dim flex items-center justify-center text-sm shrink-0">&#128200;</span>
+            <div>
+              <h4 class="font-display text-sm font-semibold">Kapazität optimieren</h4>
+              <p class="text-xs text-text-muted mt-0.5">Wissen, wo Platz ist. Bereiche nicht unnötig sperren. Mehr Besucher, mehr Umsatz.</p>
+            </div>
+          </div>
+          <div class="reveal flex items-start gap-3" style="transition-delay: 0.1s">
+            <span class="w-8 h-8 rounded-lg bg-accent-green-dim flex items-center justify-center text-sm shrink-0">&#9889;</span>
+            <div>
+              <h4 class="font-display text-sm font-semibold">Vorausschauend steuern</h4>
+              <p class="text-xs text-text-muted mt-0.5">Handlungsempfehlungen, bevor Engpässe entstehen. Proaktiv statt reaktiv.</p>
+            </div>
+          </div>
+          <div class="reveal flex items-start gap-3" style="transition-delay: 0.2s">
+            <span class="w-8 h-8 rounded-lg bg-brand-orange-glow flex items-center justify-center text-sm shrink-0">&#128196;</span>
+            <div>
+              <h4 class="font-display text-sm font-semibold">Compliance eingebaut</h4>
+              <p class="text-xs text-text-muted mt-0.5">Lückenlose Dokumentation läuft automatisch mit. Genehmigungen werden einfacher.</p>
+            </div>
+          </div>
+        </div>
+        <a href="/crowdops/" class="btn btn-primary mt-8">CrowdOps kennenlernen &rarr;</a>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.15s">
+        <DashboardMockup />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Jetzt starten</div>
+    <div class="section-title mx-auto" style="max-width: 540px;">
+      Erleben Sie MOVETOS<br>
+      <span class="text-brand-orange">live.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
+      30 Minuten Live-Demo. Wir zeigen Ihnen, wie CrowdOps und MOVETOS SET Ihren Veranstaltungsbetrieb transformieren.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href="/crowdops/demo/" class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

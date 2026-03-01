@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Über MOVETOS — Smart Infrastructure Made in Germany"
+  description="MOVETOS Germany GmbH entwickelt kabellose Infrastruktursysteme und KI-Software für Großveranstaltungen. Standort Pöcking am Starnberger See."
+>
+
+<section class="pt-32 pb-20">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label mb-4">Über MOVETOS</div>
+    <h1 class="section-title">
+      Wir machen Events möglich,<br>
+      die ohne uns nicht <span class="text-brand-orange">stattfinden könnten.</span>
+    </h1>
+    <p class="section-desc mt-4 max-w-2xl">
+      MOVETOS Germany GmbH entwickelt und fertigt kabellose, netzunabhängige Infrastruktursysteme, die Veranstaltungen und kritische Standorte operativ handlungsfähig machen — überall dort, wo keine feste Infrastruktur existiert.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Vision -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="label">Unsere Vision</div>
+        <div class="section-title mt-4">Operations Intelligence<br>für jedes Event.</div>
+        <p class="text-sm text-text-secondary leading-relaxed mt-6">
+          Wir glauben, dass großartige Veranstaltungen eine großartige operative Grundlage verdienen. Deshalb entwickeln wir Technologie, die Betreibern das Werkzeug gibt, vorausschauend zu steuern statt blind zu reagieren.
+        </p>
+        <p class="text-sm text-text-secondary leading-relaxed mt-4">
+          Unser Ansatz: Hardware und Software als ein System. MOVETOS SET liefert die physische Infrastruktur — kabellos, netzautark, in Stunden aufgebaut. CrowdOps liefert die Intelligenz — KI-gestützte Besucheranalyse, Echtzeit-Lagebild und eingebaute Compliance.
+        </p>
+      </div>
+      <div class="reveal glass-card p-8">
+        <div class="grid grid-cols-2 gap-6">
+          {[
+            { value: '2014', label: 'Gegründet' },
+            { value: '150+', label: 'Events' },
+            { value: '8 Mio.+', label: 'Besucher' },
+            { value: 'Pöcking', label: 'Standort' },
+          ].map(stat => (
+            <div class="text-center">
+              <div class="font-display text-2xl font-800 text-brand-orange">{stat.value}</div>
+              <div class="text-xs text-text-muted mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Werte -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Was uns antreibt</div>
+    <div class="section-title mt-4">Unsere Grundsätze.</div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      {[
+        {
+          icon: '&#128161;',
+          title: 'Praxisnah',
+          desc: 'Unsere Technologie entsteht aus echten Anforderungen realer Events — nicht am Schreibtisch. Jedes Feature hat seinen Ursprung in einer konkreten operativen Herausforderung.',
+        },
+        {
+          icon: '&#129309;',
+          title: 'Partnerschaftlich',
+          desc: 'Wir sehen uns als Teil des Betriebsteams unserer Kunden. Nicht als Lieferant, sondern als Partner für den operativen Erfolg — vor, während und nach dem Event.',
+        },
+        {
+          icon: '&#128187;',
+          title: 'Made in Germany',
+          desc: 'Entwicklung, Fertigung und Support aus Pöcking am Starnberger See. Deutsche Ingenieurskunst trifft auf moderne Softwareentwicklung.',
+        },
+      ].map((item, i) => (
+        <div class="reveal p-6" style={`transition-delay: ${i * 0.1}s`}>
+          <div class="text-2xl mb-3"><Fragment set:html={item.icon} /></div>
+          <h3 class="font-display text-lg font-bold mb-2">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Standort -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6 text-center">
+    <div class="label justify-center">Standort</div>
+    <div class="section-title mt-4 mx-auto">Pöcking am Starnberger See.</div>
+    <p class="section-desc text-center mx-auto mt-4">
+      MOVETOS Germany GmbH<br>
+      Feldafinger Str. 5<br>
+      82343 Pöcking
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href="/kontakt/" class="btn btn-primary">Kontakt aufnehmen &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

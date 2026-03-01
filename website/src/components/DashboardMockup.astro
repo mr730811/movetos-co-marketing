@@ -1,0 +1,87 @@
+---
+// Dashboard stays dark as an "app screenshot" contrast element
+const dark = {
+  bg: '#09090B',
+  card: '#0F0F12',
+  border: '#1C1C22',
+  text: '#ECECF0',
+  muted: '#5C5C68',
+  secondary: '#9494A0',
+};
+---
+<div class="overflow-hidden rounded-2xl border shadow-2xl" style={`background: ${dark.card}; border-color: ${dark.border};`}>
+  <!-- Title Bar -->
+  <div class="flex items-center gap-2 px-4 py-2.5 border-b" style={`border-color: ${dark.border}; background: rgba(15,15,18,0.5);`}>
+    <span class="w-2.5 h-2.5 rounded-full" style="background: #EF4444;"></span>
+    <span class="w-2.5 h-2.5 rounded-full" style="background: #EAB308;"></span>
+    <span class="w-2.5 h-2.5 rounded-full" style="background: #22C55E;"></span>
+    <span class="font-mono text-[10px] ml-2" style={`color: ${dark.muted};`}>CrowdOps — Live Dashboard</span>
+  </div>
+
+  <div class="p-3" style={`background: rgba(15,15,18,0.3);`}>
+    <!-- Status Bar -->
+    <div class="flex items-center justify-between mb-3">
+      <div class="flex items-center gap-2">
+        <span class="flex items-center gap-1.5 font-mono text-[10px] font-medium" style="color: #22C55E;">
+          <span class="live-dot"></span> LIVE
+        </span>
+      </div>
+      <div class="font-mono text-[10px]" style={`color: ${dark.muted};`}>STADTFEST MÜNCHEN 2026</div>
+    </div>
+
+    <!-- Camera Grid -->
+    <div class="grid grid-cols-3 gap-1.5 mb-3">
+      {[
+        { name: 'CAM-01 Eingang N', status: 'ok', bars: [25,35,30,40,28], level: 'low' },
+        { name: 'CAM-04 Bühne', status: 'alert', bars: [80,92,88,95,85], level: 'high' },
+        { name: 'CAM-07 Ausgang W', status: 'ok', bars: [12,18,10,22,15], level: 'low' },
+        { name: 'CAM-09 Gastro', status: 'warn', bars: [55,65,60,70,58], level: 'mid' },
+        { name: 'CAM-12 Parking S', status: 'ok', bars: [8,12,6,14,10], level: 'low' },
+        { name: 'CAM-15 Perimeter', status: 'ok', bars: [5,3,8,4,6], level: 'low' },
+      ].map((cam, ci) => (
+        <div class="relative rounded-lg p-2 aspect-video flex flex-col justify-between overflow-hidden" style={`background: ${dark.bg};`}>
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-[8px] truncate" style={`color: ${dark.muted};`}>{cam.name}</span>
+            <span class:list={[
+              "w-1.5 h-1.5 rounded-full",
+              cam.status === 'ok' ? 'bg-[#22C55E]' : cam.status === 'warn' ? 'bg-[#EAB308]' : 'bg-[#EF4444] animate-pulse'
+            ]}></span>
+          </div>
+          <div class="flex items-end gap-[2px] h-6">
+            {cam.bars.map((h, bi) => (
+              <div
+                class="flex-1 rounded-sm opacity-80"
+                style={`height: ${h}%; background: ${cam.level === 'low' ? 'rgba(34,197,94,0.6)' : cam.level === 'mid' ? 'rgba(234,179,8,0.6)' : 'rgba(239,68,68,0.6)'}; animation: density-pulse 3s infinite; animation-delay: ${(ci * 0.1) + (bi * 0.05)}s`}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- KPI Strip -->
+    <div class="grid grid-cols-4 gap-2 mb-3">
+      {[
+        { label: 'Besucher', value: '14.832', color: '#3B82F6' },
+        { label: 'Kameras', value: '15/15', color: '#22C55E' },
+        { label: 'Hinweise', value: '1', color: '#EF4444' },
+        { label: 'Max. Dichte', value: '4.2 P/m²', color: '#EAB308' },
+      ].map(kpi => (
+        <div class="text-center">
+          <div class="font-mono text-[9px]" style={`color: ${dark.muted};`}>{kpi.label}</div>
+          <div class="font-display text-sm font-bold" style={`color: ${kpi.color};`}>{kpi.value}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Alert Toast -->
+    <div class="flex items-center gap-2.5 rounded-lg px-3 py-2" style="background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.2);">
+      <span class="text-sm" style="color: #EF4444;">&#9888;</span>
+      <div class="flex-1 min-w-0">
+        <div class="font-display text-[11px] font-semibold" style={`color: ${dark.text};`}>Sicherheitshinweis — Zone Bühne (CAM-04)</div>
+        <div class="font-mono text-[9px]" style={`color: ${dark.muted};`}>Dichte 4.2 P/m² · Schwelle 3.5 · Kritische Auslastung · Handlungsempfehlung verfügbar</div>
+      </div>
+      <span class="font-mono text-[9px] font-medium whitespace-nowrap cursor-pointer" style="color: #E87F24;">DURCHSAGE &rarr;</span>
+    </div>
+  </div>
+</div>

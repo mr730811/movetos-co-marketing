@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Mobile Leitstelle (OCC) — Ihre operative Zentrale | MOVETOS"
+  description="Schlüsselfertige mobile Leitstelle für Großveranstaltungen. Multi-Monitor, klimatisiert, netzautark, mit CrowdOps vorinstalliert."
+>
+
+<section class="pt-32 pb-20">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
+      <a href="/" class="hover:text-text-secondary transition-colors">MOVETOS</a>
+      <span>/</span>
+      <a href="/infrastruktur/" class="hover:text-text-secondary transition-colors">Infrastruktur</a>
+      <span>/</span>
+      <span class="text-brand-orange">Mobile Leitstelle</span>
+    </nav>
+
+    <div class="label mb-4">Operations Command Center (OCC)</div>
+    <h1 class="section-title">
+      Ihre operative Zentrale.<br>
+      <span class="text-brand-orange">Sofort einsatzbereit.</span>
+    </h1>
+    <p class="section-desc mt-4 max-w-2xl">
+      Die MOVETOS Mobile Leitstelle ist eine schlüsselfertige Einsatzzentrale — voll ausgestattet mit Bildschirmen, Netzwerk und CrowdOps-Zugang. Überall aufstellbar, sofort betriebsbereit.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="font-display text-2xl font-bold mb-6">Ausstattung</h2>
+        <div class="flex flex-col gap-4">
+          {[
+            { label: 'Displays', value: 'Multi-Monitor Setup', desc: 'Bis zu 6 Bildschirme für Dashboard, Karten und Kamerastreams' },
+            { label: 'CrowdOps', value: 'Vorinstalliert', desc: 'Sofortiger Zugang zum operativen Lagebild' },
+            { label: 'Kommunikation', value: 'Funk + VoIP integriert', desc: 'Direkte Verbindung zum Betriebsteam im Gelände' },
+            { label: 'Klimatisierung', value: 'Heizung + Kühlung', desc: 'Angenehmes Arbeitsklima bei jeder Außentemperatur' },
+            { label: 'Stromversorgung', value: 'Netzautark', desc: 'Eigene Stromversorgung, unabhängig vom Veranstaltungsort' },
+            { label: 'Netzwerk', value: 'MOVETOS Mesh + LTE', desc: 'Automatische Verbindung zu allen Kameras und Lautsprechern' },
+          ].map((spec, i) => (
+            <div class="reveal flex items-start gap-4 p-4 bg-dark-card border border-dark-border rounded-xl" style={`transition-delay: ${i * 0.06}s`}>
+              <div class="flex-1">
+                <div class="flex items-baseline gap-2 mb-1">
+                  <span class="font-mono text-[9px] uppercase tracking-wider text-text-muted">{spec.label}</span>
+                  <span class="font-display text-sm font-semibold text-text-primary">{spec.value}</span>
+                </div>
+                <p class="text-xs text-text-muted">{spec.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl font-bold mb-6">Einsatzszenarien</h2>
+        <div class="flex flex-col gap-4">
+          {[
+            { title: 'Festivals & Konzerte', desc: 'Zentrale Steuerung für das gesamte Veranstaltungsgelände. Alle Kamerafeeds, Besucherströme und Durchsagen in einem Raum.' },
+            { title: 'Stadtfeste & Märkte', desc: 'Koordination über weitläufige Innenstadtbereiche. Mehrere Leitstellen-Arbeitsplätze für verschiedene Zuständigkeitsbereiche.' },
+            { title: 'Corporate & KRITIS', desc: 'Temporäre Einsatzzentrale für Werksevents, Messen oder besondere Sicherheitslagen auf Industriegeländen.' },
+          ].map((scenario, i) => (
+            <div class="reveal glass-card p-5" style={`transition-delay: ${i * 0.08}s`}>
+              <h3 class="font-display text-base font-bold mb-2">{scenario.title}</h3>
+              <p class="text-sm text-text-secondary leading-relaxed">{scenario.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="py-20 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="section-title mx-auto" style="max-width: 480px;">
+      Ihre Leitstelle,<br><span class="text-brand-orange">überall.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4">Wir konfigurieren Ihr OCC individuell nach Ihren Anforderungen.</p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href="/kontakt/" class="btn btn-primary">Beratung anfragen &rarr;</a>
+      <a href="/infrastruktur/" class="btn btn-ghost">&larr; Alle Systeme</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

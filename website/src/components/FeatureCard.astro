@@ -1,0 +1,28 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  color?: 'green' | 'blue' | 'orange' | 'red' | 'yellow' | 'purple';
+}
+
+const { icon, title, description, color = 'green' } = Astro.props;
+
+const colorMap = {
+  green: 'bg-accent-green-dim',
+  blue: 'bg-accent-blue-dim',
+  orange: 'bg-brand-orange-glow',
+  red: 'bg-accent-red-dim',
+  yellow: 'bg-accent-yellow-dim',
+  purple: 'bg-accent-purple/10',
+};
+---
+<div class="reveal flex items-start gap-3.5 bg-dark-card border border-dark-border rounded-xl p-5 hover:border-dark-border-hover hover:translate-x-[3px] transition-all">
+  <div class:list={["w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-base", colorMap[color]]}>
+    {icon}
+  </div>
+  <div>
+    <h4 class="font-display text-sm font-semibold mb-0.5">{title}</h4>
+    <p class="text-xs text-text-muted leading-relaxed">{description}</p>
+  </div>
+</div>

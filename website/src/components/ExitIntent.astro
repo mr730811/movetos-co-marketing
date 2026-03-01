@@ -1,0 +1,58 @@
+---
+---
+<div id="exit-intent-overlay" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/40 backdrop-blur-sm">
+  <div class="glass-card max-w-md mx-4 p-8 text-center relative">
+    <button id="exit-intent-close" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-text-muted hover:text-text-primary transition-colors rounded-lg hover:bg-dark-border/30 cursor-pointer">
+      &#10005;
+    </button>
+
+    <div class="text-3xl mb-4">&#128640;</div>
+    <h3 class="font-display text-xl font-bold mb-2">Schon gehen?</h3>
+    <p class="text-sm text-text-secondary leading-relaxed mb-6">
+      Wir zeigen Ihnen CrowdOps in 30 Minuten — mit Ihrem Szenario, unverbindlich. Wann passt es?
+    </p>
+
+    <a href="/crowdops/demo/" class="btn btn-primary w-full justify-center mb-3">
+      Demo vereinbaren &rarr;
+    </a>
+    <button id="exit-intent-dismiss" class="text-xs text-text-muted hover:text-text-secondary transition-colors cursor-pointer bg-transparent border-none">
+      Nein danke, vielleicht später
+    </button>
+  </div>
+</div>
+
+<script>
+  let exitShown = false;
+
+  const show = () => {
+    if (exitShown) return;
+    if (sessionStorage.getItem('exit-intent-dismissed')) return;
+    exitShown = true;
+    const overlay = document.getElementById('exit-intent-overlay');
+    if (overlay) {
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+    }
+  };
+
+  const hide = () => {
+    const overlay = document.getElementById('exit-intent-overlay');
+    if (overlay) {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+    }
+    sessionStorage.setItem('exit-intent-dismissed', 'true');
+  };
+
+  // Desktop: mouse leaves viewport at top
+  document.addEventListener('mouseout', (e) => {
+    if (e.clientY <= 0) show();
+  });
+
+  // Bind close buttons
+  document.getElementById('exit-intent-close')?.addEventListener('click', hide);
+  document.getElementById('exit-intent-dismiss')?.addEventListener('click', hide);
+  document.getElementById('exit-intent-overlay')?.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) hide();
+  });
+</script>

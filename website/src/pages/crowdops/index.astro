@@ -1,0 +1,459 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SocialProofBar from '../../components/SocialProofBar.astro';
+import DashboardMockup from '../../components/DashboardMockup.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ReferenceCard from '../../components/ReferenceCard.astro';
+import ROICalculator from '../../components/ROICalculator';
+---
+<BaseLayout
+  title="CrowdOps — Operations Intelligence für Live-Events | MOVETOS"
+  description="CrowdOps gibt Betreibern von Großveranstaltungen ein KI-gestütztes Echtzeit-Lagebild. Kapazitätsoptimierung, Besucherlenkung und eingebaute Compliance — bewährt bei über 150 Events."
+>
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-32 pb-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-brand-orange/[0.04] via-transparent to-transparent pointer-events-none"></div>
+
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
+          <a href="/" class="hover:text-text-secondary transition-colors">MOVETOS</a>
+          <span>/</span>
+          <a href="/crowdops/" class="hover:text-text-secondary transition-colors">Lösungen</a>
+          <span>/</span>
+          <span class="text-brand-orange">CrowdOps</span>
+        </nav>
+
+        <div class="label mb-4">
+          <span class="live-dot"></span>
+          Operations Intelligence für Live-Events
+        </div>
+
+        <h1 class="font-display text-5xl md:text-6xl font-800 tracking-tight leading-[1.05]">
+          Crowd<span class="text-brand-orange">Ops</span><br>
+          <span class="text-3xl md:text-4xl font-600 text-text-secondary leading-snug block mt-2">
+            Wissen, was passiert.<br>Steuern, was zählt.
+          </span>
+        </h1>
+
+        <p class="text-base text-text-secondary leading-relaxed mt-6 max-w-lg">
+          Die KI-Plattform, die Betreibern von Großveranstaltungen ein Echtzeit-Lagebild ihres gesamten Geländes gibt — für vorausschauende Entscheidungen statt Blindflug.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="/crowdops/demo/" class="btn btn-primary">Live-Demo vereinbaren &rarr;</a>
+          <a href="#how" class="btn btn-ghost">So funktioniert's</a>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.15s">
+        <DashboardMockup />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<div class="divider"></div>
+<SocialProofBar compact />
+<div class="divider"></div>
+
+<!-- ===== DAS PROBLEM (ohne Angst) ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="label justify-center">Die Herausforderung</div>
+      <div class="section-title mx-auto mt-4">
+        Wer 50.000 Menschen betreut,<br>braucht mehr als Funksprüche.
+      </div>
+      <p class="section-desc text-center mx-auto mt-4">
+        Hunderte Entscheidungen pro Stunde — die meisten auf Basis von Bauchgefühl und fragmentierten Informationen.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-14 max-w-3xl mx-auto">
+      {[
+        { q: 'Wo staut es sich gerade?', a: 'Funkspruch — wenn es zu spät ist' },
+        { q: 'Wie viele Besucher im Bereich?', a: 'Manuelle Zähltruppe, alle 30 Min.' },
+        { q: 'Ist Zone C voll oder geht noch was?', a: 'Schätzung vom Ordner' },
+        { q: 'Was ist vor 2 Stunden passiert?', a: 'Niemand weiß es genau' },
+      ].map((item, i) => (
+        <div class="reveal glass-card p-5" style={`transition-delay: ${i * 0.08}s`}>
+          <div class="text-sm font-semibold text-text-primary mb-1">{item.q}</div>
+          <div class="text-xs text-text-muted flex items-center gap-2">
+            <span class="text-accent-red">&#10005;</span>
+            {item.a}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="reveal text-center mt-10">
+      <p class="text-lg font-display font-semibold text-brand-orange">
+        CrowdOps macht Schluss mit dem Blindflug.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== DER CROWDOPS-LOOP ===== -->
+<section class="py-20 md:py-28 bg-dark-card" id="how">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">So funktioniert's</div>
+    <div class="section-title">Von der Erkennung zur Steuerung<br>— in Echtzeit.</div>
+    <p class="section-desc">
+      CrowdOps schließt den Regelkreis zwischen Erkennen, Einordnen und gezieltem Handeln — automatisch oder vom Operator bestätigt.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-0 mt-14 relative">
+      <!-- Connection line -->
+      <div class="hidden md:block absolute top-[56px] left-[16.66%] right-[16.66%] h-[2px] bg-gradient-to-r from-brand-orange via-accent-blue to-accent-green opacity-30"></div>
+
+      {[
+        {
+          step: '01',
+          icon: '&#128200;',
+          title: 'Erkennen',
+          desc: 'CrowdOps erfasst Besucherzahlen, Auslastung und Bewegungsmuster über alle Kamerastandorte — kontinuierlich und in Echtzeit.',
+          badge: 'bg-gradient-to-br from-brand-orange/15 to-brand-orange/5 border-brand-orange/20',
+        },
+        {
+          step: '02',
+          icon: '&#129504;',
+          title: 'Einordnen',
+          desc: 'Die Plattform bewertet die Lage automatisch anhand konfigurierbarer Schwellenwerte und gibt dem Betriebsteam klare Handlungsempfehlungen.',
+          badge: 'bg-gradient-to-br from-accent-blue/15 to-accent-blue/5 border-accent-blue/20',
+        },
+        {
+          step: '03',
+          icon: '&#128227;',
+          title: 'Steuern',
+          desc: 'Bei Bedarf löst CrowdOps gezielte Maßnahmen aus — von bereichsspezifischen Durchsagen bis zur Evakuierungskommunikation. Automatisch oder per Operator.',
+          badge: 'bg-gradient-to-br from-accent-green/15 to-accent-green/5 border-accent-green/20',
+        },
+      ].map((item, i) => (
+        <div class="reveal text-center px-6" style={`transition-delay: ${i * 0.12}s`}>
+          <div class="font-mono text-[10px] text-text-muted tracking-wider mb-2">SCHRITT {item.step}</div>
+          <div class:list={["w-14 h-14 mx-auto mb-5 rounded-2xl flex items-center justify-center text-2xl border relative z-10", item.badge]}>
+            <Fragment set:html={item.icon} />
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed max-w-[280px] mx-auto">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="reveal text-center mt-12 p-5 bg-surface border border-dark-border rounded-xl max-w-2xl mx-auto">
+      <p class="text-sm text-text-secondary">
+        <strong class="text-brand-orange">Entscheidend:</strong> CrowdOps verbindet Erkennung und Steuerung zu einem geschlossenen Regelkreis. Kein Medienbruch. Keine Verzögerung. Ihr Team behält die Kontrolle.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CROWD SAFETY ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Crowd Safety</div>
+    <div class="section-title">Sicherheit ist kein Add-on —<br><span class="text-brand-orange">sie ist eingebaut.</span></div>
+    <p class="section-desc">
+      CrowdOps erkennt kritische Situationen, bevor sie eskalieren. MOVETOS SET ermöglicht sofortige Reaktion — gezielt, dokumentiert, nachvollziehbar.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-5 mt-14">
+      <div class="reveal glass-card p-7">
+        <div class="text-2xl mb-4">&#9888;</div>
+        <h3 class="font-display text-base font-bold mb-2">Frühwarnsystem</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Automatische Alerts bei steigender Personendichte. Konfigurierbare Schwellenwerte nach Zonen. Stufenweise Eskalation mit Handlungsempfehlungen.
+        </p>
+      </div>
+      <div class="reveal glass-card p-7" style="transition-delay: 0.08s">
+        <div class="text-2xl mb-4">&#128227;</div>
+        <h3 class="font-display text-base font-bold mb-2">Evakuierungsunterstützung</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Gezielte Durchsagen an betroffene Bereiche. Zonenbasierte Kommunikation für geordnete Räumung. Lageübersicht für Einsatzleitung und BOS.
+        </p>
+      </div>
+      <div class="reveal glass-card p-7" style="transition-delay: 0.16s">
+        <div class="text-2xl mb-4">&#128196;</div>
+        <h3 class="font-display text-base font-bold mb-2">Lückenlose Nachweispflicht</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Jede Maßnahme wird automatisch dokumentiert. Vollständiger Audit-Trail für Behörden. Vereinfachte Genehmigungsprozesse durch belastbare Dokumentation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== WAS CROWDOPS IHNEN BRINGT (Value Proposition) ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Der Mehrwert</div>
+    <div class="section-title">Was CrowdOps für Ihren<br>Betrieb bedeutet.</div>
+    <p class="section-desc">
+      Nicht Features zählen — sondern Ergebnisse. CrowdOps verändert, wie Sie Ihren Veranstaltungsbetrieb führen.
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+      <div class="reveal glass-card p-7">
+        <div class="text-2xl mb-4">&#128176;</div>
+        <h3 class="font-display text-base font-bold mb-2">Mehr Kapazität nutzen</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Wissen, wo Platz ist. Bereiche nicht unnötig sperren. 10-15% mehr Kapazitätsauslastung bedeuten direkt mehr Besucher und mehr Umsatz.
+        </p>
+      </div>
+      <div class="reveal glass-card p-7" style="transition-delay: 0.08s">
+        <div class="text-2xl mb-4">&#11088;</div>
+        <h3 class="font-display text-base font-bold mb-2">Besseres Erlebnis schaffen</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Weniger Staus, kluge Wegführung, kürzere Wartezeiten. Mehr Sicherheit durch frühzeitige Entlastung kritischer Bereiche.
+        </p>
+      </div>
+      <div class="reveal glass-card p-7" style="transition-delay: 0.16s">
+        <div class="text-2xl mb-4">&#9889;</div>
+        <h3 class="font-display text-base font-bold mb-2">Schneller entscheiden</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Echtzeit-Lagebild statt Funksprüche. Kritische Situationen erkennen und entschärfen, bevor sie eskalieren.
+        </p>
+      </div>
+      <div class="reveal glass-card p-7" style="transition-delay: 0.24s">
+        <div class="text-2xl mb-4">&#128196;</div>
+        <h3 class="font-display text-base font-bold mb-2">Compliance eingebaut</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Lückenlose Dokumentation läuft automatisch mit. Sicherheitsnachweise für Genehmigungsbehörden auf Knopfdruck.
+        </p>
+      </div>
+      <div class="reveal glass-card p-7" style="transition-delay: 0.32s">
+        <div class="text-2xl mb-4">&#129309;</div>
+        <h3 class="font-display text-base font-bold mb-2">Team befähigen</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          CrowdOps ist der Co-Pilot für Ihr Sicherheits- und Betriebsteam. Bessere Informationen für bessere Entscheidungen — der Mensch behält die Kontrolle.
+        </p>
+      </div>
+      <div class="reveal glass-card p-7" style="transition-delay: 0.4s">
+        <div class="text-2xl mb-4">&#128274;</div>
+        <h3 class="font-display text-base font-bold mb-2">Datenschutz by Design</h3>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Keine Gesichtserkennung. Konfigurierbare Privacy-Zonen. Automatische Bildmaskierung. Datenschutz ist Architekturprinzip, kein Zusatzmodul.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== ROI KALKULATOR ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Ihr Mehrwert in Zahlen</div>
+    <div class="section-title">Was bringt Ihnen CrowdOps?</div>
+    <p class="section-desc">
+      Schon eine moderate Kapazitätsoptimierung von 10% kann erhebliche Mehrerlöse bedeuten. Rechnen Sie selbst.
+    </p>
+    <div class="mt-10 max-w-2xl">
+      <ROICalculator client:visible />
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== FUNKTIONSÜBERSICHT ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Funktionen</div>
+    <div class="section-title">Ihr Frühwarnsystem für den<br>laufenden Betrieb.</div>
+    <p class="section-desc">
+      Vorkonfiguriert auf Basis internationaler Betriebsnormen — sofort einsatzbereit, individuell anpassbar.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-3 mt-14">
+      <FeatureCard icon="&#128200;" title="Echtzeit-Besucheranalyse" description="Besucherzahlen, Auslastung und Verweildauer über alle Bereiche — kontinuierlich und in Echtzeit." color="green" />
+      <FeatureCard icon="&#127758;" title="Besucherstrom-Visualisierung" description="Sehen Sie, wohin sich Besucher bewegen, wo Stauungen entstehen und wo Kapazität frei ist." color="blue" />
+      <FeatureCard icon="&#128227;" title="Gezielte Besucherlenkung" description="Bereichsspezifische Durchsagen über MOVETOS-Lautsprecher. Die richtige Info am richtigen Ort." color="orange" />
+      <FeatureCard icon="&#128506;" title="Operatives Echtzeit-Cockpit" description="Ihr gesamtes Gelände auf einer interaktiven Karte. Alle Kennzahlen, alle Systeme, ein Blick." color="blue" />
+      <FeatureCard icon="&#128196;" title="Dokumentation, die mitläuft" description="Automatische Protokollierung aller Vorgänge. Audit-Trail, Exportfunktionen, Behördenberichte." color="yellow" />
+      <FeatureCard icon="&#128274;" title="Datenschutz als Designprinzip" description="Keine Gesichtserkennung. Privacy-Zonen. Automatische Maskierung. DSGVO-konform by Design." color="red" />
+      <FeatureCard icon="&#128680;" title="Sicherheits-Alerts" description="Automatische Warnungen bei kritischer Personendichte. Stufenweise Eskalation mit Handlungsempfehlungen." color="red" />
+      <FeatureCard icon="&#128101;" title="Team-Management" description="Rollenbasierte Zugänge, Event-Einladungen, Aufgabenverteilung. Ihr ganzes Team auf einer Plattform." color="purple" />
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== INTEGRATION MIT MOVETOS HARDWARE ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Nahtlose Integration</div>
+    <div class="section-title">Software und Hardware<br>als ein System.</div>
+    <p class="section-desc">CrowdOps entfaltet sein volles Potenzial im Zusammenspiel mit der kabellosen MOVETOS-Infrastruktur.</p>
+
+    <div class="grid lg:grid-cols-[1fr_auto_1fr] gap-6 items-center mt-14">
+      <div class="reveal glass-card p-7">
+        <div class="flex items-center gap-3 mb-3">
+          <h3 class="font-display text-lg font-bold">CrowdOps</h3>
+          <span class="font-mono text-[9px] px-2 py-0.5 bg-accent-blue-dim text-accent-blue rounded font-medium">SOFTWARE</span>
+        </div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">KI-Besucheranalyse, Operations-Dashboard, Durchsage-Steuerung, Compliance-Dokumentation.</p>
+        <div class="flex flex-col gap-1.5">
+          {['Echtzeit-Analyse aller Kamerastreams', 'Automatische Handlungsempfehlungen', 'Interaktives Lagebild', 'Rollenbasiertes Team-Management', 'Audit-Trail & Dokumentation'].map(f => (
+            <div class="flex items-center gap-2 text-xs text-text-secondary">
+              <span class="text-accent-green text-xs">&#10003;</span> {f}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-2 py-4 lg:py-0">
+        <span class="font-mono text-[9px] text-text-muted uppercase tracking-wider">API</span>
+        <div class="w-16 h-0.5 bg-gradient-to-r from-accent-blue to-brand-orange rounded lg:w-0.5 lg:h-16"></div>
+        <span class="font-mono text-[9px] text-text-muted uppercase tracking-wider">MESH</span>
+      </div>
+
+      <div class="reveal glass-card p-7" style="transition-delay: 0.1s">
+        <div class="flex items-center gap-3 mb-3">
+          <h3 class="font-display text-lg font-bold">MOVETOS SET</h3>
+          <span class="font-mono text-[9px] px-2 py-0.5 bg-brand-orange-glow text-brand-orange rounded font-medium">HARDWARE</span>
+        </div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">Kabellose, netzautarke Infrastruktur — Kameras, Lautsprecher, mobile Leitstelle.</p>
+        <div class="flex flex-col gap-1.5">
+          {['Kabellose Mastsysteme mit Kameras', 'Durchsage-System (BDS/NDS)', 'Mobile Leitstelle (OCC)', 'Netz- & stromautark', 'Plug & Play in unter 5 Stunden'].map(f => (
+            <div class="flex items-center gap-2 text-xs text-text-secondary">
+              <span class="text-accent-green text-xs">&#10003;</span> {f}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== COMPLIANCE (dezent) ===== -->
+<section class="py-16">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <p class="font-mono text-[10px] font-medium uppercase tracking-[2px] text-text-muted text-center mb-5">
+      Eingebaut, nicht aufgesetzt
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+      {[
+        { code: 'MVStättVO', name: 'Versammlungsstätten' },
+        { code: 'DIN EN 13200', name: 'Zuschaueranlagen' },
+        { code: 'EN 50518', name: 'Alarmempfangsstellen' },
+        { code: 'VdS 2366', name: 'Videoüberwachung' },
+        { code: 'ISO 22313', name: 'Business Continuity' },
+        { code: 'DIN 14675', name: 'Brandmeldeanlagen' },
+        { code: 'DSGVO', name: 'Datenschutzkonform' },
+      ].map((norm, i) => (
+        <div class="reveal bg-dark-card border border-dark-border rounded-xl py-5 px-4 text-center" style={`transition-delay: ${i * 0.06}s`}>
+          <div class="font-mono text-sm font-medium text-text-primary mb-1">{norm.code}</div>
+          <div class="text-[10px] text-text-muted">{norm.name}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== REFERENZEN (Mini Case Studies) ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Bewährt in der Praxis</div>
+    <div class="section-title">CrowdOps im Einsatz.</div>
+    <p class="section-desc">Von Festivals über Stadtfeste bis hin zu Corporate Events — CrowdOps ist dort im Einsatz, wo es zählt.</p>
+
+    <div class="grid md:grid-cols-3 gap-5 mt-14">
+      <ReferenceCard
+        name="BMW Motorrad Days"
+        category="Festival"
+        visitors="40.000+"
+        highlight="Kapazitätsauslastung +12% gegenüber Vorjahr"
+        quote="Mit CrowdOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen. Das hat unsere Planung grundlegend verändert."
+        quotePerson="Thomas M."
+        quoteRole="Veranstaltungsleiter"
+        tags={['MOVETOS SET', 'CrowdOps', '15 Kameras']}
+      />
+      <ReferenceCard
+        name="Christkindlmarkt München"
+        category="Stadtfest"
+        visitors="3 Mio.+"
+        highlight="Setup in unter 4 Stunden"
+        quote="Die Kombination aus Echtzeit-Lagebild und gezielten Durchsagen hat uns eine völlig neue Steuerungsqualität gegeben."
+        quotePerson="Dr. Sarah K."
+        quoteRole="Stadtmarketing"
+        tags={['MOVETOS SET', 'CrowdOps', 'BDS', '28 Tage']}
+      />
+      <ReferenceCard
+        name="VW Wolfsburg"
+        category="Corporate"
+        visitors="25.000+"
+        highlight="Lückenlose Compliance-Dokumentation"
+        quote="Für uns als Industrieunternehmen ist die automatische Dokumentation Gold wert. Jede Maßnahme ist nachvollziehbar."
+        quotePerson="Michael R."
+        quoteRole="HSE Manager"
+        tags={['CrowdOps', 'Perimeterschutz', 'Compliance']}
+      />
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="/referenzen/" class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== HARDWARE BANNER ===== -->
+<section class="py-14">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="reveal bg-gradient-to-br from-brand-orange/[0.06] to-brand-orange/[0.02] border border-brand-orange/10 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div>
+        <h3 class="font-display text-xl font-bold mb-2">Noch keine MOVETOS-Hardware?</h3>
+        <p class="text-sm text-text-secondary max-w-lg">
+          CrowdOps entfaltet sein volles Potenzial im Zusammenspiel mit dem MOVETOS SET-System — kabellos, netzautark, in unter 5 Stunden einsatzbereit.
+        </p>
+      </div>
+      <a href="/infrastruktur/" class="btn btn-primary btn-sm whitespace-nowrap">MOVETOS SET entdecken &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Jetzt starten</div>
+    <div class="section-title mx-auto" style="max-width: 540px;">
+      Erleben Sie CrowdOps<br>
+      <span class="text-brand-orange">live.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
+      30 Minuten Live-Demo. Wir zeigen Ihnen CrowdOps mit Ihrem Szenario — unverbindlich.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href="/crowdops/demo/" class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STICKY MOBILE CTA ===== -->
+<div class="fixed bottom-0 left-0 right-0 lg:hidden bg-white/95 backdrop-blur-lg border-t border-dark-border p-3 z-40">
+  <a href="/crowdops/demo/" class="btn btn-primary w-full justify-center">Demo buchen &rarr;</a>
+</div>
+
+</BaseLayout>

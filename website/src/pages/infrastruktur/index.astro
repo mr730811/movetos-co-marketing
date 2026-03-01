@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SocialProofBar from '../../components/SocialProofBar.astro';
+---
+<BaseLayout
+  title="MOVETOS SET — Kabellose Smart Infrastructure | MOVETOS"
+  description="Kabellose, netzautarke Sicherheitsinfrastruktur für Großveranstaltungen. Kameras, Durchsagesysteme, mobile Leitstelle — aufgebaut in unter 5 Stunden."
+>
+
+<section class="pt-32 pb-20">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label mb-4">MOVETOS SET-System</div>
+    <h1 class="section-title">
+      Infrastruktur, die sich dem<br>
+      Event anpasst — <span class="text-brand-orange">nicht umgekehrt.</span>
+    </h1>
+    <p class="section-desc mt-4 max-w-2xl">
+      Das Event bestimmt den Standort. Nicht die Steckdose. MOVETOS SET ist kabellose, netzautarke Infrastruktur — aufgebaut in unter 5 Stunden, überall einsetzbar.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+<SocialProofBar compact />
+<div class="divider"></div>
+
+<!-- Key Features -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-6">
+      {[
+        {
+          icon: '&#128247;',
+          title: 'Kamerasysteme',
+          desc: 'Kabellose Mastsysteme mit HD-Kameras. Flexible Positionierung, wetterfest, mit Nachtsicht. Jeder Standort wird zum Beobachtungspunkt.',
+          link: '/infrastruktur/kamerasysteme/',
+          specs: ['Full HD / 4K', 'Wetterfest IP67', 'Nachtsicht', 'Bis 8m Masthöhe'],
+        },
+        {
+          icon: '&#128227;',
+          title: 'Durchsagesysteme',
+          desc: 'Bereichsspezifische PA-Systeme (BDS/NDS) für gezielte Besucherkommunikation. Einzeln oder automatisch über CrowdOps steuerbar.',
+          link: '/infrastruktur/durchsagesysteme/',
+          specs: ['100V-Technik', 'Bis 120 dB SPL', 'Sektoral steuerbar', 'Wetterfest'],
+        },
+        {
+          icon: '&#127981;',
+          title: 'Mobile Leitstelle (OCC)',
+          desc: 'Ihre operative Zentrale vor Ort. Voll ausgestattet mit Bildschirmen, Netzwerk und CrowdOps-Zugang. Sofort einsatzbereit.',
+          link: '/infrastruktur/leitstelle/',
+          specs: ['Schlüsselfertig', 'Multi-Monitor', 'Klimatisiert', 'Netzautark'],
+        },
+      ].map((item, i) => (
+        <div class="reveal glass-card p-8 group hover:border-brand-orange/20 transition-all" style={`transition-delay: ${i * 0.1}s`}>
+          <div class="text-3xl mb-4"><Fragment set:html={item.icon} /></div>
+          <h3 class="font-display text-xl font-bold mb-3 group-hover:text-brand-orange transition-colors">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed mb-5">{item.desc}</p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            {item.specs.map(spec => (
+              <span class="font-mono text-[9px] px-2 py-1 bg-surface border border-dark-border rounded text-text-muted">{spec}</span>
+            ))}
+          </div>
+          <a href={item.link} class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium hover:text-brand-orange-light transition-colors">
+            Details &rarr;
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Vorteile -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Warum MOVETOS SET</div>
+    <div class="section-title">Volle Flexibilität.<br>Null Kompromisse.</div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+      {[
+        { icon: '&#9889;', title: 'Unter 5 Stunden', desc: 'Vom Anliefern bis zum laufenden Betrieb. Plug & Play ohne Tiefbau oder Verkabelung.' },
+        { icon: '&#128267;', title: 'Netzautark', desc: 'Eigene Stromversorgung, eigenes Mesh-Netzwerk. Unabhängig von lokaler Infrastruktur.' },
+        { icon: '&#127758;', title: 'Überall einsetzbar', desc: 'Wiese, Parkplatz, Innenstadt — wo auch immer Ihr Event stattfindet.' },
+        { icon: '&#128260;', title: 'Modular skalierbar', desc: 'Von 5 bis 50 Maste. Das System wächst mit Ihrem Event.' },
+      ].map((item, i) => (
+        <div class="reveal text-center p-6" style={`transition-delay: ${i * 0.08}s`}>
+          <div class="text-2xl mb-3"><Fragment set:html={item.icon} /></div>
+          <h4 class="font-display text-sm font-bold mb-2">{item.title}</h4>
+          <p class="text-xs text-text-muted leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CrowdOps Integration -->
+<section class="py-14">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="reveal bg-gradient-to-br from-accent-blue/[0.06] to-accent-blue/[0.02] border border-accent-blue/10 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div>
+        <h3 class="font-display text-xl font-bold mb-2">Noch smarter mit CrowdOps</h3>
+        <p class="text-sm text-text-secondary max-w-lg">
+          MOVETOS SET liefert die Augen und Ohren. CrowdOps liefert das Gehirn. Zusammen entsteht ein geschlossener Regelkreis — vom Erkennen bis zum Steuern.
+        </p>
+      </div>
+      <a href="/crowdops/" class="btn btn-primary btn-sm whitespace-nowrap">CrowdOps kennenlernen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Beratung</div>
+    <div class="section-title mx-auto" style="max-width: 480px;">
+      Welche Infrastruktur passt<br>zu <span class="text-brand-orange">Ihrem Event?</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
+      Jedes Event ist anders. Wir beraten Sie individuell — von der Planung bis zur Umsetzung.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href="/kontakt/" class="btn btn-primary">Beratung anfragen &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

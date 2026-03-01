@@ -1,0 +1,32 @@
+---
+interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+
+const references = [
+  'BMW Motorrad Days',
+  'Christkindlmarkt München',
+  'UCI Rad WM',
+  'VW Wolfsburg',
+  'Tag der Deutschen Einheit',
+  'Flughafen München',
+  'Airbus',
+  'Plärrer Augsburg',
+  'Stoppelmarkt Vechta',
+];
+---
+<div class:list={["w-full", compact ? "py-6" : "py-10"]}>
+  <div class="max-w-[1200px] mx-auto px-6">
+    <p class="font-mono text-[10px] font-medium uppercase tracking-[2px] text-text-muted text-center mb-5">
+      Bewährt bei führenden Veranstaltern
+    </p>
+    <div class="flex flex-wrap justify-center gap-3">
+      {references.map(ref => (
+        <span class="font-mono text-[11px] px-4 py-2 bg-dark-card border border-dark-border rounded-md text-text-muted hover:text-text-secondary hover:border-dark-border-hover transition-all cursor-default">
+          {ref}
+        </span>
+      ))}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReferenceCard from '../../components/ReferenceCard.astro';
+---
+<BaseLayout
+  title="Referenzen — Bewährt bei den Großen | MOVETOS"
+  description="MOVETOS und CrowdOps im Einsatz bei BMW, VW, UCI, Christkindlmarkt München und vielen mehr. Über 150 Großveranstaltungen. Mehr als 8 Mio. Besucher."
+>
+
+<section class="pt-32 pb-10">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label mb-4">Referenzen</div>
+    <h1 class="section-title">
+      Bewährt bei den Großen.<br>
+      Bereit für <span class="text-brand-orange">Ihr Event.</span>
+    </h1>
+    <p class="section-desc mt-4 max-w-2xl">
+      Über 150 Großveranstaltungen. Mehr als 8 Millionen Besucher. Von Festivals über Stadtfeste bis hin zu Corporate Events und KRITIS — MOVETOS und CrowdOps sind dort im Einsatz, wo es zählt.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Referenz Grid -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <!-- Filter -->
+    <div class="flex flex-wrap gap-2 mb-10">
+      {['Alle', 'Festival', 'Stadtfest', 'Corporate', 'KRITIS'].map((cat, i) => (
+        <button
+          class:list={[
+            "font-mono text-[11px] px-4 py-2 rounded-md border transition-all cursor-pointer",
+            i === 0 ? 'bg-brand-orange text-white border-brand-orange' : 'bg-transparent text-text-muted border-dark-border hover:border-dark-border-hover hover:text-text-secondary'
+          ]}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <ReferenceCard
+        name="BMW Motorrad Days"
+        category="Festival"
+        visitors="40.000+"
+        highlight="Kapazitätsauslastung +12% gegenüber Vorjahr"
+        quote="Mit CrowdOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen. Das hat unsere Planung grundlegend verändert."
+        quotePerson="Thomas M."
+        quoteRole="Veranstaltungsleiter"
+        tags={['MOVETOS SET', 'CrowdOps', '15 Kameras', '3 Tage']}
+      />
+      <ReferenceCard
+        name="Christkindlmarkt München"
+        category="Stadtfest"
+        visitors="3 Mio.+"
+        highlight="Setup in unter 4 Stunden"
+        quote="Die Kombination aus Echtzeit-Lagebild und gezielten Durchsagen hat uns eine völlig neue Steuerungsqualität gegeben."
+        quotePerson="Dr. Sarah K."
+        quoteRole="Stadtmarketing"
+        tags={['MOVETOS SET', 'CrowdOps', 'BDS', '28 Tage']}
+      />
+      <ReferenceCard
+        name="VW Wolfsburg"
+        category="Corporate"
+        visitors="25.000+"
+        highlight="Lückenlose Compliance-Dokumentation"
+        quote="Für uns als Industrieunternehmen ist die automatische Dokumentation Gold wert. Jede Maßnahme ist nachvollziehbar."
+        quotePerson="Michael R."
+        quoteRole="HSE Manager"
+        tags={['CrowdOps', 'Perimeterschutz', 'Compliance']}
+      />
+      <ReferenceCard
+        name="UCI Rad WM"
+        category="Festival"
+        visitors="120.000+"
+        highlight="8 Km Strecke, 22 Kamerastandorte"
+        quote="Eine Radsport-WM über eine ganze Stadtregion zu managen ist eine logistische Meisterleistung. CrowdOps war dabei unser wichtigstes Werkzeug."
+        quotePerson="Andreas L."
+        quoteRole="Projektleiter Sicherheit"
+        tags={['MOVETOS SET', 'CrowdOps', '22 Kameras', '7 Tage']}
+      />
+      <ReferenceCard
+        name="Plärrer Augsburg"
+        category="Stadtfest"
+        visitors="500.000+"
+        highlight="Besucherströme erstmals in Echtzeit sichtbar"
+        quote="Wir hatten erstmals ein klares Bild der Besucherströme. Das hat die Zusammenarbeit mit den Genehmigungsbehörden deutlich vereinfacht."
+        quotePerson="Christina H."
+        quoteRole="Veranstaltungsleiterin"
+        tags={['MOVETOS SET', 'CrowdOps', '14 Tage']}
+      />
+      <ReferenceCard
+        name="Tag der Deutschen Einheit"
+        category="Stadtfest"
+        visitors="1 Mio.+"
+        highlight="Nationale Sicherheitsanforderungen erfüllt"
+        quote="Bei einer Veranstaltung dieser politischen Bedeutung gibt es keine Kompromisse. MOVETOS und CrowdOps haben alle Anforderungen übertroffen."
+        quotePerson="Dr. Peter W."
+        quoteRole="Sicherheitskoordinator"
+        tags={['MOVETOS SET', 'CrowdOps', 'BDS/NDS', '3 Tage']}
+      />
+      <ReferenceCard
+        name="Flughafen München"
+        category="KRITIS"
+        visitors="Fortlaufend"
+        highlight="24/7 Betrieb auf kritischer Infrastruktur"
+        quote="Die Integration in unsere bestehenden Systeme verlief reibungslos. CrowdOps ergänzt unsere operative Steuerung ideal."
+        quotePerson="Dirk S."
+        quoteRole="Head of Operations"
+        tags={['CrowdOps', 'KRITIS', 'Perimeter', '24/7']}
+      />
+      <ReferenceCard
+        name="Airbus Pioneer Day"
+        category="Corporate"
+        visitors="15.000+"
+        highlight="Werksevent auf sensiblem Gelände"
+        quote="Auf einem Airbus-Werksgelände gelten besondere Sicherheitsanforderungen. CrowdOps hat uns die nötige Transparenz gegeben."
+        quotePerson="Julia F."
+        quoteRole="Event Management"
+        tags={['MOVETOS SET', 'CrowdOps', 'Perimeter']}
+      />
+      <ReferenceCard
+        name="Stoppelmarkt Vechta"
+        category="Stadtfest"
+        visitors="800.000+"
+        highlight="Größtes Volksfest Nordwestdeutschlands"
+        quote="Bei einem Volksfest dieser Größe ist CrowdOps inzwischen unverzichtbar. Die Echtzeit-Daten sind für unsere Einsatzleitung eine enorme Hilfe."
+        quotePerson="Markus D."
+        quoteRole="Einsatzleiter"
+        tags={['MOVETOS SET', 'CrowdOps', 'BDS', '5 Tage']}
+      />
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="section-title mx-auto" style="max-width: 480px;">
+      Ihr Event könnte<br>
+      <span class="text-brand-orange">hier stehen.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
+      Erzählen Sie uns von Ihrem Projekt. Wir zeigen Ihnen, was MOVETOS und CrowdOps für Sie leisten können.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href="/crowdops/demo/" class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a href="/kontakt/" class="btn btn-ghost">Kontakt aufnehmen</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
