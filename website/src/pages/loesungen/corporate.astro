@@ -44,7 +44,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 
     <div class="grid md:grid-cols-3 gap-6 mt-14">
       {[
-        { icon: '&#128274;', title: 'Zugangskontrolle & Perimeter', desc: 'Wer ist auf dem Gelände? Wo sind die kritischen Bereiche? Ohne Echtzeitübersicht bleiben diese Fragen offen.' },
+        { icon: '&#128274;', title: 'PVA & Detektions-Gates', desc: 'Wer ist auf dem Gelände? Personenvereinzelungsanlagen (PVA) und Detektions-Gates (z. B. CEIA) mit Schnittstelle zum Zugangsmanagement — für lückenlose Kontrolle.' },
         { icon: '&#128196;', title: 'Compliance-Anforderungen', desc: 'HSE-Vorgaben, Werkschutzrichtlinien, behördliche Auflagen — alles muss dokumentiert und nachweisbar sein.' },
         { icon: '&#128257;', title: 'Temporärer Bedarf', desc: 'Ein Werksfest dauert einen Tag, nicht ein Jahr. Fest installierte Systeme sind Overkill, keine Infrastruktur ist ein Risiko.' },
       ].map(item => (
@@ -73,10 +73,10 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
       {[
         { icon: '&#128247;', title: 'Echtzeit-Lagebild', desc: 'KI-gestützte Überwachung aller relevanten Bereiche. Personendichten, Zugangspunkte und Bewegungsmuster — alles auf einem Dashboard.' },
         { icon: '&#128196;', title: 'Automatische Compliance-Dokumentation', desc: 'Jede Maßnahme, jeder Alert, jede Entscheidung wird automatisch protokolliert. Export-fertig für HSE, Werkschutz und Behörden.' },
-        { icon: '&#128274;', title: 'Perimeterschutz', desc: 'Kabellose Kamerasysteme sichern das Gelände. Kritische Bereiche werden überwacht, Unbefugte erkannt.' },
+        { icon: '&#128274;', title: 'Perimeterschutz', desc: 'Kabellose Kamerasysteme überwachen den Randbereich des Geländes. Unbefugter Zutritt wird erkannt, kritische Zonen am Perimeter gesichert.' },
         { icon: '&#128226;', title: 'Gezielte Kommunikation', desc: 'Bereichsspezifische Durchsagen (BDS) und Notdurchsagen (NDS) — vom Lagebild direkt zur Ansprache. Ohne Funkgeräte-Chaos.' },
         { icon: '&#9889;', title: 'Aufbau in unter 5 Stunden', desc: 'Kabellose, netzautarke Infrastruktur. Plug & Play ohne Eingriff in bestehende IT-Systeme. Rückbau genauso schnell.' },
-        { icon: '&#128260;', title: 'Integration in bestehende Systeme', desc: 'TerrOps lässt sich in bestehende Werkschutz- und Sicherheitssysteme integrieren. API-Schnittstellen auf Anfrage.' },
+        { icon: '&#128260;', title: 'Integration & Zugangsmanagement', desc: 'TerrOps lässt sich in bestehende Werkschutz- und Sicherheitssysteme integrieren. Schnittstellen zu Zugangsmanagement, Detektions-Gates und Ticketsystemen.' },
       ].map(item => (
         <div class="reveal flex items-start gap-4 p-5 bg-surface border border-dark-border rounded-xl">
           <div class="text-xl shrink-0 mt-0.5" set:html={item.icon}></div>
@@ -127,24 +127,44 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 
     <div class="grid md:grid-cols-2 gap-5 mt-14 max-w-3xl">
       <ReferenceCard
-        name="VW Wolfsburg"
+        name="VW Familie Days Wolfsburg"
         category="Corporate"
-        visitors="25.000+"
-        highlight="Lückenlose Compliance-Dokumentation"
-        quote="Für uns als Industrieunternehmen ist die automatische Dokumentation Gold wert. Jede Maßnahme ist nachvollziehbar."
-        quotePerson="Michael R."
-        quoteRole="HSE Manager"
-        tags={['TerrOps', 'Perimeterschutz', 'Compliance']}
+        visitors="60.000"
+        highlight="Großes Firmenareal ohne einen Meter Kabel voll im Blick"
+        quote="Eine solche Fläche, in Echtzeit im Blick zu haben, ist was völlig neues für die Sicherheitsplanung."
+        quotePerson="H. Holzemer"
+        quoteRole="Fachplaner"
+        tags={['MOVETOS SET', 'TerrOps', '60 Kameras']}
       />
       <ReferenceCard
-        name="Airbus Pioneer Day"
+        name="Pioniers Day Eurocopter / Airbus"
         category="Corporate"
-        visitors="15.000+"
-        highlight="Werksevent auf sensiblem Gelände"
-        quote="Auf einem Airbus-Werksgelände gelten besondere Sicherheitsanforderungen. TerrOps hat uns die nötige Transparenz gegeben."
-        quotePerson="Julia F."
-        quoteRole="Event Management"
-        tags={['MOVETOS SET', 'TerrOps', 'Perimeter']}
+        visitors="35.000"
+        highlight="Gesamtes Firmengelände, 0 Meter Kabel"
+        quote="Einfacher kann man Sicherheit kaum planen und umsetzen."
+        quotePerson="M. Weiskopf"
+        quoteRole="Fachplaner"
+        tags={['BDS', '10x2 Lautsprecher']}
+      />
+      <ReferenceCard
+        name="BMW Jubiläumstage"
+        category="Corporate"
+        visitors="45.000"
+        highlight="Aufrüstung eines Werksgeländes"
+        quote="Ein Werksgelände als Eventfläche ist eine Herausforderung und eine Besucherinformations-/Notfallbeschallung ist das Basic. Wichtig ist, dass dieses Basic verlässlich und einfach funktioniert und das kann MOVETOS gut."
+        quotePerson="H. Schmitt"
+        quoteRole="Veranstalter"
+        tags={['BDS', '12x2 Lautsprecher + Licht']}
+      />
+      <ReferenceCard
+        name="Tag der Bundeswehr"
+        category="Corporate"
+        visitors="500.000"
+        highlight="15 Standorte, bis zu 45 ha Kasernenfläche ohne Kabel"
+        quote="Noch nie hatten wir die kritische Liegenschaft so gut im Blick, wie jetzt."
+        quotePerson="Projektleitung Bückeburg"
+        quoteRole="Veranstaltungssicherheit"
+        tags={['MOVETOS SET', 'TerrOps', 'BDS', '15 Standorte']}
       />
     </div>
 

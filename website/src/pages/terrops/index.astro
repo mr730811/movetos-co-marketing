@@ -206,9 +206,9 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
       <div class="reveal glass-card p-7">
         <div class="text-2xl mb-4">&#128176;</div>
-        <h3 class="font-display text-base font-bold mb-2">Mehr Kapazität nutzen</h3>
+        <h3 class="font-display text-base font-bold mb-2">Personal effizienter steuern</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Wissen, wo Platz ist. Bereiche nicht unnötig sperren. 10-15% mehr Kapazitätsauslastung bedeuten bessere Auslastung und höhere Effizienz.
+          Sicherheitspersonal, Sanitäter und Ordnungsdienst gezielt dorthin steuern, wo sie gebraucht werden. Weniger Personalaufwand durch datenbasierte Einsatzplanung.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.08s">
@@ -266,7 +266,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         <div class="w-10 h-10 rounded-xl bg-accent-green-dim flex items-center justify-center text-lg mb-4">&#128737;</div>
         <h3 class="font-display text-base font-bold text-text-primary group-hover:text-accent-green transition-colors mb-2">Events & Festivals</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Besucherströme in Echtzeit steuern, Kapazitäten optimieren, Sicherheit gewährleisten. Inklusive ROI-Calculator.
+          Besucherströme in Echtzeit steuern, Einsatzkräfte effizient koordinieren, Sicherheit gewährleisten.
         </p>
         <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
       </a>
@@ -305,13 +305,13 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 
     <div class="grid md:grid-cols-2 gap-3 mt-14">
       <FeatureCard icon="&#128200;" title="Echtzeit-Personenanalyse" description="Personenzahlen, Auslastung und Verweildauer über alle Bereiche — kontinuierlich und in Echtzeit." color="green" />
-      <FeatureCard icon="&#127758;" title="Personenstrom-Visualisierung" description="Sehen Sie, wohin sich Personen bewegen, wo Stauungen entstehen und wo Kapazität frei ist." color="blue" />
-      <FeatureCard icon="&#128227;" title="Gezielte Steuerung & Durchsagen" description="Bereichsspezifische Durchsagen über MOVETOS-Lautsprecher. Die richtige Info am richtigen Ort." color="orange" />
+      <FeatureCard icon="&#127758;" title="Personenstrom-Visualisierung" description="Sehen Sie, wohin sich Personen bewegen, wo Stauungen entstehen und wo Entlastung möglich ist." color="blue" />
+      <FeatureCard icon="&#128227;" title="Gezielte Steuerung & Durchsagen" description="Bereichsspezifische Durchsagen über MOVETOS BDS-Lautsprecher. Die richtige Info am richtigen Ort." color="orange" />
       <FeatureCard icon="&#128506;" title="Operatives Echtzeit-Cockpit" description="Ihr gesamtes Gelände auf einer interaktiven Karte. Alle Kennzahlen, alle Systeme, ein Blick." color="blue" />
       <FeatureCard icon="&#128196;" title="Dokumentation, die mitläuft" description="Automatische Protokollierung aller Vorgänge. Audit-Trail, Exportfunktionen, Behördenberichte." color="yellow" />
       <FeatureCard icon="&#128274;" title="Datenschutz als Designprinzip" description="Keine Gesichtserkennung. Privacy-Zonen. Automatische Maskierung. DSGVO-konform by Design." color="red" />
       <FeatureCard icon="&#128680;" title="Sicherheits-Alerts" description="Automatische Warnungen bei kritischer Personendichte. Stufenweise Eskalation mit Handlungsempfehlungen." color="red" />
-      <FeatureCard icon="&#128101;" title="Team-Management" description="Rollenbasierte Zugänge, Einsatz-Einladungen, Aufgabenverteilung. Ihr ganzes Team auf einer Plattform." color="purple" />
+      <FeatureCard icon="&#128260;" title="Schnittstellen & Integration" description="Einbindung von Detektions-Gates (CEIA), Personenzählung (Personenklicker), Ticket-Erfassung und Zugangsmanagement." color="purple" />
     </div>
   </div>
 </section>
@@ -352,9 +352,9 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
           <h3 class="font-display text-lg font-bold">MOVETOS SET</h3>
           <span class="font-mono text-[9px] px-2 py-0.5 bg-brand-orange-glow text-brand-orange rounded font-medium">HARDWARE</span>
         </div>
-        <p class="text-sm text-text-secondary leading-relaxed mb-4">Kabellose, netzautarke Infrastruktur — Kameras, Lautsprecher, mobile Leitstelle.</p>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">10 Mastsysteme (5,5 m) mit Kameras, LED-Beleuchtung, Lautsprechern und OCC — kabellos, netzautark, Plug & Play.</p>
         <div class="flex flex-col gap-1.5">
-          {['Kabellose Mastsysteme mit Kameras', 'Durchsage-System (BDS/NDS)', 'Mobile Leitstelle (OCC)', 'Netz- & stromautark', 'Plug & Play in unter 5 Stunden'].map(f => (
+          {['10 Mastsysteme mit Kameras, LED und Lautsprechern', 'Besucher-Durchsage-System (BDS) — einzeln, kabellos', 'Operation Control Centre (OCC)', 'Netz- & stromautark mit eigener Datenübertragung', 'Plug & Play in unter 5 Stunden'].map(f => (
             <div class="flex items-center gap-2 text-xs text-text-secondary">
               <span class="text-accent-green text-xs">&#10003;</span> {f}
             </div>
@@ -404,43 +404,43 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
       <ReferenceCard
         name="BMW Motorrad Days"
-        category="Festival"
-        visitors="40.000+"
-        highlight="Kapazitätsauslastung +12% gegenüber Vorjahr"
-        quote="Mit TerrOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen."
-        quotePerson="Thomas M."
-        quoteRole="Veranstaltungsleiter"
-        tags={['MOVETOS SET', 'TerrOps', '15 Kameras']}
+        category="Corporate"
+        visitors="135.000"
+        highlight="Veranstaltung trotz 15% Personalausfall am Eventtag"
+        quote="Sicherheit auf dem technischen Niveau ist überzeugend."
+        quotePerson="H. Schmitt"
+        quoteRole="Veranstalter"
+        tags={['MOVETOS SET', 'TerrOps', '20 Kameras', '3x']}
       />
       <ReferenceCard
-        name="Christkindlmarkt München"
-        category="Stadtfest"
-        visitors="3 Mio.+"
-        highlight="Setup in unter 4 Stunden"
-        quote="Die Kombination aus Echtzeit-Lagebild und gezielten Durchsagen hat uns eine völlig neue Steuerungsqualität gegeben."
-        quotePerson="Dr. Sarah K."
-        quoteRole="Stadtmarketing"
-        tags={['MOVETOS SET', 'TerrOps', 'BDS', '28 Tage']}
+        name="VW Familie Days Wolfsburg"
+        category="Corporate"
+        visitors="60.000"
+        highlight="Großes Firmenareal ohne einen Meter Kabel voll im Blick"
+        quote="Eine solche Fläche, in Echtzeit im Blick zu haben, ist was völlig neues für die Sicherheitsplanung."
+        quotePerson="H. Holzemer"
+        quoteRole="Fachplaner"
+        tags={['MOVETOS SET', 'TerrOps', '60 Kameras']}
       />
       <ReferenceCard
         name="UCI Rad WM"
-        category="Festival"
-        visitors="120.000+"
-        highlight="8 Km Strecke, 22 Kamerastandorte"
-        quote="Eine Radsport-WM über eine ganze Stadtregion zu managen ist eine logistische Meisterleistung. TerrOps war unser wichtigstes Werkzeug."
-        quotePerson="Andreas L."
-        quoteRole="Projektleiter Sicherheit"
-        tags={['MOVETOS SET', 'TerrOps', '22 Kameras']}
+        category="Sportevent"
+        visitors="1,15 Mio."
+        highlight="Gesamte Innstadt ohne Kabel, Einbindung Leitstelle Tirol"
+        quote="Nie war Sicherheit so einfach und zuverlässig."
+        quotePerson="Mag. Noggler"
+        quoteRole="Leitstelle Tirol"
+        tags={['MOVETOS SET', 'TerrOps', '20 Kameras', '7 Tage']}
       />
       <ReferenceCard
         name="Flughafen München"
         category="KRITIS"
         visitors="Fortlaufend"
-        highlight="24/7 Betrieb auf kritischer Infrastruktur"
-        quote="Die Integration in unsere bestehenden Systeme verlief reibungslos. TerrOps ergänzt unsere operative Steuerung ideal."
-        quotePerson="Dirk S."
-        quoteRole="Head of Operations"
-        tags={['TerrOps', 'KRITIS', 'Perimeter', '24/7']}
+        highlight="Datenübertragung über das gesamte Flugfeld"
+        quote="In zwei Tagen einsatzbereit, das hätten wir nie gedacht, mit Datenübertragung über das gesamte Flugfeld."
+        quotePerson="R. Götze"
+        quoteRole="Airport"
+        tags={['TerrOps', 'KRITIS', '40 Kameras', '24/7']}
       />
     </div>
 

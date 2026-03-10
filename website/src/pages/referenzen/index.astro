@@ -4,7 +4,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 ---
 <BaseLayout
   title="Referenzen — Bewährt bei den Großen | MOVETOS"
-  description="MOVETOS und TerrOps im Einsatz bei BMW, VW, UCI, Christkindlmarkt München und vielen mehr. Über 150 Großveranstaltungen. Mehr als 8 Mio. Besucher."
+  description="MOVETOS und TerrOps im Einsatz bei BMW, VW, UCI, Christkindlmarkt München und vielen mehr. Über 150 Großveranstaltungen. Mehr als 12,7 Mio. Besucher."
 >
 
 <section class="pt-32 pb-10">
@@ -15,7 +15,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
       Bereit für <span class="text-brand-orange">Ihr Event.</span>
     </h1>
     <p class="section-desc mt-4 max-w-2xl">
-      Über 150 Großveranstaltungen. Mehr als 8 Millionen Besucher. Von Festivals über Stadtfeste bis hin zu Corporate Events und KRITIS — unser Crowd Management System ist dort im Einsatz, wo es zählt.
+      Über 150 Großveranstaltungen. Mehr als 12,7 Millionen Besucher. Von Volksfesten über Stadtfeste, Sportevents und Konzerte bis hin zu Corporate Events und KRITIS — unser System ist dort im Einsatz, wo es zählt.
     </p>
   </div>
 </section>
@@ -27,7 +27,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
   <div class="max-w-[1200px] mx-auto px-6">
     <!-- Filter -->
     <div id="ref-filters" class="flex flex-wrap gap-2 mb-10">
-      {['Alle', 'Festival', 'Stadtfest', 'Corporate', 'KRITIS'].map((cat, i) => (
+      {['Alle', 'Corporate', 'Volksfest', 'Stadtfest', 'Sportevent', 'Konzert', 'KRITIS'].map((cat, i) => (
         <button
           data-filter={cat}
           class:list={[
@@ -41,105 +41,252 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Corporate -->
       <ReferenceCard
         name="BMW Motorrad Days"
-        category="Festival"
-        visitors="40.000+"
-        highlight="Kapazitätsauslastung +12% gegenüber Vorjahr"
-        quote="Mit TerrOps haben wir zum ersten Mal verstanden, wie sich unsere Besucher tatsächlich über das Gelände bewegen. Das hat unsere Planung grundlegend verändert."
-        quotePerson="Thomas M."
-        quoteRole="Veranstaltungsleiter"
-        tags={['MOVETOS SET', 'TerrOps', '15 Kameras', '3 Tage']}
-      />
-      <ReferenceCard
-        name="Christkindlmarkt München"
-        category="Stadtfest"
-        visitors="3 Mio.+"
-        highlight="Setup in unter 4 Stunden"
-        quote="Die Kombination aus Echtzeit-Lagebild und gezielten Durchsagen hat uns eine völlig neue Steuerungsqualität gegeben."
-        quotePerson="Dr. Sarah K."
-        quoteRole="Stadtmarketing"
-        tags={['MOVETOS SET', 'TerrOps', 'BDS', '28 Tage']}
-      />
-      <ReferenceCard
-        name="VW Wolfsburg"
         category="Corporate"
-        visitors="25.000+"
-        highlight="Lückenlose Compliance-Dokumentation"
-        quote="Für uns als Industrieunternehmen ist die automatische Dokumentation Gold wert. Jede Maßnahme ist nachvollziehbar."
-        quotePerson="Michael R."
-        quoteRole="HSE Manager"
-        tags={['TerrOps', 'Perimeterschutz', 'Compliance']}
+        visitors="135.000"
+        highlight="Veranstaltung trotz 15% Personalausfall am Eventtag"
+        quote="Sicherheit auf dem technischen Niveau ist überzeugend."
+        quotePerson="H. Schmitt"
+        quoteRole="Veranstalter"
+        tags={['SET', 'BDS', 'TerrOps', '3x']}
       />
       <ReferenceCard
-        name="UCI Rad WM"
-        category="Festival"
-        visitors="120.000+"
-        highlight="8 Km Strecke, 22 Kamerastandorte"
-        quote="Eine Radsport-WM über eine ganze Stadtregion zu managen ist eine logistische Meisterleistung. TerrOps war dabei unser wichtigstes Werkzeug."
-        quotePerson="Andreas L."
-        quoteRole="Projektleiter Sicherheit"
-        tags={['MOVETOS SET', 'TerrOps', '22 Kameras', '7 Tage']}
-      />
-      <ReferenceCard
-        name="Plärrer Augsburg"
-        category="Stadtfest"
-        visitors="500.000+"
-        highlight="Besucherströme erstmals in Echtzeit sichtbar"
-        quote="Wir hatten erstmals ein klares Bild der Besucherströme. Das hat die Zusammenarbeit mit den Genehmigungsbehörden deutlich vereinfacht."
-        quotePerson="Christina H."
-        quoteRole="Veranstaltungsleiterin"
-        tags={['MOVETOS SET', 'TerrOps', '14 Tage']}
-      />
-      <ReferenceCard
-        name="Tag der Deutschen Einheit"
-        category="Stadtfest"
-        visitors="1 Mio.+"
-        highlight="Nationale Sicherheitsanforderungen erfüllt"
-        quote="Bei einer Veranstaltung dieser politischen Bedeutung gibt es keine Kompromisse. MOVETOS und TerrOps haben alle Anforderungen übertroffen."
-        quotePerson="Dr. Peter W."
-        quoteRole="Sicherheitskoordinator"
-        tags={['MOVETOS SET', 'TerrOps', 'BDS/NDS', '3 Tage']}
-      />
-      <ReferenceCard
-        name="Flughafen München"
-        category="KRITIS"
-        visitors="Fortlaufend"
-        highlight="24/7 Betrieb auf kritischer Infrastruktur"
-        quote="Die Integration in unsere bestehenden Systeme verlief reibungslos. TerrOps ergänzt unsere operative Steuerung ideal."
-        quotePerson="Dirk S."
-        quoteRole="Head of Operations"
-        tags={['TerrOps', 'KRITIS', 'Perimeter', '24/7']}
-      />
-      <ReferenceCard
-        name="Airbus Pioneer Day"
+        name="VW Familie Days Wolfsburg"
         category="Corporate"
-        visitors="15.000+"
-        highlight="Werksevent auf sensiblem Gelände"
-        quote="Auf einem Airbus-Werksgelände gelten besondere Sicherheitsanforderungen. TerrOps hat uns die nötige Transparenz gegeben."
-        quotePerson="Julia F."
-        quoteRole="Event Management"
-        tags={['MOVETOS SET', 'TerrOps', 'Perimeter']}
+        visitors="60.000"
+        highlight="Großes Firmenareal ohne einen Meter Kabel voll im Blick"
+        quote="Eine solche Fläche, in Echtzeit im Blick zu haben, ist was völlig neues für die Sicherheitsplanung."
+        quotePerson="H. Holzemer"
+        quoteRole="Fachplaner"
+        tags={['MOVETOS SET', 'TerrOps', '60 Kameras']}
       />
       <ReferenceCard
         name="Tag der Bundeswehr"
         category="Corporate"
-        visitors="250.000+"
-        highlight="Höchste Sicherheitsanforderungen auf militärischem Gelände"
-        quote="Die Kombination aus kabelloser Infrastruktur und KI-gestützter Lagebildführung hat die Sicherheitsarchitektur des Events auf ein neues Niveau gehoben."
-        quotePerson="Hauptmann Florian K."
+        visitors="500.000"
+        highlight="15 Standorte, bis zu 45 ha Kasernenfläche ohne Kabel"
+        quote="Noch nie hatten wir die kritische Liegenschaft so gut im Blick, wie jetzt."
+        quotePerson="Projektleitung Bückeburg"
         quoteRole="Veranstaltungssicherheit"
-        tags={['MOVETOS SET', 'TerrOps', 'Perimeter', 'BDS']}
+        tags={['SET', 'BDS', 'TerrOps', '15 Standorte']}
+      />
+      <ReferenceCard
+        name="Pioniers Day Eurocopter / Airbus"
+        category="Corporate"
+        visitors="35.000"
+        highlight="Gesamtes Firmengelände, 0 Meter Kabel"
+        quote="Einfacher kann man Sicherheit kaum planen und umsetzen."
+        quotePerson="M. Weiskopf"
+        quoteRole="Fachplaner"
+        tags={['BDS', '10x2 Lautsprecher']}
+      />
+      <ReferenceCard
+        name="BMW Jubiläumstage"
+        category="Corporate"
+        visitors="45.000"
+        highlight="Aufrüstung eines Werksgeländes"
+        quote="Ein Werksgelände als Eventfläche ist eine Herausforderung und eine Besucherinformations-/Notfallbeschallung ist das Basic. Wichtig ist, dass dieses Basic verlässlich und einfach funktioniert und das kann MOVETOS gut."
+        quotePerson="H. Schmitt"
+        quoteRole="Veranstalter"
+        tags={['BDS', '12x2 Lautsprecher + Licht']}
+      />
+      <ReferenceCard
+        name="Wiener Linien"
+        category="Corporate"
+        visitors="35.000"
+        highlight="Innenstadt Wien, ohne Kabel, Traversen, Überfahrschutz"
+        quote="Das live Lagebild macht die Veranstaltungsleitung deutlich sicherer und einfacher, für alle Beteiligten."
+        quotePerson="G. Geczek"
+        quoteRole="RK Wien"
+        tags={['MOVETOS SET', 'TerrOps', '12 Kameras']}
+      />
+      <!-- Volksfest -->
+      <ReferenceCard
+        name="Plärrer Augsburg"
+        category="Volksfest"
+        visitors="1,2 Mio."
+        highlight="Einbindung aller Fahrgeschäfte, 0 m Kabel verlegt"
+        quote="An einem Tag alles auf und abgebaut, so einfach hatte ich es mir nicht vorgestellt."
+        quotePerson="F. Wüst"
+        quoteRole="Marktleiter"
+        tags={['TerrOps', 'BDS', '14x2 Lautsprecher', '4x']}
       />
       <ReferenceCard
         name="Stoppelmarkt Vechta"
+        category="Volksfest"
+        visitors="600.000"
+        highlight="Ohne Kabel und Traversen, mit Einbindung der Polizei"
+        quote="Mit der Technik können wir beim nächsten Mal deutlich besser unser Personal planen."
+        quotePerson="C. Thöle"
+        quoteRole="Marktleiter"
+        tags={['MOVETOS SET', 'TerrOps', '20 Kameras', '7 Tage']}
+      />
+      <ReferenceCard
+        name="Japan Tag Düsseldorf"
+        category="Volksfest"
+        visitors="800.000"
+        highlight="Entlang der Rhein Promenade"
+        quote="Ein live Bild, in Farbe, von allen Standorten und das bei der Besuchermenge, hatte ich nicht geglaubt."
+        quotePerson=""
+        quoteRole="Veranstalter"
+        tags={['MOVETOS SET', 'TerrOps', '20 Kameras']}
+      />
+      <!-- Stadtfest -->
+      <ReferenceCard
+        name="Christkindelmarkt München"
         category="Stadtfest"
-        visitors="800.000+"
-        highlight="Größtes Volksfest Nordwestdeutschlands"
-        quote="Bei einem Volksfest dieser Größe ist TerrOps inzwischen unverzichtbar. Die Echtzeit-Daten sind für unsere Einsatzleitung eine enorme Hilfe."
-        quotePerson="Markus D."
-        quoteRole="Einsatzleiter"
-        tags={['MOVETOS SET', 'TerrOps', 'BDS', '5 Tage']}
+        visitors="7,5 Mio."
+        highlight="Im gesamten Stadtbereich keine Kabel, Traversen, Überfahrschutz"
+        quote="Es war sehr einfach und ohne großen Aufwand im Aufbau und in der Bedienung. So ist Eventsicherheit einfach und sinnvoll."
+        quotePerson="J. Wagle"
+        quoteRole="Veranstalter"
+        tags={['BDS', '16x2 Lautsprecher', '3x 30 Tage']}
+      />
+      <ReferenceCard
+        name="Tag der Deutschen Einheit Erfurt"
+        category="Stadtfest"
+        visitors="300.000"
+        highlight="Gesamter Innenstadtbereich ohne Kabel"
+        quote="Die zentrale Veranstaltungsleitung hatte jederzeit die Lage im Blick."
+        quotePerson="J. Wagner"
+        quoteRole="Veranstalter"
+        tags={['MOVETOS SET', 'TerrOps', '40 Kameras', '4 Tage']}
+      />
+      <ReferenceCard
+        name="Tanz der Marktweiber"
+        category="Stadtfest"
+        visitors="45.000"
+        highlight="Viktualien Markt München, alles ohne Kabel"
+        quote="Die technischen Lösungen waren überzeugend und haben genau das gemacht, was wir erwartet haben."
+        quotePerson="M. Kerscher"
+        quoteRole="Marktmeister"
+        tags={['SET', 'BDS', 'TerrOps', '3x']}
+      />
+      <ReferenceCard
+        name="Weihnachtsmarkt Mühlheim"
+        category="Stadtfest"
+        visitors="15.000"
+        highlight="Auf einer Ruhrinsel, alles ohne Kabel"
+        quote="Mit der Lösung ist Sicherheit weder teuer noch problematisch. Das hat uns allen geholfen."
+        quotePerson="T. Weber"
+        quoteRole="Veranstalter"
+        tags={['BDS', '4x2 Lautsprecher + Licht']}
+      />
+      <!-- Sportevent -->
+      <ReferenceCard
+        name="UCI Rad WM"
+        category="Sportevent"
+        visitors="1,15 Mio."
+        highlight="Gesamte Innstadt ohne Kabel, Einbindung Leitstelle Tirol"
+        quote="Nie war Sicherheit so einfach und zuverlässig."
+        quotePerson="Mag. Noggler"
+        quoteRole="Leitstelle Tirol"
+        tags={['MOVETOS SET', 'TerrOps', '20 Kameras', '7 Tage']}
+      />
+      <ReferenceCard
+        name="Allianz Arena Last Mile"
+        category="Sportevent"
+        visitors="60.000"
+        highlight="Last Mile Lösung, keine Stolperfallen vor dem Stadion"
+        quote="Die Technik ist überzeugend und kann bei an jedem Stadion eingebunden werden."
+        quotePerson="B. Nass"
+        quoteRole="DFL"
+        tags={['MOVETOS SET', 'TerrOps', '10 Kameras']}
+      />
+      <ReferenceCard
+        name="Hockey Cup Grünwald"
+        category="Sportevent"
+        visitors="2.500"
+        highlight="Sicherheitsrelevante Aufrüstung einer Sportanlage"
+        quote="Einfach, zuverlässig und mit wenig Aufwand. Eventsicherheit wird dadurch einfacher."
+        quotePerson="J. Verleger"
+        quoteRole="Locationmanager"
+        tags={['MOVETOS SET', 'TerrOps', '10 Kameras', '2 Tage']}
+      />
+      <ReferenceCard
+        name="Tabaluga Golf Charity"
+        category="Sportevent"
+        visitors="250"
+        highlight="50 ha Golfplatz, alles ohne 1 m Kabel"
+        quote="Auf einem Golfplatz ist es wichtig, dass alles ohne Kabel ist, funktioniert und die Besucher sicher sind."
+        quotePerson="M. Tepel"
+        quoteRole="Sponsor"
+        tags={['BDS', '4x2 Lautsprecher']}
+      />
+      <ReferenceCard
+        name="Après Ski Mosshütte Seefeld"
+        category="Sportevent"
+        visitors="8.000"
+        highlight="Party-Event oben auf der Piste"
+        quote="Einfacher geht Sicherheit wirklich nicht."
+        quotePerson="R. Schneider"
+        quoteRole="Veranstalter"
+        tags={['BDS', '2x2 Lautsprecher + Licht']}
+      />
+      <ReferenceCard
+        name="TdoT Segelsportzentrum Königsdorf"
+        category="Sportevent"
+        visitors="12.000"
+        highlight="Auf einer grünen Wiese, alles kabellos"
+        quote="Schnell auf- und abgebaut und alles da, was die Behörde wollte."
+        quotePerson="A. Sternbeck"
+        quoteRole="Veranstalter"
+        tags={['BDS', '4x2 Lautsprecher + Licht']}
+      />
+      <!-- Konzert -->
+      <ReferenceCard
+        name="Wiener Philharmoniker Schönbrunn"
+        category="Konzert"
+        visitors="20.000"
+        highlight="Denkmalgeschützter Schlosspark, keine Kabel erlaubt"
+        quote="Echtzeitlagebild an allen Eingängen, ohne Kabel und Traversen. Das war was völlig neues."
+        quotePerson="G. Geczek"
+        quoteRole="RK Wien"
+        tags={['MOVETOS SET', 'TerrOps', '20 Kameras']}
+      />
+      <ReferenceCard
+        name="Ärzte Konzert Tempelhof"
+        category="Konzert"
+        visitors="120.000"
+        highlight="4 Eingänge, 1.000 m Laufwege, 0 Meter Kabel"
+        quote="Einfach in der Bedienung, und wirklich flexibel im Aufbau. Wir mussten an keine Kabel, Traversen oder Strom denken."
+        quotePerson="S. Mohnen"
+        quoteRole="Veranstalter"
+        tags={['BDS', '6x2 Lautsprecher + Licht']}
+      />
+      <ReferenceCard
+        name="Braas Wiesn"
+        category="Konzert"
+        visitors="30.000"
+        highlight="Veranstaltung auf freier Wiese"
+        quote="Hier muss es schnell und unkompliziert gehen und das kann das System."
+        quotePerson=""
+        quoteRole="Veranstalter"
+        tags={['BDS', '4x2 Lautsprecher', '2x']}
+      />
+      <!-- Weitere -->
+      <ReferenceCard
+        name="Flohmarkt Münchner Wiesn"
+        category="Stadtfest"
+        visitors="100.000"
+        highlight="Freie Fläche auf der Theresien Wiese München"
+        quote="Eine freie Fläche und bei schönem Wetter viele Familien, da muss Sicherheit einfach funktionieren."
+        quotePerson=""
+        quoteRole="BRK, Veranstalter"
+        tags={['BDS', '5x2 Lautsprecher + Licht', '3x']}
+      />
+      <!-- KRITIS -->
+      <ReferenceCard
+        name="Flughafen München"
+        category="KRITIS"
+        visitors="Fortlaufend"
+        highlight="Einbindung in die Leitstelle Sicherheit, gesamtes Flugfeld"
+        quote="In zwei Tagen einsatzbereit, das hätten wir nie gedacht, mit Datenübertragung über das gesamte Flugfeld."
+        quotePerson="R. Götze"
+        quoteRole="Airport"
+        tags={['MOVETOS SET', 'TerrOps', '40 Kameras', '24/7']}
       />
     </div>
   </div>
