@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ReferenceCard from '../../../components/ReferenceCard.astro';
+---
+<BaseLayout
+  title="Perimeter Protection & Situational Awareness for Critical Infrastructure | MOVETOS"
+  description="24/7 situational awareness and perimeter protection for critical infrastructure. AI-powered monitoring for airports, energy providers and sensitive facilities. Mobile or permanent solution."
+  lang="en"
+>
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+  <img src={`${import.meta.env.BASE_URL}/images/tile-kritis.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-2xl bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-lg border border-white/60">
+      <div class="label mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+        Critical Infrastructure
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-800 tracking-tight leading-[1.08]">
+        Perimeter Protection &<br>
+        <span class="text-brand-orange">Situational Awareness.</span>
+      </h1>
+      <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+        AI-powered monitoring and real-time situational awareness for airports, energy providers and critical infrastructure. Mobile or permanent. 24/7. Made in Germany.
+      </p>
+      <div class="flex flex-wrap items-center gap-3 mt-8">
+        <a href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Consultation &rarr;</a>
+        <a href="tel:+4981572934870" class="btn btn-ghost bg-white/50">&#9742; 08157 2934870</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CHALLENGES ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">The Challenge</div>
+    <div class="section-title">Protecting critical infrastructure.<br><span class="text-brand-orange">Around the clock.</span></div>
+    <p class="section-desc">
+      Airports, energy providers, data centers — critical infrastructure operators face special requirements for perimeter protection and situational awareness. MOVETOS delivers the technology for it.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      {[
+        { icon: '&#128274;', title: 'Perimeter Security', desc: 'Extensive premises, numerous access points, various security zones — everything must be monitored and documented.' },
+        { icon: '&#128337;', title: '24/7 Operations', desc: 'Critical infrastructure has no opening hours. Monitoring systems must operate reliably around the clock.' },
+        { icon: '&#128200;', title: 'Real-time Situational Awareness', desc: 'In an emergency, seconds count. Operational decisions require a current, complete situational picture — not radio calls.' },
+      ].map(item => (
+        <div class="reveal glass-card p-7">
+          <div class="text-2xl mb-3" set:html={item.icon}></div>
+          <h3 class="font-display text-base font-bold mb-2">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== SOLUTION ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">The Solution</div>
+    <div class="section-title">Intelligent situational awareness.<br><span class="text-brand-orange">From camera to action.</span></div>
+    <p class="section-desc">
+      TerrOps delivers an AI-powered real-time situational picture with automatic anomaly detection. MOVETOS SET supplements the wireless infrastructure as needed — rapidly deployable, immediately operational.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { icon: '&#128247;', title: 'AI-powered Video Analysis', desc: 'Automatic detection of anomalies, crowd densities and movement patterns. Integration of existing camera systems or supplementation with MOVETOS SET.' },
+        { icon: '&#128506;', title: 'Real-time Situational Picture', desc: 'Map-based overview of all monitored areas. Zones, cameras, alerts and measures — all on one screen.' },
+        { icon: '&#128680;', title: 'Automatic Alerting', desc: 'Defined thresholds automatically trigger alerts. Recommended actions are displayed directly in the system.' },
+        { icon: '&#128226;', title: 'Integrated Announcements', desc: 'Targeted communication to defined areas. Area broadcasts and emergency broadcasts directly from the situational picture.' },
+        { icon: '&#128196;', title: 'Seamless Documentation', desc: 'Automatic logging of all incidents. Audit trail for regulatory evidence and internal audits.' },
+        { icon: '&#128260;', title: 'Integration into OCC/Control Center', desc: 'TerrOps complements existing control center systems. Data export, API interfaces and connection to existing infrastructure.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-4 p-5 bg-surface border border-dark-border rounded-xl">
+          <div class="text-xl shrink-0 mt-0.5" set:html={item.icon}></div>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== DEPLOYMENT SCENARIOS ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Deployment Scenarios</div>
+    <div class="section-title">Where MOVETOS supports critical infrastructure<br><span class="text-brand-orange">operators.</span></div>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { title: 'Airports', desc: 'Perimeter security, terminal monitoring, apron safety. Integration into existing airport control centers.' },
+        { title: 'Energy Providers', desc: 'Monitoring of power plant premises, substations and sensitive facilities. Mobile deployment during maintenance phases.' },
+        { title: 'Data Centers', desc: 'Perimeter protection and access monitoring for high-security sites. 24/7 monitoring with automatic alerting.' },
+        { title: 'Government & Public Institutions', desc: 'Temporary security infrastructure for special situations. Rapidly deployable, immediately operational.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-3 p-5 bg-surface border border-dark-border rounded-xl">
+          <span class="text-brand-orange text-xs mt-1">&#10003;</span>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== REFERENCES ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Proven at critical infrastructure</div>
+    <div class="section-title">Critical Infrastructure Reference.</div>
+
+    <div class="max-w-md mt-14">
+      <ReferenceCard
+        name="Munich Airport"
+        category="Critical Infrastructure"
+        visitors="Ongoing"
+        highlight="24/7 operations on critical infrastructure"
+        quote="Die Integration in unsere bestehenden Systeme verlief reibungslos. TerrOps ergänzt unsere operative Steuerung ideal."
+        quotePerson="Dirk S."
+        quoteRole="Head of Operations"
+        tags={['TerrOps', 'Critical Infrastructure', 'Perimeter', '24/7']}
+      />
+    </div>
+
+    <div class="text-center mt-10">
+      <a href={`${import.meta.env.BASE_URL}/en/references/`} class="btn btn-ghost">View All References &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Consultation</div>
+    <div class="section-title mx-auto" style="max-width: 540px;">
+      Your infrastructure.<br>
+      <span class="text-brand-orange">Our protection.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+      Critical infrastructure requirements are individual. Talk to our experts about your specific needs for perimeter protection and situational awareness.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Consultation &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

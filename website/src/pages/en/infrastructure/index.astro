@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SocialProofBar from '../../../components/SocialProofBar.astro';
+---
+<BaseLayout
+  title="MOVETOS SET — Wireless Smart Infrastructure | MOVETOS"
+  description="Wireless, off-grid security infrastructure for large-scale events. Cameras, PA systems, mobile command center — set up in under 5 hours."
+>
+
+<section class="pt-32 pb-20">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label mb-4">Hardware for Crowd Management</div>
+    <h1 class="section-title">
+      Infrastructure that adapts to the<br>
+      event — <span class="text-brand-orange">not the other way around.</span>
+    </h1>
+    <p class="section-desc mt-4 max-w-2xl">
+      The event determines the location. Not the power outlet. MOVETOS SET is the wireless, off-grid hardware foundation for professional crowd management — set up in under 5 hours, deployable anywhere.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+<SocialProofBar compact lang="en" />
+<div class="divider"></div>
+
+<!-- Key Features -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-6">
+      {[
+        {
+          icon: '&#128247;',
+          title: 'MOVETOS SET — Camera System',
+          desc: '10 wireless mast systems (5.5 m) with HD cameras, LED lighting and speakers — together with the OCC as one system. Plug & Play, wireless, off-grid.',
+          link: `${import.meta.env.BASE_URL}/en/infrastructure/camera-systems/`,
+          specs: ['Full HD / 4K', 'Weatherproof IP67', 'LED Lighting', '5.5 m Mast Height'],
+        },
+        {
+          icon: '&#128227;',
+          title: 'Public Address System (BDS)',
+          desc: 'Individual wireless PA systems with speakers, radio-controlled, optionally with LED lighting and dispatcher solution for automated announcements.',
+          link: `${import.meta.env.BASE_URL}/en/infrastructure/pa-systems/`,
+          specs: ['100V Technology', '100 dB at 100 m', 'Sectoral Control', 'Weatherproof'],
+        },
+        {
+          icon: '&#127981;',
+          title: 'Operation Control Centre (OCC)',
+          desc: 'Your operational hub on site — part of the MOVETOS SET system. Fully equipped with monitors, network and TerrOps access. Optionally with external workstation in a remote command center.',
+          link: `${import.meta.env.BASE_URL}/en/infrastructure/command-center/`,
+          specs: ['Turnkey', 'Multi-Monitor', 'Climate-Controlled', 'Off-grid'],
+        },
+      ].map((item, i) => (
+        <div class="reveal glass-card p-8 group hover:border-brand-orange/20 transition-all" style={`transition-delay: ${i * 0.1}s`}>
+          <div class="text-3xl mb-4"><Fragment set:html={item.icon} /></div>
+          <h3 class="font-display text-xl font-bold mb-3 group-hover:text-brand-orange transition-colors">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed mb-5">{item.desc}</p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            {item.specs.map(spec => (
+              <span class="font-mono text-[9px] px-2 py-1 bg-surface border border-dark-border rounded text-text-muted">{spec}</span>
+            ))}
+          </div>
+          <a href={item.link} class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium hover:text-brand-orange-light transition-colors">
+            Details &rarr;
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Advantages -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Why MOVETOS SET</div>
+    <div class="section-title">Full Flexibility.<br>Zero Compromises.</div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+      {[
+        { icon: '&#9889;', title: 'Under 5 Hours', desc: 'From delivery to live operation. Plug & Play without excavation or cabling.' },
+        { icon: '&#128267;', title: 'Off-grid', desc: 'Own power supply, own mesh network. Independent of local infrastructure.' },
+        { icon: '&#127758;', title: 'Deployable Anywhere', desc: 'Meadow, parking lot, city center — wherever your event takes place.' },
+        { icon: '&#128260;', title: 'Modularly Scalable', desc: 'From 5 to 50 masts. The system grows with your event.' },
+      ].map((item, i) => (
+        <div class="reveal text-center p-6" style={`transition-delay: ${i * 0.08}s`}>
+          <div class="text-2xl mb-3"><Fragment set:html={item.icon} /></div>
+          <h4 class="font-display text-sm font-bold mb-2">{item.title}</h4>
+          <p class="text-xs text-text-muted leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TerrOps Integration -->
+<section class="py-14">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="reveal bg-gradient-to-br from-accent-blue/[0.06] to-accent-blue/[0.02] border border-accent-blue/10 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div>
+        <h3 class="font-display text-xl font-bold mb-2">Even smarter with TerrOps</h3>
+        <p class="text-sm text-text-secondary max-w-lg">
+          MOVETOS SET provides the eyes and ears. TerrOps provides the brain. Together they create a closed control loop — from detection to action.
+        </p>
+      </div>
+      <a  href={`${import.meta.env.BASE_URL}/en/terrops/`} class="btn btn-primary btn-sm whitespace-nowrap">Discover TerrOps &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Consultation</div>
+    <div class="section-title mx-auto" style="max-width: 480px;">
+      Which infrastructure fits<br>your <span class="text-brand-orange">event?</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
+      Every event is different. We advise you individually — from planning to implementation.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a  href={`${import.meta.env.BASE_URL}/en/contact/`} class="btn btn-primary">Request Consultation &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

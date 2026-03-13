@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Operation Control Centre (OCC) — Your Operational Hub | MOVETOS"
+  description="Turnkey mobile command center (OCC) for large-scale events. Multi-monitor, climate-controlled, off-grid, with TerrOps pre-installed. Part of the MOVETOS SET system."
+>
+
+<section class="pt-32 pb-20">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
+      <a  href={`${import.meta.env.BASE_URL}/en/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
+      <span>/</span>
+      <a  href={`${import.meta.env.BASE_URL}/en/infrastructure/`} class="hover:text-text-secondary transition-colors">Infrastructure</a>
+      <span>/</span>
+      <span class="text-brand-orange">Mobile Command Center</span>
+    </nav>
+
+    <div class="label mb-4">Operation Control Centre (OCC)</div>
+    <h1 class="section-title">
+      Your operational hub.<br>
+      <span class="text-brand-orange">Ready instantly.</span>
+    </h1>
+    <p class="section-desc mt-4 max-w-2xl">
+      The Operation Control Centre (OCC) is part of the MOVETOS SET system — a turnkey command center with monitors, network and TerrOps access. Optionally with external workstation in a remote command center.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="font-display text-2xl font-bold mb-6">Equipment</h2>
+        <div class="flex flex-col gap-4">
+          {[
+            { label: 'Displays', value: 'Multi-Monitor Setup', desc: 'Up to 6 screens for dashboard, maps and camera streams' },
+            { label: 'TerrOps', value: 'Pre-installed', desc: 'Immediate access to the operational situation picture' },
+            { label: 'Communication', value: 'Radio + VoIP Integrated', desc: 'Direct connection to the operations team in the field' },
+            { label: 'Climate Control', value: 'Heating + Cooling', desc: 'Comfortable working climate at any outside temperature' },
+            { label: 'Power Supply', value: 'Off-grid', desc: 'Own power supply, independent of the event location' },
+            { label: 'Network', value: 'MOVETOS Mesh', desc: 'Automatic connection to all cameras and speakers' },
+          ].map((spec, i) => (
+            <div class="reveal flex items-start gap-4 p-4 bg-dark-card border border-dark-border rounded-xl" style={`transition-delay: ${i * 0.06}s`}>
+              <div class="flex-1">
+                <div class="flex items-baseline gap-2 mb-1">
+                  <span class="font-mono text-[9px] uppercase tracking-wider text-text-muted">{spec.label}</span>
+                  <span class="font-display text-sm font-semibold text-text-primary">{spec.value}</span>
+                </div>
+                <p class="text-xs text-text-muted">{spec.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <img src={`${import.meta.env.BASE_URL}/images/occ-inside.jpg`} alt="MOVETOS Operation Control Centre (OCC) interior view" class="w-full rounded-xl shadow-xl mb-8 object-cover max-h-72" loading="lazy" />
+        <h2 class="font-display text-2xl font-bold mb-6">Deployment Scenarios</h2>
+        <div class="flex flex-col gap-4">
+          {[
+            { title: 'Festivals & Concerts', desc: 'Central control for the entire event grounds. All camera feeds, visitor flows and announcements in one room.' },
+            { title: 'City Festivals & Fairs', desc: 'Coordination across expansive city center areas. Multiple command center workstations for different areas of responsibility.' },
+            { title: 'Corporate & Critical Infrastructure', desc: 'Temporary command center for factory events, trade shows or special security situations on industrial premises.' },
+          ].map((scenario, i) => (
+            <div class="reveal glass-card p-5" style={`transition-delay: ${i * 0.08}s`}>
+              <h3 class="font-display text-base font-bold mb-2">{scenario.title}</h3>
+              <p class="text-sm text-text-secondary leading-relaxed">{scenario.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="py-20 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="section-title mx-auto" style="max-width: 480px;">
+      Your command center,<br><span class="text-brand-orange">anywhere.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4">We configure your OCC individually according to your requirements.</p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a  href={`${import.meta.env.BASE_URL}/en/contact/`} class="btn btn-primary">Request Consultation &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/en/infrastructure/`} class="btn btn-ghost">&larr; All Systems</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

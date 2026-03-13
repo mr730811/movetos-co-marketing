@@ -1,0 +1,377 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SocialProofBar from '../../components/SocialProofBar.astro';
+import StatsCounter from '../../components/StatsCounter.astro';
+
+---
+<BaseLayout title="MOVETOS — Operations Intelligence. Made in Germany." description="AI-powered situational awareness and wireless infrastructure — for large-scale events, corporate security, and critical infrastructure. Proven since 2017.">
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+  <img src={`${import.meta.env.BASE_URL}/images/hero-bg.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-2xl bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-lg border border-white/60">
+      <div class="label mb-4">Operations Intelligence. Made in Germany.</div>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-800 tracking-tight leading-[1.08]">
+        Detect. Assess.<br>
+        <span class="text-brand-orange">Control.</span>
+      </h1>
+      <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+        AI-powered situational awareness and wireless infrastructure — for large-scale events, corporate security, and critical infrastructure. Set up in under 5 hours, proven with over 12.7 million visitors. Made in Germany.
+      </p>
+
+      <!-- Mini Stats -->
+      <div class="flex flex-wrap gap-5 mt-6 py-3">
+        <div>
+          <div class="font-display text-2xl font-800 text-brand-orange">Since 2017</div>
+          <div class="text-[11px] text-text-muted font-mono">in operation</div>
+        </div>
+        <div class="w-px bg-dark-border"></div>
+        <div>
+          <div class="font-display text-2xl font-800 text-accent-blue">12.7M+</div>
+          <div class="text-[11px] text-text-muted font-mono">visitors managed</div>
+        </div>
+        <div class="w-px bg-dark-border"></div>
+        <div>
+          <div class="font-display text-2xl font-800 text-accent-green">&lt; 5h</div>
+          <div class="text-[11px] text-text-muted font-mono">setup time</div>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap items-center gap-3 mt-6">
+        <a href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Demo &rarr;</a>
+        <a href={`${import.meta.env.BASE_URL}/en/terrops/`} class="btn btn-ghost bg-white/50">Discover TerrOps</a>
+        <a href="tel:+4981572934870" class="hidden md:inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-brand-orange transition-colors ml-1">
+          &#9742; 08157 2934870
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUTION TILES ===== -->
+<section class="py-12 md:py-16">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center mb-3">Solutions for Your Industry</div>
+    <p class="text-center text-sm text-text-muted max-w-lg mx-auto mb-10">One system. Three areas of application. Find your use case.</p>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- Events & Festivals -->
+      <a href={`${import.meta.env.BASE_URL}/en/solutions/events/`} class="reveal glass-card overflow-hidden border-t-2 border-t-accent-green hover:border-accent-green/40 transition-all group no-underline">
+        <img src={`${import.meta.env.BASE_URL}/images/tile-events.jpg`} alt="Christmas market with MOVETOS monitoring" class="w-full h-36 object-cover" loading="lazy" />
+        <div class="p-7 pt-5">
+        <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-accent-green transition-colors">Events & Festivals</h3>
+        <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Crowd Management</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Manage crowd flows, efficiently coordinate response teams, and ensure safety — at festivals, city events, and sports events.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          Learn more &rarr;
+        </span>
+        </div>
+      </a>
+
+      <!-- Corporate -->
+      <a href={`${import.meta.env.BASE_URL}/en/solutions/corporate/`} class="reveal glass-card overflow-hidden border-t-2 border-t-accent-blue hover:border-accent-blue/40 transition-all group no-underline" style="transition-delay: 0.1s">
+        <img src={`${import.meta.env.BASE_URL}/images/tile-corporate.jpg`} alt="VW Family Days Corporate Event" class="w-full h-36 object-cover" loading="lazy" />
+        <div class="p-7 pt-5">
+        <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-accent-blue transition-colors">Corporate</h3>
+        <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Event Security</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Compliance-ready monitoring for corporate events, factory premises, and sensitive corporate locations.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          Learn more &rarr;
+        </span>
+        </div>
+      </a>
+
+      <!-- KRITIS -->
+      <a href={`${import.meta.env.BASE_URL}/en/solutions/critical-infrastructure/`} class="reveal glass-card overflow-hidden border-t-2 border-t-brand-orange hover:border-brand-orange/40 transition-all group no-underline" style="transition-delay: 0.2s">
+        <img src={`${import.meta.env.BASE_URL}/images/tile-kritis.jpg`} alt="Munich Airport critical infrastructure monitoring" class="w-full h-36 object-cover" loading="lazy" />
+        <div class="p-7 pt-5">
+        <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-brand-orange transition-colors">Critical Infrastructure</h3>
+        <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Perimeter Protection & Situational Awareness</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          24/7 situational awareness for airports, energy providers, and critical infrastructure — mobile or permanent.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          Learn more &rarr;
+        </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOCIAL PROOF BAR ===== -->
+<div class="divider"></div>
+<SocialProofBar lang="en" />
+<div class="divider"></div>
+
+<!-- ===== THE MOVETOS SYSTEM ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">The MOVETOS System</div>
+    <div class="section-title">Operations Intelligence from a single source:<br>Software and hardware as one system.</div>
+    <p class="section-desc">
+      MOVETOS combines AI-powered situational awareness with wireless, grid-independent infrastructure. The result: A closed-loop system for operational awareness — from detection to control. With interfaces for detection gates, people counting, and ticketing systems.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      <!-- TerrOps Box -->
+      <div class="reveal glass-card p-8 hover:border-accent-blue/20 transition-all group">
+        <div class="flex items-center gap-3 mb-4">
+          <h3 class="font-display text-xl font-bold">TerrOps</h3>
+          <span class="font-mono text-[9px] px-2 py-0.5 bg-accent-blue-dim text-accent-blue rounded font-medium">SOFTWARE</span>
+        </div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-5">
+          The AI platform for Operations Intelligence. Real-time situational awareness, crowd flow analysis, resource management, and built-in compliance — in one system.
+        </p>
+        <div class="flex flex-col gap-2">
+          {['AI-powered real-time analysis across all cameras', 'Safety alerts at critical capacity levels', 'Automatic action recommendations', 'Interactive situational map view', 'Targeted control via PA system', 'Complete documentation & audit trail'].map(feat => (
+            <div class="flex items-center gap-2 text-xs text-text-secondary">
+              <span class="text-accent-green text-xs">&#10003;</span>
+              {feat}
+            </div>
+          ))}
+        </div>
+        <a  href={`${import.meta.env.BASE_URL}/en/terrops/`} class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-6 hover:text-brand-orange transition-colors">
+          Learn more &rarr;
+        </a>
+      </div>
+
+      <!-- MOVETOS SET Box -->
+      <div class="reveal glass-card p-8 hover:border-brand-orange/20 transition-all group" style="transition-delay: 0.1s">
+        <div class="flex items-center gap-3 mb-4">
+          <h3 class="font-display text-xl font-bold">MOVETOS SET</h3>
+          <span class="font-mono text-[9px] px-2 py-0.5 bg-brand-orange-glow text-brand-orange rounded font-medium">HARDWARE</span>
+        </div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-5">
+          Wireless, grid-independent security infrastructure — mast systems with cameras, LED lighting, speakers, and mobile command center (OCC). Set up in under 5 hours. Anywhere.
+        </p>
+        <div class="flex flex-col gap-2">
+          {['10 mast systems with HD cameras, LED lighting, and speakers', 'Public Address System (BDS) — individual, wireless, radio-controlled', 'Mobile Command Center / Operation Control Centre (OCC)', 'Grid and power independent with dedicated data transmission', 'Plug & Play in under 5 hours', 'Interfaces for detection gates, people counting, and ticketing systems'].map(feat => (
+            <div class="flex items-center gap-2 text-xs text-text-secondary">
+              <span class="text-accent-green text-xs">&#10003;</span>
+              {feat}
+            </div>
+          ))}
+        </div>
+        <a  href={`${import.meta.env.BASE_URL}/en/infrastructure/`} class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-6 hover:text-brand-orange-light transition-colors">
+          Discover hardware &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Connection Note -->
+    <div class="reveal text-center mt-10 p-5 bg-surface border border-dark-border rounded-xl max-w-2xl mx-auto">
+      <p class="text-sm text-text-secondary">
+        <strong class="text-brand-orange">Better together:</strong> TerrOps detects and assesses — MOVETOS SET responds. From camera image to targeted announcement. No media breaks. In real time.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== IMPACT NUMBERS ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label mb-6 justify-center">By the Numbers</div>
+    <StatsCounter stats={[
+      { value: 'Since 2017', label: 'in continuous operation', color: 'var(--color-brand-orange)' },
+      { value: '12.7M+', label: 'visitors managed', color: 'var(--color-accent-blue)' },
+      { value: '< 5h', label: 'setup time', color: 'var(--color-accent-green)' },
+      { value: '12+', label: 'years of experience', color: 'var(--color-accent-yellow)' },
+    ]} />
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== THREE MESSAGING PILLARS ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Why MOVETOS</div>
+    <div class="section-title">Operations Intelligence.<br>One system. Three promises.</div>
+    <p class="section-desc">
+      Where others deliver software or hardware, MOVETOS delivers the closed-loop system — from detection to targeted action.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <!-- Pillar 1: Safety Intelligence -->
+      <div class="reveal glass-card overflow-hidden border-t-2 border-t-accent-green">
+        <div class="relative h-32">
+          <img src={`${import.meta.env.BASE_URL}/images/tile-events.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
+        </div>
+        <div class="p-7 pt-0 -mt-4 relative">
+        <h3 class="font-display text-lg font-bold">Safety Intelligence</h3>
+        <p class="text-[13px] text-text-muted mt-1 mb-4">Safety that thinks ahead.</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Detect critical situations before they escalate. Automatic early warning, targeted announcements, and complete compliance documentation — in one system.
+        </p>
+        <div class="mt-5 pt-4 border-t border-dark-border">
+          <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
+          <p class="text-xs text-text-secondary">Christkindlmarkt Munich: <strong class="text-text-primary">7.5 million visitors</strong> safely managed over 3 years. No cables, trusses, or bollards.</p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Pillar 2: Live Intelligence -->
+      <div class="reveal glass-card overflow-hidden border-t-2 border-t-accent-blue" style="transition-delay: 0.1s">
+        <div class="relative h-32">
+          <img src={`${import.meta.env.BASE_URL}/images/occ-inside.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
+        </div>
+        <div class="p-7 pt-0 -mt-4 relative">
+        <h3 class="font-display text-lg font-bold">Live Intelligence</h3>
+        <p class="text-[13px] text-text-muted mt-1 mb-4">From gut feeling to real-time situational awareness.</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          TerrOps analyzes crowd flows, capacity, and movement patterns in real time. The result: more efficient deployment of security personnel and faster decisions.
+        </p>
+        <div class="mt-5 pt-4 border-t border-dark-border">
+          <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
+          <p class="text-xs text-text-secondary">VW Family Days Wolfsburg: <strong class="text-text-primary">60 cameras, 0 m cable</strong> — entire corporate campus in view.</p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Pillar 3: All-in-One Mobility -->
+      <div class="reveal glass-card overflow-hidden border-t-2 border-t-brand-orange" style="transition-delay: 0.2s">
+        <div class="relative h-32">
+          <img src={`${import.meta.env.BASE_URL}/images/set-mast.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
+        </div>
+        <div class="p-7 pt-0 -mt-4 relative">
+        <h3 class="font-display text-lg font-bold">All-in-One Mobility</h3>
+        <p class="text-[13px] text-text-muted mt-1 mb-4">Full infrastructure. Zero cables. Under 5 hours.</p>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Cameras, PA systems, mobile command center, and AI platform — as one system. Wireless, grid-independent, scalable from 5 to 50+ locations. Made in Germany.
+        </p>
+        <div class="mt-5 pt-4 border-t border-dark-border">
+          <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
+          <p class="text-xs text-text-secondary">Munich Airport: <strong class="text-text-primary">24/7 operation</strong>, seamless integration into existing command center.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== MEASURABLE RESULTS ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Your Benefits</div>
+    <div class="section-title">Measurable Results.<br><span class="text-brand-orange">In every industry.</span></div>
+    <p class="section-desc">
+      TerrOps and MOVETOS SET deliver operational advantages — whether festival, corporate event, or critical infrastructure.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <!-- Events -->
+      <a href={`${import.meta.env.BASE_URL}/en/solutions/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
+        <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Events & Festivals</div>
+        <div class="font-display text-3xl font-800 text-accent-green mb-2">-15%</div>
+        <div class="font-display text-sm font-semibold text-text-primary mb-2">Staff Deployment</div>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Deploy security personnel, paramedics, and stewards precisely where needed — with data-driven situational awareness instead of gut feeling.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          View event solution &rarr;
+        </span>
+      </a>
+
+      <!-- Corporate -->
+      <a href={`${import.meta.env.BASE_URL}/en/solutions/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
+        <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Corporate</div>
+        <div class="font-display text-3xl font-800 text-accent-blue mb-2">100%</div>
+        <div class="font-display text-sm font-semibold text-text-primary mb-2">Compliance Documentation</div>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Complete documentation of all safety-relevant measures. Audit trail for HSE, plant security, and authorities — automatic.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          View corporate benefits &rarr;
+        </span>
+      </a>
+
+      <!-- KRITIS -->
+      <a href={`${import.meta.env.BASE_URL}/en/solutions/critical-infrastructure/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
+        <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Critical Infrastructure</div>
+        <div class="font-display text-3xl font-800 text-brand-orange mb-2">24/7</div>
+        <div class="font-display text-sm font-semibold text-text-primary mb-2">Real-time Situational Awareness</div>
+        <p class="text-sm text-text-secondary leading-relaxed">
+          Complete overview of all monitored areas. Automatic alerting, integrated communication, comprehensive logging.
+        </p>
+        <span class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-5 group-hover:translate-x-1 transition-transform">
+          View CRITIS solution &rarr;
+        </span>
+      </a>
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-dark-border">
+      <p class="font-mono text-[10px] uppercase tracking-widest text-text-muted mb-5">And beyond</p>
+      <div class="grid md:grid-cols-4 gap-5">
+        <div class="flex items-start gap-2.5">
+          <span class="text-accent-green text-xs mt-0.5">&#128737;</span>
+          <div>
+            <span class="text-sm font-semibold text-text-primary">Enhanced Safety</span>
+            <p class="text-xs text-text-muted mt-0.5">Detect critical situations early, before they escalate.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="text-accent-green text-xs mt-0.5">&#128196;</span>
+          <div>
+            <span class="text-sm font-semibold text-text-primary">Built-in Compliance</span>
+            <p class="text-xs text-text-muted mt-0.5">Complete documentation for authorities and approval processes — automatic.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="text-accent-green text-xs mt-0.5">&#11088;</span>
+          <div>
+            <span class="text-sm font-semibold text-text-primary">Optimized Operations</span>
+            <p class="text-xs text-text-muted mt-0.5">Avoid bottlenecks, improve processes, deploy resources where needed.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="text-accent-green text-xs mt-0.5">&#9889;</span>
+          <div>
+            <span class="text-sm font-semibold text-text-primary">Faster Decisions</span>
+            <p class="text-xs text-text-muted mt-0.5">Real-time situational awareness instead of radio calls and gut feeling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="relative py-20 md:py-28 overflow-hidden">
+  <img src={`${import.meta.env.BASE_URL}/images/event-night.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+  <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-2xl mx-auto bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 text-center shadow-lg border border-white/60">
+      <div class="label justify-center">Get Started</div>
+      <div class="section-title mx-auto" style="max-width: 540px;">
+        30 minutes. One situational picture.<br>
+        <span class="text-brand-orange">Your decision.</span>
+      </div>
+      <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+        In a personal live demo, we show you how TerrOps and MOVETOS SET work in your deployment scenario — tailored to your requirements.
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center mt-8">
+        <a href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Demo &rarr;</a>
+        <a href="tel:+4981572934870" class="btn btn-ghost bg-white/50">&#9742; 08157 2934870</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

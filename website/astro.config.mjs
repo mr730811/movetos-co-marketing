@@ -9,7 +9,13 @@ export default defineConfig({
   site: 'https://mr730811.github.io',
   base: '/movetos-co-marketing',
   integrations: [react()],
-
+  i18n: {
+    defaultLocale: 'de',
+    locales: ['de', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   vite: {
     plugins: [tailwindcss()]
   }

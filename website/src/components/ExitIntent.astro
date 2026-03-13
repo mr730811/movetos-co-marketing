@@ -1,4 +1,14 @@
 ---
+import { t, getLocalizedPath } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+interface Props { lang?: Lang; }
+const { lang = 'de' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const demoLink = lang === 'en'
+  ? getLocalizedPath(base + '/terrops/demo/', 'en', base)
+  : base + '/terrops/demo/';
 ---
 <div id="exit-intent-overlay" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/40 backdrop-blur-sm">
   <div class="glass-card max-w-md mx-4 p-8 text-center relative">
@@ -7,16 +17,16 @@
     </button>
 
     <div class="text-3xl mb-4">&#128640;</div>
-    <h3 class="font-display text-xl font-bold mb-2">Schon gehen?</h3>
+    <h3 class="font-display text-xl font-bold mb-2">{t(lang, 'exitIntent.heading')}</h3>
     <p class="text-sm text-text-secondary leading-relaxed mb-6">
-      Wir zeigen Ihnen TerrOps in 30 Minuten — mit Ihrem Szenario, unverbindlich. Wann passt es?
+      {t(lang, 'exitIntent.text')}
     </p>
 
-    <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary w-full justify-center mb-3">
-      Demo vereinbaren &rarr;
+    <a  href={demoLink} class="btn btn-primary w-full justify-center mb-3">
+      {t(lang, 'exitIntent.cta')} &rarr;
     </a>
     <button id="exit-intent-dismiss" class="text-xs text-text-muted hover:text-text-secondary transition-colors cursor-pointer bg-transparent border-none">
-      Nein danke, vielleicht später
+      {t(lang, 'exitIntent.dismiss')}
     </button>
   </div>
 </div>
@@ -44,12 +54,10 @@
     sessionStorage.setItem('exit-intent-dismissed', 'true');
   };
 
-  // Desktop: mouse leaves viewport at top
   document.addEventListener('mouseout', (e) => {
     if (e.clientY <= 0) show();
   });
 
-  // Bind close buttons
   document.getElementById('exit-intent-close')?.addEventListener('click', hide);
   document.getElementById('exit-intent-dismiss')?.addEventListener('click', hide);
   document.getElementById('exit-intent-overlay')?.addEventListener('click', (e) => {

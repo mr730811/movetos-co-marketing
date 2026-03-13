@@ -1,0 +1,364 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ReferenceCard from '../../../components/ReferenceCard.astro';
+---
+<BaseLayout
+  title="References — Proven by the Best | MOVETOS"
+  description="MOVETOS and TerrOps in action at BMW, VW, UCI, Munich Christmas Market and more. Over 12.7 million visitors."
+  lang="en"
+>
+
+<section class="pt-32 pb-10">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label mb-4">Crowd Management References</div>
+    <h1 class="section-title">
+      Proven by the best.<br>
+      Ready for <span class="text-brand-orange">your event.</span>
+    </h1>
+    <p class="section-desc mt-4 max-w-2xl">
+      More than 12.7 million visitors. From folk festivals to city festivals, sports events, concerts, corporate events and critical infrastructure — our system is deployed where it counts.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Reference Grid -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <!-- Filter -->
+    <div id="ref-filters" class="flex flex-wrap gap-2 mb-10">
+      {[
+        { filter: 'Alle', label: 'All' },
+        { filter: 'Corporate', label: 'Corporate' },
+        { filter: 'Volksfest', label: 'Folk Festival' },
+        { filter: 'Stadtfest', label: 'City Festival' },
+        { filter: 'Sportevent', label: 'Sports Event' },
+        { filter: 'Konzert', label: 'Concert' },
+        { filter: 'KRITIS', label: 'Critical Infra.' },
+      ].map((cat, i) => (
+        <button
+          data-filter={cat.filter}
+          class:list={[
+            "ref-filter font-mono text-[11px] px-4 py-2 rounded-md border transition-all cursor-pointer",
+            i === 0 ? 'bg-brand-orange text-white border-brand-orange' : 'bg-transparent text-text-muted border-dark-border hover:border-dark-border-hover hover:text-text-secondary'
+          ]}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Corporate -->
+      <ReferenceCard
+        name="BMW Motorrad Days"
+        category="Corporate"
+        visitors="135,000"
+        highlight="Event continued despite 15% staff shortage on event day"
+        quote="Sicherheit auf dem technischen Niveau ist überzeugend."
+        quotePerson="H. Schmitt"
+        quoteRole="Event Organizer"
+        tags={['SET', 'BDS', 'TerrOps', '3x']}
+        image={`${import.meta.env.BASE_URL}/images/ref-bmw.jpg`}
+      />
+      <ReferenceCard
+        name="VW Family Days Wolfsburg"
+        category="Corporate"
+        visitors="60,000"
+        highlight="Large corporate campus fully monitored without a single cable"
+        quote="Eine solche Fläche, in Echtzeit im Blick zu haben, ist was völlig neues für die Sicherheitsplanung."
+        quotePerson="H. Holzemer"
+        quoteRole="Specialist Planner"
+        tags={['MOVETOS SET', 'TerrOps', '60 Cameras']}
+        image={`${import.meta.env.BASE_URL}/images/ref-vw.jpg`}
+      />
+      <ReferenceCard
+        name="Tag der Bundeswehr"
+        category="Corporate"
+        visitors="500,000"
+        highlight="15 locations, up to 45 ha barracks area without cables"
+        quote="Noch nie hatten wir die kritische Liegenschaft so gut im Blick, wie jetzt."
+        quotePerson="Projektleitung Bückeburg"
+        quoteRole="Event Security"
+        tags={['SET', 'BDS', 'TerrOps', '15 Locations']}
+        image={`${import.meta.env.BASE_URL}/images/ref-bundeswehr.jpg`}
+      />
+      <ReferenceCard
+        name="Pioniers Day Eurocopter / Airbus"
+        category="Corporate"
+        visitors="35,000"
+        highlight="Entire corporate campus, 0 meters of cable"
+        quote="Einfacher kann man Sicherheit kaum planen und umsetzen."
+        quotePerson="M. Weiskopf"
+        quoteRole="Specialist Planner"
+        tags={['BDS', '10x2 Speakers']}
+      />
+      <ReferenceCard
+        name="BMW Anniversary Days"
+        category="Corporate"
+        visitors="45,000"
+        highlight="Upgrading a factory site for events"
+        quote="Ein Werksgelände als Eventfläche ist eine Herausforderung und eine Besucherinformations-/Notfallbeschallung ist das Basic. Wichtig ist, dass dieses Basic verlässlich und einfach funktioniert und das kann MOVETOS gut."
+        quotePerson="H. Schmitt"
+        quoteRole="Event Organizer"
+        tags={['BDS', '12x2 Speakers + Light']}
+      />
+      <ReferenceCard
+        name="Wiener Linien"
+        category="Corporate"
+        visitors="35,000"
+        highlight="Vienna city center, no cables, trusses, or drive-over protection"
+        quote="Das live Lagebild macht die Veranstaltungsleitung deutlich sicherer und einfacher, für alle Beteiligten."
+        quotePerson="G. Geczek"
+        quoteRole="Red Cross Vienna"
+        tags={['MOVETOS SET', 'TerrOps', '12 Cameras']}
+      />
+      <!-- Volksfest -->
+      <ReferenceCard
+        name="Plärrer Augsburg"
+        category="Volksfest"
+        visitors="1.2M"
+        highlight="Integration of all rides, 0 m of cable laid"
+        quote="An einem Tag alles auf und abgebaut, so einfach hatte ich es mir nicht vorgestellt."
+        quotePerson="F. Wüst"
+        quoteRole="Market Director"
+        tags={['TerrOps', 'BDS', '14x2 Speakers', '4x']}
+      />
+      <ReferenceCard
+        name="Stoppelmarkt Vechta"
+        category="Volksfest"
+        visitors="600,000"
+        highlight="No cables or trusses, with police integration"
+        quote="Mit der Technik können wir beim nächsten Mal deutlich besser unser Personal planen."
+        quotePerson="C. Thöle"
+        quoteRole="Market Director"
+        tags={['MOVETOS SET', 'TerrOps', '20 Cameras', '7 Days']}
+      />
+      <ReferenceCard
+        name="Japan Day Düsseldorf"
+        category="Volksfest"
+        visitors="800,000"
+        highlight="Along the Rhine Promenade"
+        quote="Ein live Bild, in Farbe, von allen Standorten und das bei der Besuchermenge, hatte ich nicht geglaubt."
+        quotePerson=""
+        quoteRole="Event Organizer"
+        tags={['MOVETOS SET', 'TerrOps', '20 Cameras']}
+      />
+      <!-- Stadtfest -->
+      <ReferenceCard
+        name="Christmas Market Munich"
+        category="Stadtfest"
+        visitors="7.5M"
+        highlight="Entire city area without cables, trusses, or drive-over protection"
+        quote="Es war sehr einfach und ohne großen Aufwand im Aufbau und in der Bedienung. So ist Eventsicherheit einfach und sinnvoll."
+        quotePerson="J. Wagle"
+        quoteRole="Event Organizer"
+        tags={['BDS', '16x2 Speakers', '3x 30 Days']}
+      />
+      <ReferenceCard
+        name="German Unity Day Erfurt"
+        category="Stadtfest"
+        visitors="300,000"
+        highlight="Entire city center area without cables"
+        quote="Die zentrale Veranstaltungsleitung hatte jederzeit die Lage im Blick."
+        quotePerson="J. Wagner"
+        quoteRole="Event Organizer"
+        tags={['MOVETOS SET', 'TerrOps', '40 Cameras', '4 Days']}
+        image={`${import.meta.env.BASE_URL}/images/ref-einheit.jpg`}
+      />
+      <ReferenceCard
+        name="Tanz der Marktweiber"
+        category="Stadtfest"
+        visitors="45,000"
+        highlight="Viktualienmarkt Munich, all without cables"
+        quote="Die technischen Lösungen waren überzeugend und haben genau das gemacht, was wir erwartet haben."
+        quotePerson="M. Kerscher"
+        quoteRole="Market Master"
+        tags={['SET', 'BDS', 'TerrOps', '3x']}
+        image={`${import.meta.env.BASE_URL}/images/ref-marktweiber.jpg`}
+      />
+      <ReferenceCard
+        name="Christmas Market Mühlheim"
+        category="Stadtfest"
+        visitors="15,000"
+        highlight="On a Ruhr river island, all without cables"
+        quote="Mit der Lösung ist Sicherheit weder teuer noch problematisch. Das hat uns allen geholfen."
+        quotePerson="T. Weber"
+        quoteRole="Event Organizer"
+        tags={['BDS', '4x2 Speakers + Light']}
+      />
+      <!-- Sportevent -->
+      <ReferenceCard
+        name="UCI Road World Championships"
+        category="Sportevent"
+        visitors="1.15M"
+        highlight="Entire city without cables, integration with Tyrol Control Center"
+        quote="Nie war Sicherheit so einfach und zuverlässig."
+        quotePerson="Mag. Noggler"
+        quoteRole="Control Center Tyrol"
+        tags={['MOVETOS SET', 'TerrOps', '20 Cameras', '7 Days']}
+        image={`${import.meta.env.BASE_URL}/images/ref-uci.jpg`}
+      />
+      <ReferenceCard
+        name="Allianz Arena Last Mile"
+        category="Sportevent"
+        visitors="60,000"
+        highlight="Last mile solution, no trip hazards in front of the stadium"
+        quote="Die Technik ist überzeugend und kann bei an jedem Stadion eingebunden werden."
+        quotePerson="B. Nass"
+        quoteRole="DFL"
+        tags={['MOVETOS SET', 'TerrOps', '10 Cameras']}
+      />
+      <ReferenceCard
+        name="Hockey Cup Grünwald"
+        category="Sportevent"
+        visitors="2,500"
+        highlight="Security upgrade of a sports facility"
+        quote="Einfach, zuverlässig und mit wenig Aufwand. Eventsicherheit wird dadurch einfacher."
+        quotePerson="J. Verleger"
+        quoteRole="Location Manager"
+        tags={['MOVETOS SET', 'TerrOps', '10 Cameras', '2 Days']}
+      />
+      <ReferenceCard
+        name="Tabaluga Golf Charity"
+        category="Sportevent"
+        visitors="250"
+        highlight="50 ha golf course, all without 1 m of cable"
+        quote="Auf einem Golfplatz ist es wichtig, dass alles ohne Kabel ist, funktioniert und die Besucher sicher sind."
+        quotePerson="M. Tepel"
+        quoteRole="Sponsor"
+        tags={['BDS', '4x2 Speakers']}
+        image={`${import.meta.env.BASE_URL}/images/ref-golf.jpg`}
+      />
+      <ReferenceCard
+        name="Après Ski Mosshütte Seefeld"
+        category="Sportevent"
+        visitors="8,000"
+        highlight="Party event at the top of the ski slope"
+        quote="Einfacher geht Sicherheit wirklich nicht."
+        quotePerson="R. Schneider"
+        quoteRole="Event Organizer"
+        tags={['BDS', '2x2 Speakers + Light']}
+      />
+      <ReferenceCard
+        name="Open Day Sailing Center Königsdorf"
+        category="Sportevent"
+        visitors="12,000"
+        highlight="On a green field, everything wireless"
+        quote="Schnell auf- und abgebaut und alles da, was die Behörde wollte."
+        quotePerson="A. Sternbeck"
+        quoteRole="Event Organizer"
+        tags={['BDS', '4x2 Speakers + Light']}
+      />
+      <!-- Konzert -->
+      <ReferenceCard
+        name="Vienna Philharmonic Schönbrunn"
+        category="Konzert"
+        visitors="20,000"
+        highlight="Heritage-listed palace park, no cables allowed"
+        quote="Echtzeitlagebild an allen Eingängen, ohne Kabel und Traversen. Das war was völlig neues."
+        quotePerson="G. Geczek"
+        quoteRole="Red Cross Vienna"
+        tags={['MOVETOS SET', 'TerrOps', '20 Cameras']}
+        image={`${import.meta.env.BASE_URL}/images/ref-schoenbrunn.jpg`}
+      />
+      <ReferenceCard
+        name="Die Ärzte Concert Tempelhof"
+        category="Konzert"
+        visitors="120,000"
+        highlight="4 entrances, 1,000 m walkways, 0 meters of cable"
+        quote="Einfach in der Bedienung, und wirklich flexibel im Aufbau. Wir mussten an keine Kabel, Traversen oder Strom denken."
+        quotePerson="S. Mohnen"
+        quoteRole="Event Organizer"
+        tags={['BDS', '6x2 Speakers + Light']}
+      />
+      <ReferenceCard
+        name="Braas Wiesn"
+        category="Konzert"
+        visitors="30,000"
+        highlight="Event on an open field"
+        quote="Hier muss es schnell und unkompliziert gehen und das kann das System."
+        quotePerson=""
+        quoteRole="Event Organizer"
+        tags={['BDS', '4x2 Speakers', '2x']}
+      />
+      <!-- More -->
+      <ReferenceCard
+        name="Flea Market Münchner Wiesn"
+        category="Stadtfest"
+        visitors="100,000"
+        highlight="Open area on the Theresienwiese Munich"
+        quote="Eine freie Fläche und bei schönem Wetter viele Familien, da muss Sicherheit einfach funktionieren."
+        quotePerson=""
+        quoteRole="Red Cross, Event Organizer"
+        tags={['BDS', '5x2 Speakers + Light', '3x']}
+      />
+      <!-- KRITIS -->
+      <ReferenceCard
+        name="Munich Airport"
+        category="KRITIS"
+        visitors="Ongoing"
+        highlight="Integration into Security Control Center, entire airfield"
+        quote="In zwei Tagen einsatzbereit, das hätten wir nie gedacht, mit Datenübertragung über das gesamte Flugfeld."
+        quotePerson="R. Götze"
+        quoteRole="Airport"
+        tags={['MOVETOS SET', 'TerrOps', '40 Cameras', '24/7']}
+        image={`${import.meta.env.BASE_URL}/images/ref-muc.jpg`}
+      />
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="section-title mx-auto" style="max-width: 480px;">
+      Your event could be<br>
+      <span class="text-brand-orange">right here.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
+      Tell us about your project. We'll show you what MOVETOS and TerrOps can do for you.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a  href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Demo &rarr;</a>
+      <a  href={`${import.meta.env.BASE_URL}/en/contact/`} class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.ref-filter');
+  const cards = document.querySelectorAll<HTMLElement>('.ref-card');
+
+  const activeClasses = ['bg-brand-orange', 'text-white', 'border-brand-orange'];
+  const inactiveClasses = ['bg-transparent', 'text-text-muted', 'border-dark-border', 'hover:border-dark-border-hover', 'hover:text-text-secondary'];
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter') || 'Alle';
+
+      // Update button styles
+      buttons.forEach(b => {
+        b.classList.remove(...activeClasses);
+        b.classList.add(...inactiveClasses);
+      });
+      btn.classList.remove(...inactiveClasses);
+      btn.classList.add(...activeClasses);
+
+      // Filter cards
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category') || '';
+        if (filter === 'Alle' || category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</BaseLayout>

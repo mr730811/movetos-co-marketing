@@ -1,49 +1,63 @@
 ---
+import { t, getLocalizedPath } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+interface Props { lang?: Lang; }
+const { lang = 'de' } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+
+const l = (dePath: string) => {
+  if (lang === 'en') {
+    return getLocalizedPath(base + dePath, 'en', base);
+  }
+  return base + dePath;
+};
 ---
 <footer class="border-t border-dark-border pt-12 pb-9">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="flex flex-wrap justify-between items-start gap-10">
       <div class="max-w-xs">
-        <a  href={`${import.meta.env.BASE_URL}/`} class="flex items-center no-underline">
-          <img src={`${import.meta.env.BASE_URL}/MOVETOS_Logo.png`} alt="MOVETOS Logo" class="h-7" />
+        <a  href={l('/')} class="flex items-center no-underline">
+          <img src={`${base}/MOVETOS_Logo.png`} alt="MOVETOS Logo" class="h-7" />
         </a>
         <p class="text-xs text-text-muted mt-3 leading-relaxed">
           Operations Intelligence. Made in Germany.<br>
-          KI-gestützte Lagebildführung und kabellose Infrastruktur.
+          {t(lang, 'footer.tagline')}
         </p>
       </div>
 
       <div class="flex gap-10 flex-wrap">
         <div>
-          <h5 class="font-mono text-[10px] font-medium uppercase tracking-[1.5px] text-text-muted mb-3">Lösungen</h5>
-          <a  href={`${import.meta.env.BASE_URL}/terrops/`} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">TerrOps</a>
-          <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">SET-System</a>
-          <a  href={`${import.meta.env.BASE_URL}/infrastruktur/durchsagesysteme/`} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">Durchsagesysteme</a>
-          <a  href={`${import.meta.env.BASE_URL}/infrastruktur/leitstelle/`} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">Mobile Leitstelle</a>
+          <h5 class="font-mono text-[10px] font-medium uppercase tracking-[1.5px] text-text-muted mb-3">{t(lang, 'footer.solutions')}</h5>
+          <a  href={l('/terrops/')} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">{t(lang, 'footer.terrops')}</a>
+          <a  href={l('/infrastruktur/')} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">{t(lang, 'footer.setSystem')}</a>
+          <a  href={l('/infrastruktur/durchsagesysteme/')} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">{t(lang, 'footer.pa')}</a>
+          <a  href={l('/infrastruktur/leitstelle/')} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">{t(lang, 'footer.commandCenter')}</a>
         </div>
         <div>
-          <h5 class="font-mono text-[10px] font-medium uppercase tracking-[1.5px] text-text-muted mb-3">Unternehmen</h5>
-          <a  href={`${import.meta.env.BASE_URL}/unternehmen/`} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">Über uns</a>
-          <a  href={`${import.meta.env.BASE_URL}/referenzen/`} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">Referenzen</a>
-          <a  href={`${import.meta.env.BASE_URL}/kontakt/`} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">Kontakt</a>
+          <h5 class="font-mono text-[10px] font-medium uppercase tracking-[1.5px] text-text-muted mb-3">{t(lang, 'footer.company')}</h5>
+          <a  href={l('/unternehmen/')} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">{t(lang, 'footer.aboutUs')}</a>
+          <a  href={l('/referenzen/')} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">{t(lang, 'footer.references')}</a>
+          <a  href={l('/kontakt/')} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">{t(lang, 'footer.contact')}</a>
         </div>
         <div>
-          <h5 class="font-mono text-[10px] font-medium uppercase tracking-[1.5px] text-text-muted mb-3">Kontakt</h5>
+          <h5 class="font-mono text-[10px] font-medium uppercase tracking-[1.5px] text-text-muted mb-3">{t(lang, 'footer.contact')}</h5>
           <a href="mailto:kontakt@movetos.de" class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">kontakt@movetos.de</a>
           <a href="tel:+4981572934870" class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">08157 2934870</a>
-          <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">Demo buchen</a>
+          <a  href={l('/terrops/demo/')} class="block text-sm text-text-secondary hover:text-brand-orange mb-2 no-underline transition-colors">{t(lang, 'footer.bookDemo')}</a>
         </div>
       </div>
     </div>
 
     <div class="mt-9 pt-6 border-t border-dark-border flex flex-wrap justify-between text-[11px] text-text-muted gap-4">
-      <span>&copy; 2026 MOVETOS Germany GmbH · Feldafinger Str. 5, 82343 Pöcking</span>
+      <span>&copy; 2026 MOVETOS Germany GmbH &middot; Feldafinger Str. 5, 82343 P&ouml;cking</span>
       <span class="flex gap-3">
-        <a  href={`${import.meta.env.BASE_URL}/impressum/`} class="text-text-muted hover:text-text-secondary no-underline">Impressum</a>
-        <span>·</span>
-        <a  href={`${import.meta.env.BASE_URL}/datenschutz/`} class="text-text-muted hover:text-text-secondary no-underline">Datenschutz</a>
-        <span>·</span>
-        <a  href={`${import.meta.env.BASE_URL}/agb/`} class="text-text-muted hover:text-text-secondary no-underline">AGB</a>
+        <a  href={`${base}/impressum/`} class="text-text-muted hover:text-text-secondary no-underline">{t(lang, 'footer.imprint')}</a>
+        <span>&middot;</span>
+        <a  href={`${base}/datenschutz/`} class="text-text-muted hover:text-text-secondary no-underline">{t(lang, 'footer.privacy')}</a>
+        <span>&middot;</span>
+        <a  href={`${base}/agb/`} class="text-text-muted hover:text-text-secondary no-underline">{t(lang, 'footer.terms')}</a>
       </span>
     </div>
   </div>

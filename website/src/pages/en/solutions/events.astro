@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SocialProofBar from '../../../components/SocialProofBar.astro';
+import ROICalculator from '../../../components/ROICalculatorInline.astro';
+import ReferenceCard from '../../../components/ReferenceCard.astro';
+---
+<BaseLayout
+  title="Crowd Management for Large-Scale Events | MOVETOS"
+  description="AI-powered crowd management for festivals, city fairs and sports events. Monitor visitor flows in real time, optimize capacity, ensure safety. Proven since 2017."
+  lang="en"
+>
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+  <img src={`${import.meta.env.BASE_URL}/images/tile-events.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-2xl bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-lg border border-white/60">
+      <div class="label mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent-green"></span>
+        Crowd Management
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-800 tracking-tight leading-[1.08]">
+        Crowd Management for<br>
+        <span class="text-accent-green">Large-Scale Events.</span>
+      </h1>
+      <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+        Detect, assess and manage visitor flows in real time — with AI-powered analysis and wireless infrastructure. Set up in under 5 hours. Proven at festivals, city fairs and international sports events.
+      </p>
+      <div class="flex flex-wrap items-center gap-3 mt-8">
+        <a href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Demo &rarr;</a>
+        <a href={`${import.meta.env.BASE_URL}/en/references/`} class="btn btn-ghost bg-white/50">View References</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CHALLENGES ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">The Challenge</div>
+    <div class="section-title">Thousands of visitors. Hundreds of decisions.<br><span class="text-brand-orange">A gut feeling?</span></div>
+    <p class="section-desc">
+      Event managers face an impossible task: monitoring a dynamic venue with tens of thousands of people — often relying on radio calls, experience and hope. MOVETOS puts an end to flying blind.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      {[
+        { icon: '&#128101;', title: 'Unclear Crowd Flows', desc: 'Where are the bottlenecks? Where is there space? Without real-time data, these questions remain unanswered — until it is too late.' },
+        { icon: '&#9888;', title: 'Identifying Safety Risks', desc: 'Critical crowd densities develop within minutes. Those who detect them too late can no longer steer.' },
+        { icon: '&#128196;', title: 'Compliance & Documentation', desc: 'Venue regulations, permit conditions, authority documentation — everything must be recorded. Manually, this is nearly impossible.' },
+      ].map(item => (
+        <div class="reveal glass-card p-7">
+          <div class="text-2xl mb-3" set:html={item.icon}></div>
+          <h3 class="font-display text-base font-bold mb-2">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== SOLUTION ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">The Solution</div>
+    <div class="section-title">One system for the entire<br><span class="text-accent-green">crowd management cycle.</span></div>
+    <p class="section-desc">
+      MOVETOS combines AI software (TerrOps) with wireless hardware (MOVETOS SET) into a closed-loop system: Detect, Assess, Act.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { icon: '&#128247;', title: 'Real-time Visitor Analysis', desc: 'AI-powered evaluation of all camera positions. Visitor flows, crowd densities and movement patterns — live on the dashboard. Interfaces for detection gates, people counters and ticketing systems.' },
+        { icon: '&#128680;', title: 'Automatic Safety Alerts', desc: 'Define thresholds, receive automatic early warnings when critical capacity is reached. Recommended actions directly in the system.' },
+        { icon: '&#128226;', title: 'Targeted Crowd Guidance', desc: 'From camera image to targeted announcement — via area broadcast (BDS) or emergency broadcast (NDS). Without media breaks.' },
+        { icon: '&#128196;', title: 'Compliance Documentation', desc: 'Seamless logging of all measures, thresholds and alerts. Export-ready for authorities and permit procedures.' },
+        { icon: '&#128506;', title: 'Interactive Situational Map', desc: 'Map-based real-time view of the entire venue. Cameras, zones, capacity and alerts at a glance.' },
+        { icon: '&#9889;', title: 'Setup in Under 5 Hours', desc: 'Wireless mast systems, off-grid power supply, plug & play. The entire system is standing before the first visitor arrives.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-4 p-5 bg-surface border border-dark-border rounded-xl">
+          <div class="text-xl shrink-0 mt-0.5" set:html={item.icon}></div>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== ROI CALCULATOR ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="label">Your Value in Numbers</div>
+        <div class="section-title">How much more efficient will<br><span class="text-brand-orange">your event be?</span></div>
+        <p class="section-desc">
+          Real-time situational picture instead of radio calls: less coordination overhead, more targeted staffing. Calculate with your own numbers.
+        </p>
+      </div>
+      <div>
+        <ROICalculator lang="en" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== REFERENCES ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Proven in Practice</div>
+    <div class="section-title">Events that trust<br><span class="text-accent-green">MOVETOS.</span></div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+      <ReferenceCard
+        name="UCI Road World Championships"
+        category="Sports Event"
+        visitors="1.15 million"
+        highlight="Entire city center without cables, integration with Leitstelle Tirol"
+        quote="Nie war Sicherheit so einfach und zuverlässig."
+        quotePerson="Mag. Noggler"
+        quoteRole="Leitstelle Tirol"
+        tags={['MOVETOS SET', 'TerrOps', '20 Cameras', '7 Days']}
+        image={`${import.meta.env.BASE_URL}/images/ref-uci.jpg`}
+      />
+      <ReferenceCard
+        name="Japan Day Düsseldorf"
+        category="City Fair"
+        visitors="800,000"
+        highlight="Along the Rhine Promenade"
+        quote="Ein live Bild, in Farbe, von allen Standorten und das bei der Besuchermenge, hatte ich nicht geglaubt."
+        quotePerson=""
+        quoteRole="Organizer"
+        tags={['MOVETOS SET', 'TerrOps', '20 Cameras']}
+      />
+      <ReferenceCard
+        name="Stoppelmarkt Vechta"
+        category="City Fair"
+        visitors="600,000"
+        highlight="Without cables and trusses, with police integration"
+        quote="Mit der Technik können wir beim nächsten Mal deutlich besser unser Personal planen."
+        quotePerson="C. Thöle"
+        quoteRole="Market Director"
+        tags={['MOVETOS SET', 'TerrOps', '20 Cameras', '7 Days']}
+      />
+    </div>
+
+    <div class="text-center mt-10">
+      <a href={`${import.meta.env.BASE_URL}/en/references/`} class="btn btn-ghost">View All References &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Get Started</div>
+    <div class="section-title mx-auto" style="max-width: 540px;">
+      30 minutes. One situational picture.<br>
+      <span class="text-brand-orange">Your decision.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+      In a personal live demo, we show you how TerrOps and MOVETOS SET work at your event — including an individual efficiency analysis.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Demo &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

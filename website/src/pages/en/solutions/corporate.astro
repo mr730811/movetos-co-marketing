@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ReferenceCard from '../../../components/ReferenceCard.astro';
+---
+<BaseLayout
+  title="Event Security for Enterprises | MOVETOS"
+  description="Compliance-ready event security for corporate events, factory days and sensitive enterprise locations. AI-powered situational awareness and wireless infrastructure."
+  lang="en"
+>
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+  <img src={`${import.meta.env.BASE_URL}/images/tile-corporate.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-2xl bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-lg border border-white/60">
+      <div class="label mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent-blue"></span>
+        Event Security
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-800 tracking-tight leading-[1.08]">
+        Event Security<br>
+        <span class="text-accent-blue">for Enterprises.</span>
+      </h1>
+      <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+        Corporate events, factory days, company gatherings — when thousands of people come together on sensitive premises, you need more than a security service. You need a system.
+      </p>
+      <div class="flex flex-wrap items-center gap-3 mt-8">
+        <a href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Demo &rarr;</a>
+        <a href={`${import.meta.env.BASE_URL}/en/references/`} class="btn btn-ghost bg-white/50">View References</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CHALLENGES ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">The Challenge</div>
+    <div class="section-title">Sensitive venues. High standards.<br><span class="text-brand-orange">Zero compromises.</span></div>
+    <p class="section-desc">
+      Corporate events on factory premises, company sites or in restricted areas require special safety standards — and seamless documentation. MOVETOS delivers both.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      {[
+        { icon: '&#128274;', title: 'PVA & Detection Gates', desc: 'Who is on the premises? Personnel access gates (PVA) and detection gates (e.g. CEIA) with interface to access management — for seamless control.' },
+        { icon: '&#128196;', title: 'Compliance Requirements', desc: 'HSE regulations, plant security guidelines, regulatory requirements — everything must be documented and verifiable.' },
+        { icon: '&#128257;', title: 'Temporary Needs', desc: 'A factory fair lasts one day, not one year. Permanently installed systems are overkill, no infrastructure is a risk.' },
+      ].map(item => (
+        <div class="reveal glass-card p-7">
+          <div class="text-2xl mb-3" set:html={item.icon}></div>
+          <h3 class="font-display text-base font-bold mb-2">{item.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== SOLUTION ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">The Solution</div>
+    <div class="section-title">Mobile Security Infrastructure.<br><span class="text-accent-blue">Compliance included.</span></div>
+    <p class="section-desc">
+      MOVETOS delivers a temporary security system that is set up in just a few hours and meets enterprise requirements — without permanent installation.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { icon: '&#128247;', title: 'Real-time Situational Picture', desc: 'AI-powered monitoring of all relevant areas. Crowd densities, access points and movement patterns — all on one dashboard.' },
+        { icon: '&#128196;', title: 'Automatic Compliance Documentation', desc: 'Every measure, every alert, every decision is automatically logged. Export-ready for HSE, plant security and authorities.' },
+        { icon: '&#128274;', title: 'Perimeter Protection', desc: 'Wireless camera systems monitor the perimeter of the premises. Unauthorized access is detected, critical perimeter zones are secured.' },
+        { icon: '&#128226;', title: 'Targeted Communication', desc: 'Area-specific broadcasts (BDS) and emergency broadcasts (NDS) — from the situational picture directly to the announcement. Without radio chaos.' },
+        { icon: '&#9889;', title: 'Setup in Under 5 Hours', desc: 'Wireless, off-grid infrastructure. Plug & play without interfering with existing IT systems. Teardown just as fast.' },
+        { icon: '&#128260;', title: 'Integration & Access Management', desc: 'TerrOps integrates with existing plant security systems. Interfaces to access management, detection gates and ticketing systems.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-4 p-5 bg-surface border border-dark-border rounded-xl">
+          <div class="text-xl shrink-0 mt-0.5" set:html={item.icon}></div>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== ADVANTAGES ===== -->
+<section class="py-20 md:py-28 bg-dark-card">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Your Advantages</div>
+    <div class="section-title">Why enterprises choose<br><span class="text-accent-blue">MOVETOS.</span></div>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+      {[
+        { title: 'No permanent installation', desc: 'Mobile infrastructure that disappears after the event. No renovations, no permit procedures for permanent installations.' },
+        { title: 'Enterprise-Grade Compliance', desc: 'Seamless documentation of all safety-relevant measures. Audit trail for internal and external reviews.' },
+        { title: 'Meeting HSE requirements', desc: 'Automatic early warning at critical capacity. Demonstrable duty of care for event managers.' },
+        { title: 'Fast decisions', desc: 'Real-time situational picture instead of radio calls. Data-driven decisions in seconds, not minutes.' },
+      ].map(item => (
+        <div class="reveal flex items-start gap-3 p-5 bg-surface border border-dark-border rounded-xl">
+          <span class="text-accent-blue text-xs mt-1">&#10003;</span>
+          <div>
+            <h3 class="font-display text-sm font-bold mb-1">{item.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== REFERENCES ===== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label">Trusted by leading enterprises</div>
+    <div class="section-title">Corporate References.</div>
+
+    <div class="grid md:grid-cols-2 gap-5 mt-14 max-w-3xl">
+      <ReferenceCard
+        name="VW Family Days Wolfsburg"
+        category="Corporate"
+        visitors="60,000"
+        highlight="Large corporate campus fully monitored without a single meter of cable"
+        quote="Eine solche Fläche, in Echtzeit im Blick zu haben, ist was völlig neues für die Sicherheitsplanung."
+        quotePerson="H. Holzemer"
+        quoteRole="Security Planner"
+        tags={['MOVETOS SET', 'TerrOps', '60 Cameras']}
+      />
+      <ReferenceCard
+        name="Pioneers Day Eurocopter / Airbus"
+        category="Corporate"
+        visitors="35,000"
+        highlight="Entire corporate campus, 0 meters of cable"
+        quote="Einfacher kann man Sicherheit kaum planen und umsetzen."
+        quotePerson="M. Weiskopf"
+        quoteRole="Security Planner"
+        tags={['BDS', '10x2 Speakers']}
+      />
+      <ReferenceCard
+        name="BMW Anniversary Days"
+        category="Corporate"
+        visitors="45,000"
+        highlight="Upgrading a factory site"
+        quote="Ein Werksgelände als Eventfläche ist eine Herausforderung und eine Besucherinformations-/Notfallbeschallung ist das Basic. Wichtig ist, dass dieses Basic verlässlich und einfach funktioniert und das kann MOVETOS gut."
+        quotePerson="H. Schmitt"
+        quoteRole="Organizer"
+        tags={['BDS', '12x2 Speakers + Lighting']}
+      />
+      <ReferenceCard
+        name="Tag der Bundeswehr"
+        category="Corporate"
+        visitors="500,000"
+        highlight="15 locations, up to 45 hectares of barracks without cables"
+        quote="Noch nie hatten wir die kritische Liegenschaft so gut im Blick, wie jetzt."
+        quotePerson="Project Lead Bückeburg"
+        quoteRole="Event Security"
+        tags={['MOVETOS SET', 'TerrOps', 'BDS', '15 Locations']}
+      />
+    </div>
+
+    <div class="text-center mt-10">
+      <a href={`${import.meta.env.BASE_URL}/en/references/`} class="btn btn-ghost">View All References &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 md:py-28 text-center">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="label justify-center">Get Started</div>
+    <div class="section-title mx-auto" style="max-width: 540px;">
+      Your next corporate event.<br>
+      <span class="text-accent-blue">Securely planned.</span>
+    </div>
+    <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+      In a personal demo, we show you how MOVETOS works at your next corporate event — tailored to your requirements.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center mt-8">
+      <a href={`${import.meta.env.BASE_URL}/en/terrops/demo/`} class="btn btn-primary">Schedule Demo &rarr;</a>
+      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

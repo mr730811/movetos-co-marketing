@@ -1,24 +1,36 @@
 ---
+import { t } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+interface Props { lang?: Lang; }
+const { lang = 'de' } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 <div id="contact-form-wrapper">
-  <form id="contact-form" class="bg-surface/80 backdrop-blur-xl border border-dark-border rounded-[14px] p-8">
+  <form id="contact-form" class="bg-surface/80 backdrop-blur-xl border border-dark-border rounded-[14px] p-8"
+    data-sending={t(lang, 'form.sending')}
+    data-submit={t(lang, 'form.submit')}
+    data-error={t(lang, 'form.errorTitle')}
+    data-error-subject={t(lang, 'form.errorSubject')}
+    data-lang={lang}
+  >
     <div class="grid grid-cols-2 gap-4 mb-4">
       <div>
-        <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">Name *</label>
+        <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">{t(lang, 'form.name')}</label>
         <input
           type="text"
           name="name"
           required
-          placeholder="Max Mustermann"
+          placeholder={t(lang, 'form.namePlaceholder')}
           class="w-full px-4 py-3 rounded-lg border border-dark-border bg-dark text-text-primary font-body text-sm outline-none transition-colors focus:border-brand-orange"
         />
       </div>
       <div>
-        <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">Unternehmen</label>
+        <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">{t(lang, 'form.company')}</label>
         <input
           type="text"
           name="company"
-          placeholder="Firma GmbH"
+          placeholder={t(lang, 'form.companyPlaceholder')}
           class="w-full px-4 py-3 rounded-lg border border-dark-border bg-dark text-text-primary font-body text-sm outline-none transition-colors focus:border-brand-orange"
         />
       </div>
@@ -26,47 +38,47 @@
 
     <div class="grid grid-cols-2 gap-4 mb-4">
       <div>
-        <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">E-Mail *</label>
+        <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">{t(lang, 'form.email')}</label>
         <input
           type="email"
           name="email"
           required
-          placeholder="max@firma.de"
+          placeholder={t(lang, 'form.emailPlaceholder')}
           class="w-full px-4 py-3 rounded-lg border border-dark-border bg-dark text-text-primary font-body text-sm outline-none transition-colors focus:border-brand-orange"
         />
       </div>
       <div>
-        <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">Einsatz-Typ</label>
+        <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">{t(lang, 'form.deploymentType')}</label>
         <select
           name="eventType"
           class="w-full px-4 py-3 rounded-lg border border-dark-border bg-dark text-text-primary font-body text-sm outline-none transition-colors focus:border-brand-orange appearance-auto"
         >
-          <option value="">Bitte wählen</option>
-          <option value="festival">Festival / Konzert</option>
-          <option value="stadtfest">Stadtfest / Markt</option>
-          <option value="corporate">Corporate Event</option>
-          <option value="kritis">KRITIS / Infrastruktur</option>
-          <option value="sonstige">Sonstiges</option>
+          <option value="">{t(lang, 'form.pleaseSelect')}</option>
+          <option value="festival">{t(lang, 'form.festival')}</option>
+          <option value="stadtfest">{t(lang, 'form.cityFest')}</option>
+          <option value="corporate">{t(lang, 'form.corporateEvent')}</option>
+          <option value="kritis">{t(lang, 'form.kritis')}</option>
+          <option value="sonstige">{t(lang, 'form.other')}</option>
         </select>
       </div>
     </div>
 
     <div class="mb-4">
-      <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">Erwartete Personenzahl</label>
+      <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">{t(lang, 'form.expectedVisitors')}</label>
       <input
         type="text"
         name="visitors"
-        placeholder="z.B. 20.000"
+        placeholder={t(lang, 'form.visitorsPlaceholder')}
         class="w-full px-4 py-3 rounded-lg border border-dark-border bg-dark text-text-primary font-body text-sm outline-none transition-colors focus:border-brand-orange"
       />
     </div>
 
     <div class="mb-6">
-      <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">Nachricht (optional)</label>
+      <label class="block font-mono text-[10px] tracking-[1px] uppercase text-text-muted mb-1.5">{t(lang, 'form.message')}</label>
       <textarea
         name="message"
         rows="3"
-        placeholder="Erzählen Sie uns von Ihrem Projekt..."
+        placeholder={t(lang, 'form.messagePlaceholder')}
         class="w-full px-4 py-3 rounded-lg border border-dark-border bg-dark text-text-primary font-body text-sm outline-none transition-colors focus:border-brand-orange resize-y"
       ></textarea>
     </div>
@@ -80,9 +92,9 @@
           class="mt-0.5 w-4 h-4 accent-brand-orange shrink-0"
         />
         <span class="text-xs text-text-muted leading-relaxed">
-          Ich stimme der Verarbeitung meiner Daten gemäß der
-          <a href={`${import.meta.env.BASE_URL}/datenschutz/`} target="_blank" class="text-brand-orange hover:text-brand-orange-light underline transition-colors">Datenschutzerklärung</a>
-          zu. *
+          {t(lang, 'form.privacyConsent')}
+          <a href={`${base}/datenschutz/`} target="_blank" class="text-brand-orange hover:text-brand-orange-light underline transition-colors">{t(lang, 'form.privacyPolicy')}</a>
+          {t(lang, 'form.privacySuffix')}
         </span>
       </label>
     </div>
@@ -91,30 +103,34 @@
       type="submit"
       class="inline-flex items-center justify-center gap-1.5 w-full px-7 py-3.5 rounded-lg text-sm font-semibold bg-brand-orange text-white cursor-pointer border-none transition-all hover:brightness-110"
     >
-      Demo anfragen &rarr;
+      {t(lang, 'form.submit')} &rarr;
     </button>
 
     <p class="text-[11px] text-text-muted text-center mt-3 leading-relaxed">
-      Wir melden uns innerhalb von 24 Stunden. Keine Werbemails, versprochen.
+      {t(lang, 'form.noSpam')}
     </p>
   </form>
 
   <div id="contact-form-success" class="hidden bg-surface/80 backdrop-blur-xl border border-dark-border rounded-[14px] py-12 px-8 text-center">
     <div class="text-5xl mb-4">&#10003;</div>
-    <h3 class="font-display text-2xl font-bold mb-2 text-text-primary">Vielen Dank!</h3>
+    <h3 class="font-display text-2xl font-bold mb-2 text-text-primary">{t(lang, 'form.thankYou')}</h3>
     <p class="text-[15px] text-text-secondary leading-relaxed">
-      Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+      {t(lang, 'form.responseTime')}
     </p>
   </div>
 </div>
 
 <script>
-  // API-Endpoint URL — anpassen wenn der Contact-API-Server deployed ist
   const CONTACT_API_URL = 'https://api.movetos.de';
 
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const success = document.getElementById('contact-form-success') as HTMLElement;
   const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+  const sendingText = form?.dataset.sending || 'Sending...';
+  const submitText = form?.dataset.submit || 'Request Demo';
+  const errorText = form?.dataset.error || 'Could not send message.';
+  const errorSubject = form?.dataset.errorSubject || 'Contact request from';
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -123,15 +139,13 @@
     const data: Record<string, string> = {};
     formData.forEach((value, key) => { data[key] = value.toString(); });
 
-    // DSGVO-konformes Consent-Logging
     data.consent_timestamp = new Date().toISOString();
     data.consent_version = '2026-03-01';
     data.consent_source = window.location.pathname;
 
-    // Button deaktivieren während des Sendens
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Wird gesendet…';
+      submitBtn.textContent = sendingText;
     }
 
     try {
@@ -143,27 +157,24 @@
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
-        throw new Error(err.error || 'Serverfehler');
+        throw new Error(err.error || 'Server error');
       }
 
       form.classList.add('hidden');
       success?.classList.remove('hidden');
     } catch (err) {
-      // Fallback: mailto-Link öffnen bei API-Fehler
-      const subject = encodeURIComponent(`Kontaktanfrage von ${data.name || 'Website'}`);
+      const subject = encodeURIComponent(`${errorSubject} ${data.name || 'Website'}`);
       const body = encodeURIComponent(
-        `Name: ${data.name}\nUnternehmen: ${data.company || '—'}\nE-Mail: ${data.email}\nEinsatz-Typ: ${data.eventType || '—'}\nPersonenzahl: ${data.visitors || '—'}\n\nNachricht:\n${data.message || '—'}`
+        `Name: ${data.name}\nCompany: ${data.company || '—'}\nEmail: ${data.email}\nType: ${data.eventType || '—'}\nVisitors: ${data.visitors || '—'}\n\nMessage:\n${data.message || '—'}`
       );
-      const fallback = confirm(
-        'Die Nachricht konnte leider nicht automatisch gesendet werden.\n\nMöchten Sie die Anfrage stattdessen per E-Mail senden?'
-      );
+      const fallback = confirm(errorText);
       if (fallback) {
         window.location.href = `mailto:kontakt@movetos.de?subject=${subject}&body=${body}`;
       }
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Demo anfragen &rarr;';
+        submitBtn.innerHTML = submitText + ' &rarr;';
       }
     }
   });
