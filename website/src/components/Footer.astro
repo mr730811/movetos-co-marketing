@@ -1,5 +1,5 @@
 ---
-import { t, getLocalizedPath } from '../i18n/utils';
+import { t, getLocalizedPath, joinPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 
 interface Props { lang?: Lang; }
@@ -9,9 +9,9 @@ const base = import.meta.env.BASE_URL;
 
 const l = (dePath: string) => {
   if (lang === 'en') {
-    return getLocalizedPath(base + dePath, 'en', base);
+    return getLocalizedPath(joinPath(base, dePath), 'en', base);
   }
-  return base + dePath;
+  return joinPath(base, dePath);
 };
 ---
 <footer class="border-t border-dark-border pt-12 pb-9">

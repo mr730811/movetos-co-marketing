@@ -1,5 +1,5 @@
 ---
-import { t, getLocalizedPath } from '../i18n/utils';
+import { t, getLocalizedPath, joinPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 
 interface Props {
@@ -10,8 +10,8 @@ const { compact = false, lang = 'de' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const refLink = lang === 'en'
-  ? getLocalizedPath(base + '/referenzen/', 'en', base)
-  : base + '/referenzen/';
+  ? getLocalizedPath(joinPath(base, '/referenzen/'), 'en', base)
+  : joinPath(base, '/referenzen/');
 
 const references = [
   { name: 'BMW Motorrad Days', short: 'BMW' },

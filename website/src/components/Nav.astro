@@ -1,5 +1,5 @@
 ---
-import { t, getLocalizedPath } from '../i18n/utils';
+import { t, getLocalizedPath, joinPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 
 interface Props { lang?: Lang; }
@@ -13,9 +13,9 @@ const switchUrl = getLocalizedPath(currentPath, altLang, base);
 // Helper for localized links
 const l = (dePath: string) => {
   if (lang === 'en') {
-    return getLocalizedPath(base + dePath, 'en', base);
+    return getLocalizedPath(joinPath(base, dePath), 'en', base);
   }
-  return base + dePath;
+  return joinPath(base, dePath);
 };
 
 // Active path check

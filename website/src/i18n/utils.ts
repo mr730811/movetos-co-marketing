@@ -5,6 +5,14 @@ import { routeMap } from './routes';
 const translations: Record<string, any> = { de, en };
 export type Lang = 'de' | 'en';
 
+/** Join base path with a sub-path, avoiding double slashes */
+export function joinPath(base: string, path: string): string {
+  if (base.endsWith('/') && path.startsWith('/')) {
+    return base + path.slice(1);
+  }
+  return base + path;
+}
+
 export function getLangFromUrl(url: URL): Lang {
   const path = url.pathname;
   // Check if path contains /en/ segment (after base path)
@@ -38,12 +46,12 @@ export function getLocalizedPath(path: string, lang: Lang, base: string): string
       // Find DE equivalent
       for (const [dePath, enRoute] of Object.entries(routeMap)) {
         if (enRoute === enPath || enRoute === enPath.replace(/\/$/, '') + '/') {
-          return base + dePath;
+          return joinPath(base, dePath);
         }
       }
-      return base + '/';
+      return joinPath(base, '/');
     }
-    return base + cleanPath;
+    return joinPath(base, cleanPath);
   }
 
   // lang === 'en': map DE path to EN
@@ -51,11 +59,11 @@ export function getLocalizedPath(path: string, lang: Lang, base: string): string
   const enPath = routeMap[dePath];
   if (enPath === null) {
     // Legal page with no EN equivalent — link to DE version
-    return base + dePath;
+    return joinPath(base, dePath);
   }
   if (enPath) {
-    return base + '/en' + enPath;
+    return joinPath(base, '/en' + enPath);
   }
   // Fallback
-  return base + '/en' + cleanPath;
+  return joinPath(base, '/en' + cleanPath);
 }

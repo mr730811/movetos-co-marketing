@@ -1,5 +1,5 @@
 ---
-import { t, getLocalizedPath } from '../i18n/utils';
+import { t, getLocalizedPath, joinPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 
 interface Props { lang?: Lang; }
@@ -7,8 +7,8 @@ const { lang = 'de' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const demoLink = lang === 'en'
-  ? getLocalizedPath(base + '/terrops/demo/', 'en', base)
-  : base + '/terrops/demo/';
+  ? getLocalizedPath(joinPath(base, '/terrops/demo/'), 'en', base)
+  : joinPath(base, '/terrops/demo/');
 ---
 <div class="roi-calc bg-white border border-dark-border rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(0,0,0,0.06);" data-lang={lang}>
   <div class="grid grid-cols-3 gap-4 mb-6">
