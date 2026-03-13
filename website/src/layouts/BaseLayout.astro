@@ -41,8 +41,8 @@ const {
   <meta property="og:image" content={ogImage} />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`} />
-  <link rel="icon" type="image/x-icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} />
+  <link rel="icon" type="image/svg+xml" href={`/favicon.svg`} />
+  <link rel="icon" type="image/x-icon" href={`/favicon.ico`} />
   <link rel="canonical" href={currentPath} />
   <link rel="alternate" hreflang="de" href={lang === 'de' ? currentPath : altUrl} />
   {altPath !== Astro.url.pathname && <link rel="alternate" hreflang="en" href={lang === 'en' ? currentPath : altUrl} />}
@@ -64,7 +64,7 @@ const {
     @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/ibm-plex-mono/ibm-plex-mono-400.ttf') format('truetype'); }
     @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/ibm-plex-mono/ibm-plex-mono-500.ttf') format('truetype'); }
   </style>
-<!-- build:v2026-03-13a -->
+<!-- build:v2026-03-13b -->
 </head>
 <body>
   <Nav lang={lang} />

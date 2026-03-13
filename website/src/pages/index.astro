@@ -8,7 +8,7 @@ import StatsCounter from '../components/StatsCounter.astro';
 
 <!-- ===== HERO ===== -->
 <section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
-  <img src={`${import.meta.env.BASE_URL}/images/hero-bg.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <img src={`/images/hero-bg.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
   <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
   <div class="max-w-[1200px] mx-auto px-6 relative">
     <div class="max-w-2xl bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-lg border border-white/60">
@@ -41,8 +41,8 @@ import StatsCounter from '../components/StatsCounter.astro';
 
       <!-- CTAs -->
       <div class="flex flex-wrap items-center gap-3 mt-6">
-        <a href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
-        <a href={`${import.meta.env.BASE_URL}/terrops/`} class="btn btn-ghost bg-white/50">TerrOps entdecken</a>
+        <a href={`/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+        <a href={`/terrops/`} class="btn btn-ghost bg-white/50">TerrOps entdecken</a>
         <a href="tel:+4981572934870" class="hidden md:inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-brand-orange transition-colors ml-1">
           &#9742; 08157 2934870
         </a>
@@ -59,8 +59,8 @@ import StatsCounter from '../components/StatsCounter.astro';
 
     <div class="grid md:grid-cols-3 gap-5">
       <!-- Events & Festivals -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="reveal glass-card overflow-hidden border-t-2 border-t-accent-green hover:border-accent-green/40 transition-all group no-underline">
-        <img src={`${import.meta.env.BASE_URL}/images/tile-events.jpg`} alt="Weihnachtsmarkt mit MOVETOS Überwachung" class="w-full h-36 object-cover" loading="lazy" />
+      <a href={`/loesungen/events/`} class="reveal glass-card overflow-hidden border-t-2 border-t-accent-green hover:border-accent-green/40 transition-all group no-underline">
+        <img src={`/images/tile-events.jpg`} alt="Weihnachtsmarkt mit MOVETOS Überwachung" class="w-full h-36 object-cover" loading="lazy" />
         <div class="p-7 pt-5">
         <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-accent-green transition-colors">Events & Festivals</h3>
         <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Crowd Management</p>
@@ -74,8 +74,8 @@ import StatsCounter from '../components/StatsCounter.astro';
       </a>
 
       <!-- Corporate -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="reveal glass-card overflow-hidden border-t-2 border-t-accent-blue hover:border-accent-blue/40 transition-all group no-underline" style="transition-delay: 0.1s">
-        <img src={`${import.meta.env.BASE_URL}/images/tile-corporate.jpg`} alt="VW Family Days Corporate Event" class="w-full h-36 object-cover" loading="lazy" />
+      <a href={`/loesungen/corporate/`} class="reveal glass-card overflow-hidden border-t-2 border-t-accent-blue hover:border-accent-blue/40 transition-all group no-underline" style="transition-delay: 0.1s">
+        <img src={`/images/tile-corporate.jpg`} alt="VW Family Days Corporate Event" class="w-full h-36 object-cover" loading="lazy" />
         <div class="p-7 pt-5">
         <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-accent-blue transition-colors">Corporate</h3>
         <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Veranstaltungssicherheit</p>
@@ -89,8 +89,8 @@ import StatsCounter from '../components/StatsCounter.astro';
       </a>
 
       <!-- KRITIS -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="reveal glass-card overflow-hidden border-t-2 border-t-brand-orange hover:border-brand-orange/40 transition-all group no-underline" style="transition-delay: 0.2s">
-        <img src={`${import.meta.env.BASE_URL}/images/tile-kritis.jpg`} alt="Flughafen München KRITIS Überwachung" class="w-full h-36 object-cover" loading="lazy" />
+      <a href={`/loesungen/kritis/`} class="reveal glass-card overflow-hidden border-t-2 border-t-brand-orange hover:border-brand-orange/40 transition-all group no-underline" style="transition-delay: 0.2s">
+        <img src={`/images/tile-kritis.jpg`} alt="Flughafen München KRITIS Überwachung" class="w-full h-36 object-cover" loading="lazy" />
         <div class="p-7 pt-5">
         <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-brand-orange transition-colors">Kritische Infrastruktur</h3>
         <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Perimeterschutz & Lagebildführung</p>
@@ -138,7 +138,7 @@ import StatsCounter from '../components/StatsCounter.astro';
             </div>
           ))}
         </div>
-        <a  href={`${import.meta.env.BASE_URL}/terrops/`} class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-6 hover:text-brand-orange transition-colors">
+        <a  href={`/terrops/`} class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-6 hover:text-brand-orange transition-colors">
           Mehr erfahren &rarr;
         </a>
       </div>
@@ -160,7 +160,7 @@ import StatsCounter from '../components/StatsCounter.astro';
             </div>
           ))}
         </div>
-        <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-6 hover:text-brand-orange-light transition-colors">
+        <a  href={`/infrastruktur/`} class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-6 hover:text-brand-orange-light transition-colors">
           Hardware entdecken &rarr;
         </a>
       </div>
@@ -205,7 +205,7 @@ import StatsCounter from '../components/StatsCounter.astro';
       <!-- Säule 1: Safety Intelligence -->
       <div class="reveal glass-card overflow-hidden border-t-2 border-t-accent-green">
         <div class="relative h-32">
-          <img src={`${import.meta.env.BASE_URL}/images/tile-events.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <img src={`/images/tile-events.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
         </div>
         <div class="p-7 pt-0 -mt-4 relative">
@@ -224,7 +224,7 @@ import StatsCounter from '../components/StatsCounter.astro';
       <!-- Säule 2: Live Intelligence -->
       <div class="reveal glass-card overflow-hidden border-t-2 border-t-accent-blue" style="transition-delay: 0.1s">
         <div class="relative h-32">
-          <img src={`${import.meta.env.BASE_URL}/images/occ-inside.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <img src={`/images/occ-inside.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
         </div>
         <div class="p-7 pt-0 -mt-4 relative">
@@ -243,7 +243,7 @@ import StatsCounter from '../components/StatsCounter.astro';
       <!-- Säule 3: All-in-One Mobility -->
       <div class="reveal glass-card overflow-hidden border-t-2 border-t-brand-orange" style="transition-delay: 0.2s">
         <div class="relative h-32">
-          <img src={`${import.meta.env.BASE_URL}/images/set-mast.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <img src={`/images/set-mast.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
         </div>
         <div class="p-7 pt-0 -mt-4 relative">
@@ -275,7 +275,7 @@ import StatsCounter from '../components/StatsCounter.astro';
 
     <div class="grid md:grid-cols-3 gap-6 mt-14">
       <!-- Events -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
+      <a href={`/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
         <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Events & Festivals</div>
         <div class="font-display text-3xl font-800 text-accent-green mb-2">-15%</div>
         <div class="font-display text-sm font-semibold text-text-primary mb-2">Personaleinsatz</div>
@@ -288,7 +288,7 @@ import StatsCounter from '../components/StatsCounter.astro';
       </a>
 
       <!-- Corporate -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
+      <a href={`/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
         <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Corporate</div>
         <div class="font-display text-3xl font-800 text-accent-blue mb-2">100%</div>
         <div class="font-display text-sm font-semibold text-text-primary mb-2">Compliance-Dokumentation</div>
@@ -301,7 +301,7 @@ import StatsCounter from '../components/StatsCounter.astro';
       </a>
 
       <!-- KRITIS -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
+      <a href={`/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
         <div class="font-mono text-[9px] uppercase tracking-wider text-text-muted mb-3">Kritische Infrastruktur</div>
         <div class="font-display text-3xl font-800 text-brand-orange mb-2">24/7</div>
         <div class="font-display text-sm font-semibold text-text-primary mb-2">Echtzeit-Lagebild</div>
@@ -354,7 +354,7 @@ import StatsCounter from '../components/StatsCounter.astro';
 
 <!-- ===== CTA ===== -->
 <section class="relative py-20 md:py-28 overflow-hidden">
-  <img src={`${import.meta.env.BASE_URL}/images/event-night.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+  <img src={`/images/event-night.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
   <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
   <div class="max-w-[1200px] mx-auto px-6 relative">
     <div class="max-w-2xl mx-auto bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 text-center shadow-lg border border-white/60">
@@ -367,7 +367,7 @@ import StatsCounter from '../components/StatsCounter.astro';
         In einer persönlichen Live-Demo zeigen wir Ihnen, wie TerrOps und MOVETOS SET in Ihrem Einsatzszenario funktionieren — zugeschnitten auf Ihre Anforderungen.
       </p>
       <div class="flex flex-wrap gap-3 justify-center mt-8">
-        <a href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+        <a href={`/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
         <a href="tel:+4981572934870" class="btn btn-ghost bg-white/50">&#9742; 08157 2934870</a>
       </div>
     </div>

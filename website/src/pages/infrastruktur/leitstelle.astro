@@ -9,9 +9,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <section class="pt-32 pb-20">
   <div class="max-w-[1200px] mx-auto px-6">
     <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
-      <a  href={`${import.meta.env.BASE_URL}/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
+      <a  href={`/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
       <span>/</span>
-      <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="hover:text-text-secondary transition-colors">Infrastruktur</a>
+      <a  href={`/infrastruktur/`} class="hover:text-text-secondary transition-colors">Infrastruktur</a>
       <span>/</span>
       <span class="text-brand-orange">Mobile Leitstelle</span>
     </nav>
@@ -57,7 +57,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <div>
-        <img src={`${import.meta.env.BASE_URL}/images/occ-inside.jpg`} alt="MOVETOS Operation Control Centre (OCC) Innenansicht" class="w-full rounded-xl shadow-xl mb-8 object-cover max-h-72" loading="lazy" />
+        <img src={`/images/occ-inside.jpg`} alt="MOVETOS Operation Control Centre (OCC) Innenansicht" class="w-full rounded-xl shadow-xl mb-8 object-cover max-h-72" loading="lazy" />
         <h2 class="font-display text-2xl font-bold mb-6">Einsatzszenarien</h2>
         <div class="flex flex-col gap-4">
           {[
@@ -85,8 +85,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
     <p class="section-desc text-center mx-auto mt-4">Wir konfigurieren Ihr OCC individuell nach Ihren Anforderungen.</p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a  href={`${import.meta.env.BASE_URL}/kontakt/`} class="btn btn-primary">Beratung anfragen &rarr;</a>
-      <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="btn btn-ghost">&larr; Alle Systeme</a>
+      <a  href={`/kontakt/`} class="btn btn-primary">Beratung anfragen &rarr;</a>
+      <a  href={`/infrastruktur/`} class="btn btn-ghost">&larr; Alle Systeme</a>
     </div>
   </div>
 </section>

@@ -19,9 +19,9 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
         <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
-          <a  href={`${import.meta.env.BASE_URL}/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
+          <a  href={`/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
           <span>/</span>
-          <a  href={`${import.meta.env.BASE_URL}/terrops/`} class="hover:text-text-secondary transition-colors">Lösungen</a>
+          <a  href={`/terrops/`} class="hover:text-text-secondary transition-colors">Lösungen</a>
           <span>/</span>
           <span class="text-brand-orange">TerrOps</span>
         </nav>
@@ -43,7 +43,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         </p>
 
         <div class="flex flex-wrap gap-3 mt-8">
-          <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Live-Demo vereinbaren &rarr;</a>
+          <a  href={`/terrops/demo/`} class="btn btn-primary">Live-Demo vereinbaren &rarr;</a>
           <a href="#how" class="btn btn-ghost">So funktioniert's</a>
         </div>
       </div>
@@ -62,7 +62,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 
 <!-- ===== DAS PROBLEM (ohne Angst) ===== -->
 <section class="relative py-20 md:py-28 overflow-hidden">
-  <img src={`${import.meta.env.BASE_URL}/images/crowd-atmosphere.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" loading="lazy" />
+  <img src={`/images/crowd-atmosphere.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" loading="lazy" />
   <div class="max-w-[1200px] mx-auto px-6 relative">
     <div class="max-w-2xl mx-auto text-center">
       <div class="label justify-center">Die Herausforderung</div>
@@ -263,7 +263,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
     </p>
 
     <div class="grid md:grid-cols-3 gap-6 mt-14">
-      <a href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
+      <a href={`/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
         <div class="w-10 h-10 rounded-xl bg-accent-green-dim flex items-center justify-center text-lg mb-4">&#128737;</div>
         <h3 class="font-display text-base font-bold text-text-primary group-hover:text-accent-green transition-colors mb-2">Events & Festivals</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -272,7 +272,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
       </a>
 
-      <a href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
+      <a href={`/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
         <div class="w-10 h-10 rounded-xl bg-accent-blue-dim flex items-center justify-center text-lg mb-4">&#127970;</div>
         <h3 class="font-display text-base font-bold text-text-primary group-hover:text-accent-blue transition-colors mb-2">Corporate</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -281,7 +281,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
       </a>
 
-      <a href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
+      <a href={`/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
         <div class="w-10 h-10 rounded-xl bg-brand-orange-glow flex items-center justify-center text-lg mb-4">&#128274;</div>
         <h3 class="font-display text-base font-bold text-text-primary group-hover:text-brand-orange transition-colors mb-2">Kritische Infrastruktur</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -349,7 +349,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
       </div>
 
       <div class="reveal glass-card overflow-hidden" style="transition-delay: 0.1s">
-        <img src={`${import.meta.env.BASE_URL}/images/set-mast.jpg`} alt="MOVETOS SET Mastsystem im Einsatz" class="w-full h-44 object-cover" loading="lazy" />
+        <img src={`/images/set-mast.jpg`} alt="MOVETOS SET Mastsystem im Einsatz" class="w-full h-44 object-cover" loading="lazy" />
         <div class="p-7">
         <div class="flex items-center gap-3 mb-3">
           <h3 class="font-display text-lg font-bold">MOVETOS SET</h3>
@@ -415,7 +415,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quotePerson="H. Schmitt"
         quoteRole="Veranstalter"
         tags={['MOVETOS SET', 'TerrOps', '20 Kameras', '3x']}
-        image={`${import.meta.env.BASE_URL}/images/ref-bmw.jpg`}
+        image={`/images/ref-bmw.jpg`}
       />
       <ReferenceCard
         name="VW Familie Days Wolfsburg"
@@ -426,7 +426,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quotePerson="H. Holzemer"
         quoteRole="Fachplaner"
         tags={['MOVETOS SET', 'TerrOps', '60 Kameras']}
-        image={`${import.meta.env.BASE_URL}/images/ref-vw.jpg`}
+        image={`/images/ref-vw.jpg`}
       />
       <ReferenceCard
         name="UCI Rad WM"
@@ -437,7 +437,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quotePerson="Mag. Noggler"
         quoteRole="Leitstelle Tirol"
         tags={['MOVETOS SET', 'TerrOps', '20 Kameras', '7 Tage']}
-        image={`${import.meta.env.BASE_URL}/images/ref-uci.jpg`}
+        image={`/images/ref-uci.jpg`}
       />
       <ReferenceCard
         name="Flughafen München"
@@ -448,12 +448,12 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quotePerson="R. Götze"
         quoteRole="Airport"
         tags={['TerrOps', 'KRITIS', '40 Kameras', '24/7']}
-        image={`${import.meta.env.BASE_URL}/images/ref-muc.jpg`}
+        image={`/images/ref-muc.jpg`}
       />
     </div>
 
     <div class="text-center mt-10">
-      <a  href={`${import.meta.env.BASE_URL}/referenzen/`} class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
+      <a  href={`/referenzen/`} class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
     </div>
   </div>
 </section>
@@ -470,7 +470,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
           TerrOps entfaltet sein volles Potenzial im Zusammenspiel mit dem MOVETOS SET-System — kabellos, netzautark, in unter 5 Stunden einsatzbereit.
         </p>
       </div>
-      <a  href={`${import.meta.env.BASE_URL}/infrastruktur/`} class="btn btn-primary btn-sm whitespace-nowrap">MOVETOS SET entdecken &rarr;</a>
+      <a  href={`/infrastruktur/`} class="btn btn-primary btn-sm whitespace-nowrap">MOVETOS SET entdecken &rarr;</a>
     </div>
   </div>
 </section>
@@ -489,7 +489,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
       30 Minuten Live-Demo. Wir zeigen Ihnen TerrOps mit Ihrem Szenario — unverbindlich.
     </p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+      <a  href={`/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
       <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
     </div>
   </div>
@@ -497,7 +497,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 
 <!-- ===== STICKY MOBILE CTA ===== -->
 <div class="fixed bottom-0 left-0 right-0 lg:hidden bg-white/95 backdrop-blur-lg border-t border-dark-border p-3 z-40">
-  <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary w-full justify-center">Demo buchen &rarr;</a>
+  <a  href={`/terrops/demo/`} class="btn btn-primary w-full justify-center">Demo buchen &rarr;</a>
 </div>
 
 </BaseLayout>

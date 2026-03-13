@@ -9,9 +9,9 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 <section class="pt-32 pb-20">
   <div class="max-w-[1200px] mx-auto px-6">
     <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
-      <a  href={`${import.meta.env.BASE_URL}/en/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
+      <a  href={`/en/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
       <span>/</span>
-      <a  href={`${import.meta.env.BASE_URL}/en/infrastructure/`} class="hover:text-text-secondary transition-colors">Infrastructure</a>
+      <a  href={`/en/infrastructure/`} class="hover:text-text-secondary transition-colors">Infrastructure</a>
       <span>/</span>
       <span class="text-brand-orange">Mobile Command Center</span>
     </nav>
@@ -57,7 +57,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
       </div>
 
       <div>
-        <img src={`${import.meta.env.BASE_URL}/images/occ-inside.jpg`} alt="MOVETOS Operation Control Centre (OCC) interior view" class="w-full rounded-xl shadow-xl mb-8 object-cover max-h-72" loading="lazy" />
+        <img src={`/images/occ-inside.jpg`} alt="MOVETOS Operation Control Centre (OCC) interior view" class="w-full rounded-xl shadow-xl mb-8 object-cover max-h-72" loading="lazy" />
         <h2 class="font-display text-2xl font-bold mb-6">Deployment Scenarios</h2>
         <div class="flex flex-col gap-4">
           {[
@@ -85,8 +85,8 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     </div>
     <p class="section-desc text-center mx-auto mt-4">We configure your OCC individually according to your requirements.</p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a  href={`${import.meta.env.BASE_URL}/en/contact/`} class="btn btn-primary">Request Consultation &rarr;</a>
-      <a  href={`${import.meta.env.BASE_URL}/en/infrastructure/`} class="btn btn-ghost">&larr; All Systems</a>
+      <a  href={`/en/contact/`} class="btn btn-primary">Request Consultation &rarr;</a>
+      <a  href={`/en/infrastructure/`} class="btn btn-ghost">&larr; All Systems</a>
     </div>
   </div>
 </section>
