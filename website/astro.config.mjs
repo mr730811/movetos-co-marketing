@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://movetos-website.pages.dev',
+  site: 'https://movetos-co-marketing.pages.dev',
   integrations: [react()],
   i18n: {
     defaultLocale: 'de',
