@@ -2,59 +2,50 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SocialProofBar from '../components/SocialProofBar.astro';
 import StatsCounter from '../components/StatsCounter.astro';
-import DashboardMockup from '../components/DashboardMockup.astro';
 
 ---
-<BaseLayout title="MOVETOS — Operations Intelligence. Made in Germany." description="KI-gestützte Lagebildführung und kabellose Infrastruktur — für Großveranstaltungen, Unternehmen und kritische Infrastruktur. Bewährt bei über 150 Einsätzen.">
+<BaseLayout title="MOVETOS — Operations Intelligence. Made in Germany." description="KI-gestützte Lagebildführung und kabellose Infrastruktur — für Großveranstaltungen, Unternehmen und kritische Infrastruktur. Bewährt seit 2017.">
 
 <!-- ===== HERO ===== -->
 <section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/[0.03] via-transparent to-accent-blue/[0.02] pointer-events-none"></div>
-
+  <img src={`${import.meta.env.BASE_URL}/images/hero-bg.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
   <div class="max-w-[1200px] mx-auto px-6 relative">
-    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-      <!-- Left: Messaging -->
-      <div>
-        <div class="label mb-4">Operations Intelligence. Made in Germany.</div>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-800 tracking-tight leading-[1.08]">
-          Erkennen. Bewerten.<br>
-          <span class="text-brand-orange">Steuern.</span>
-        </h1>
-        <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
-          KI-gestützte Lagebildführung und kabellose Infrastruktur — für Großveranstaltungen, Unternehmen und kritische Infrastruktur. Aufgebaut in unter 5 Stunden, bewährt bei über 12,7 Mio. Besuchern. Made in Germany.
-        </p>
+    <div class="max-w-2xl bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-lg border border-white/60">
+      <div class="label mb-4">Operations Intelligence. Made in Germany.</div>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-800 tracking-tight leading-[1.08]">
+        Erkennen. Bewerten.<br>
+        <span class="text-brand-orange">Steuern.</span>
+      </h1>
+      <p class="text-base md:text-lg text-text-secondary leading-relaxed mt-5 max-w-xl">
+        KI-gestützte Lagebildführung und kabellose Infrastruktur — für Großveranstaltungen, Unternehmen und kritische Infrastruktur. Aufgebaut in unter 5 Stunden, bewährt bei über 12,7 Mio. Besuchern. Made in Germany.
+      </p>
 
-        <!-- Mini Stats -->
-        <div class="flex flex-wrap gap-5 mt-6 py-3">
-          <div>
-            <div class="font-display text-2xl font-800 text-brand-orange">150+</div>
-            <div class="text-[11px] text-text-muted font-mono">Einsätze</div>
-          </div>
-          <div class="w-px bg-dark-border"></div>
-          <div>
-            <div class="font-display text-2xl font-800 text-accent-blue">12.7 Mio.+</div>
-            <div class="text-[11px] text-text-muted font-mono">Besucher betreut</div>
-          </div>
-          <div class="w-px bg-dark-border"></div>
-          <div>
-            <div class="font-display text-2xl font-800 text-accent-green">&lt; 5h</div>
-            <div class="text-[11px] text-text-muted font-mono">Aufbauzeit</div>
-          </div>
+      <!-- Mini Stats -->
+      <div class="flex flex-wrap gap-5 mt-6 py-3">
+        <div>
+          <div class="font-display text-2xl font-800 text-brand-orange">Seit 2017</div>
+          <div class="text-[11px] text-text-muted font-mono">im Einsatz</div>
         </div>
-
-        <!-- CTAs -->
-        <div class="flex flex-wrap items-center gap-3 mt-6">
-          <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
-          <a  href={`${import.meta.env.BASE_URL}/terrops/`} class="btn btn-ghost">TerrOps entdecken</a>
-          <a href="tel:+4981572934870" class="hidden md:inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-brand-orange transition-colors ml-1">
-            &#9742; 08157 2934870
-          </a>
+        <div class="w-px bg-dark-border"></div>
+        <div>
+          <div class="font-display text-2xl font-800 text-accent-blue">12.7 Mio.+</div>
+          <div class="text-[11px] text-text-muted font-mono">Besucher betreut</div>
+        </div>
+        <div class="w-px bg-dark-border"></div>
+        <div>
+          <div class="font-display text-2xl font-800 text-accent-green">&lt; 5h</div>
+          <div class="text-[11px] text-text-muted font-mono">Aufbauzeit</div>
         </div>
       </div>
 
-      <!-- Right: Dashboard Mockup -->
-      <div class="reveal lg:translate-y-0" style="transition-delay: 0.15s">
-        <DashboardMockup />
+      <!-- CTAs -->
+      <div class="flex flex-wrap items-center gap-3 mt-6">
+        <a href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+        <a href={`${import.meta.env.BASE_URL}/terrops/`} class="btn btn-ghost bg-white/50">TerrOps entdecken</a>
+        <a href="tel:+4981572934870" class="hidden md:inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-brand-orange transition-colors ml-1">
+          &#9742; 08157 2934870
+        </a>
       </div>
     </div>
   </div>
@@ -68,8 +59,9 @@ import DashboardMockup from '../components/DashboardMockup.astro';
 
     <div class="grid md:grid-cols-3 gap-5">
       <!-- Events & Festivals -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green hover:border-accent-green/40 transition-all group no-underline">
-        <div class="w-10 h-10 rounded-xl bg-accent-green-dim flex items-center justify-center text-lg mb-4">&#128737;</div>
+      <a href={`${import.meta.env.BASE_URL}/loesungen/events/`} class="reveal glass-card overflow-hidden border-t-2 border-t-accent-green hover:border-accent-green/40 transition-all group no-underline">
+        <img src={`${import.meta.env.BASE_URL}/images/tile-events.jpg`} alt="Weihnachtsmarkt mit MOVETOS Überwachung" class="w-full h-36 object-cover" loading="lazy" />
+        <div class="p-7 pt-5">
         <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-accent-green transition-colors">Events & Festivals</h3>
         <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Crowd Management</p>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -78,11 +70,13 @@ import DashboardMockup from '../components/DashboardMockup.astro';
         <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-5 group-hover:translate-x-1 transition-transform">
           Mehr erfahren &rarr;
         </span>
+        </div>
       </a>
 
       <!-- Corporate -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue hover:border-accent-blue/40 transition-all group no-underline" style="transition-delay: 0.1s">
-        <div class="w-10 h-10 rounded-xl bg-accent-blue-dim flex items-center justify-center text-lg mb-4">&#127970;</div>
+      <a href={`${import.meta.env.BASE_URL}/loesungen/corporate/`} class="reveal glass-card overflow-hidden border-t-2 border-t-accent-blue hover:border-accent-blue/40 transition-all group no-underline" style="transition-delay: 0.1s">
+        <img src={`${import.meta.env.BASE_URL}/images/tile-corporate.jpg`} alt="VW Family Days Corporate Event" class="w-full h-36 object-cover" loading="lazy" />
+        <div class="p-7 pt-5">
         <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-accent-blue transition-colors">Corporate</h3>
         <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Veranstaltungssicherheit</p>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -91,11 +85,13 @@ import DashboardMockup from '../components/DashboardMockup.astro';
         <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-5 group-hover:translate-x-1 transition-transform">
           Mehr erfahren &rarr;
         </span>
+        </div>
       </a>
 
       <!-- KRITIS -->
-      <a href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange hover:border-brand-orange/40 transition-all group no-underline" style="transition-delay: 0.2s">
-        <div class="w-10 h-10 rounded-xl bg-brand-orange-glow flex items-center justify-center text-lg mb-4">&#128274;</div>
+      <a href={`${import.meta.env.BASE_URL}/loesungen/kritis/`} class="reveal glass-card overflow-hidden border-t-2 border-t-brand-orange hover:border-brand-orange/40 transition-all group no-underline" style="transition-delay: 0.2s">
+        <img src={`${import.meta.env.BASE_URL}/images/tile-kritis.jpg`} alt="Flughafen München KRITIS Überwachung" class="w-full h-36 object-cover" loading="lazy" />
+        <div class="p-7 pt-5">
         <h3 class="font-display text-lg font-bold text-text-primary group-hover:text-brand-orange transition-colors">Kritische Infrastruktur</h3>
         <p class="text-[13px] text-brand-orange font-mono font-medium mt-1 mb-3">Perimeterschutz & Lagebildführung</p>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -104,6 +100,7 @@ import DashboardMockup from '../components/DashboardMockup.astro';
         <span class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-5 group-hover:translate-x-1 transition-transform">
           Mehr erfahren &rarr;
         </span>
+        </div>
       </a>
     </div>
   </div>
@@ -185,7 +182,7 @@ import DashboardMockup from '../components/DashboardMockup.astro';
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label mb-6 justify-center">In Zahlen</div>
     <StatsCounter stats={[
-      { value: '150+', label: 'Einsätze betreut', color: 'var(--color-brand-orange)' },
+      { value: 'Seit 2017', label: 'im Dauereinsatz', color: 'var(--color-brand-orange)' },
       { value: '12.7 Mio.+', label: 'Besucher betreut', color: 'var(--color-accent-blue)' },
       { value: '< 5h', label: 'Aufbauzeit', color: 'var(--color-accent-green)' },
       { value: '12+', label: 'Jahre Erfahrung', color: 'var(--color-accent-yellow)' },
@@ -206,8 +203,12 @@ import DashboardMockup from '../components/DashboardMockup.astro';
 
     <div class="grid md:grid-cols-3 gap-6 mt-14">
       <!-- Säule 1: Safety Intelligence -->
-      <div class="reveal glass-card p-7 border-t-2 border-t-accent-green">
-        <div class="w-10 h-10 rounded-xl bg-accent-green-dim flex items-center justify-center text-lg mb-4">&#128737;</div>
+      <div class="reveal glass-card overflow-hidden border-t-2 border-t-accent-green">
+        <div class="relative h-32">
+          <img src={`${import.meta.env.BASE_URL}/images/tile-events.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
+        </div>
+        <div class="p-7 pt-0 -mt-4 relative">
         <h3 class="font-display text-lg font-bold">Safety Intelligence</h3>
         <p class="text-[13px] text-text-muted mt-1 mb-4">Sicherheit, die mitdenkt.</p>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -217,11 +218,16 @@ import DashboardMockup from '../components/DashboardMockup.astro';
           <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
           <p class="text-xs text-text-secondary">Christkindlmarkt München: <strong class="text-text-primary">7,5 Mio. Besucher</strong> über 3 Jahre sicher betreut. Ohne Kabel, Traversen, Überfahrschutz.</p>
         </div>
+        </div>
       </div>
 
       <!-- Säule 2: Live Intelligence -->
-      <div class="reveal glass-card p-7 border-t-2 border-t-accent-blue" style="transition-delay: 0.1s">
-        <div class="w-10 h-10 rounded-xl bg-accent-blue-dim flex items-center justify-center text-lg mb-4">&#128200;</div>
+      <div class="reveal glass-card overflow-hidden border-t-2 border-t-accent-blue" style="transition-delay: 0.1s">
+        <div class="relative h-32">
+          <img src={`${import.meta.env.BASE_URL}/images/occ-inside.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
+        </div>
+        <div class="p-7 pt-0 -mt-4 relative">
         <h3 class="font-display text-lg font-bold">Live Intelligence</h3>
         <p class="text-[13px] text-text-muted mt-1 mb-4">Vom Bauchgefühl zum Echtzeit-Lagebild.</p>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -231,11 +237,16 @@ import DashboardMockup from '../components/DashboardMockup.astro';
           <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
           <p class="text-xs text-text-secondary">VW Familie Days Wolfsburg: <strong class="text-text-primary">60 Kameras, 0 m Kabel</strong> — gesamtes Firmenareal im Blick.</p>
         </div>
+        </div>
       </div>
 
       <!-- Säule 3: All-in-One Mobility -->
-      <div class="reveal glass-card p-7 border-t-2 border-t-brand-orange" style="transition-delay: 0.2s">
-        <div class="w-10 h-10 rounded-xl bg-brand-orange-glow flex items-center justify-center text-lg mb-4">&#128225;</div>
+      <div class="reveal glass-card overflow-hidden border-t-2 border-t-brand-orange" style="transition-delay: 0.2s">
+        <div class="relative h-32">
+          <img src={`${import.meta.env.BASE_URL}/images/set-mast.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/70 to-dark-card/30"></div>
+        </div>
+        <div class="p-7 pt-0 -mt-4 relative">
         <h3 class="font-display text-lg font-bold">All-in-One Mobility</h3>
         <p class="text-[13px] text-text-muted mt-1 mb-4">Volle Infrastruktur. Null Kabel. Unter 5 Stunden.</p>
         <p class="text-sm text-text-secondary leading-relaxed">
@@ -244,6 +255,7 @@ import DashboardMockup from '../components/DashboardMockup.astro';
         <div class="mt-5 pt-4 border-t border-dark-border">
           <p class="font-mono text-[10px] text-text-muted uppercase tracking-wider mb-1">Proof Point</p>
           <p class="text-xs text-text-secondary">Flughafen München: <strong class="text-text-primary">24/7-Betrieb</strong>, nahtlose Integration in bestehende Leitstelle.</p>
+        </div>
         </div>
       </div>
     </div>
@@ -341,19 +353,23 @@ import DashboardMockup from '../components/DashboardMockup.astro';
 <div class="divider"></div>
 
 <!-- ===== CTA ===== -->
-<section class="py-20 md:py-28 text-center">
-  <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label justify-center">Jetzt starten</div>
-    <div class="section-title mx-auto" style="max-width: 540px;">
-      30 Minuten. Ein Lagebild.<br>
-      <span class="text-brand-orange">Ihre Entscheidung.</span>
-    </div>
-    <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
-      In einer persönlichen Live-Demo zeigen wir Ihnen, wie TerrOps und MOVETOS SET in Ihrem Einsatzszenario funktionieren — zugeschnitten auf Ihre Anforderungen.
-    </p>
-    <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a  href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
-      <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+<section class="relative py-20 md:py-28 overflow-hidden">
+  <img src={`${import.meta.env.BASE_URL}/images/event-night.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+  <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="max-w-2xl mx-auto bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 text-center shadow-lg border border-white/60">
+      <div class="label justify-center">Jetzt starten</div>
+      <div class="section-title mx-auto" style="max-width: 540px;">
+        30 Minuten. Ein Lagebild.<br>
+        <span class="text-brand-orange">Ihre Entscheidung.</span>
+      </div>
+      <p class="section-desc text-center mx-auto mt-4" style="max-width: 460px;">
+        In einer persönlichen Live-Demo zeigen wir Ihnen, wie TerrOps und MOVETOS SET in Ihrem Einsatzszenario funktionieren — zugeschnitten auf Ihre Anforderungen.
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center mt-8">
+        <a href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
+        <a href="tel:+4981572934870" class="btn btn-ghost bg-white/50">&#9742; 08157 2934870</a>
+      </div>
     </div>
   </div>
 </section>

@@ -3,17 +3,12 @@ import { useState } from 'react';
 const base = import.meta.env.BASE_URL || '';
 
 export default function ROICalculator() {
-  const [visitors, setVisitors] = useState(50000);
-  const [ticketPrice, setTicketPrice] = useState(35);
-  const [gastroPerVisitor, setGastroPerVisitor] = useState(12);
-  const [eventsPerYear, setEventsPerYear] = useState(3);
+  const [area, setArea] = useState(50000);
+  const [staff, setStaff] = useState(40);
+  const [days, setDays] = useState(3);
 
-  const optimizationRate = 0.10;
-  const additionalVisitors = Math.round(visitors * optimizationRate);
-  const ticketRevenue = additionalVisitors * ticketPrice;
-  const gastroRevenue = additionalVisitors * gastroPerVisitor;
-  const revenuePerEvent = ticketRevenue + gastroRevenue;
-  const annualRevenue = revenuePerEvent * eventsPerYear;
+  const hoursSaved = Math.round((area / 10000) * days * 4);
+  const staffSaved = Math.round(staff * 0.15);
 
   const fmt = (n: number) => n.toLocaleString('de-DE');
 
@@ -27,11 +22,10 @@ export default function ROICalculator() {
         boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
       }}
     >
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '24px' }}>
-        <InputField label="Erwartete Besucher" value={visitors} onChange={setVisitors} suffix="" />
-        <InputField label="Ticketpreis (Ø)" value={ticketPrice} onChange={setTicketPrice} suffix="€" />
-        <InputField label="Gastro-Umsatz / Besucher" value={gastroPerVisitor} onChange={setGastroPerVisitor} suffix="€" />
-        <InputField label="Anzahl Events / Jahr" value={eventsPerYear} onChange={setEventsPerYear} suffix="" />
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px', marginBottom: '24px' }}>
+        <InputField label="Geländefläche (m²)" value={area} onChange={setArea} suffix="" />
+        <InputField label="Sicherheitspersonal" value={staff} onChange={setStaff} suffix="" />
+        <InputField label="Event-Dauer (Tage)" value={days} onChange={setDays} suffix="" />
       </div>
 
       <div
@@ -51,13 +45,13 @@ export default function ROICalculator() {
             marginBottom: '16px',
           }}
         >
-          Bei 10% besserer Kapazitätsauslastung
+          Ihr Effizienzgewinn mit MOVETOS
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <ResultRow label={`+ ${fmt(additionalVisitors)} zusätzliche Besucher / Event`} />
-          <ResultRow label={`+ ${fmt(ticketRevenue)} € Ticket-Mehrerlös / Event`} />
-          <ResultRow label={`+ ${fmt(gastroRevenue)} € Gastro-Mehrerlös / Event`} />
+          <ResultRow label={`${fmt(hoursSaved)} Koordinationsstunden gespart`} />
+          <ResultRow label={`${fmt(staffSaved)} Sicherheitskräfte weniger nötig`} />
+          <ResultRow label="Ø 8 Min. schnellere Reaktion durch Echtzeit-Alerts" />
         </div>
 
         <div
@@ -78,17 +72,17 @@ export default function ROICalculator() {
               color: 'var(--color-text-primary)',
             }}
           >
-            Geschätzter Mehrerlös / Jahr
+            Weniger Aufwand, mehr Kontrolle
           </span>
           <span
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: '28px',
+              fontSize: '18px',
               fontWeight: 800,
               color: 'var(--color-accent-green)',
             }}
           >
-            {fmt(annualRevenue)} €
+            Effizienter
           </span>
         </div>
 

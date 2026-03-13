@@ -41,7 +41,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             { label: 'Kommunikation', value: 'Funk + VoIP integriert', desc: 'Direkte Verbindung zum Betriebsteam im Gelände' },
             { label: 'Klimatisierung', value: 'Heizung + Kühlung', desc: 'Angenehmes Arbeitsklima bei jeder Außentemperatur' },
             { label: 'Stromversorgung', value: 'Netzautark', desc: 'Eigene Stromversorgung, unabhängig vom Veranstaltungsort' },
-            { label: 'Netzwerk', value: 'MOVETOS Mesh + LTE', desc: 'Automatische Verbindung zu allen Kameras und Lautsprechern' },
+            { label: 'Netzwerk', value: 'MOVETOS Mesh', desc: 'Automatische Verbindung zu allen Kameras und Lautsprechern' },
           ].map((spec, i) => (
             <div class="reveal flex items-start gap-4 p-4 bg-dark-card border border-dark-border rounded-xl" style={`transition-delay: ${i * 0.06}s`}>
               <div class="flex-1">
@@ -57,6 +57,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <div>
+        <img src={`${import.meta.env.BASE_URL}/images/occ-inside.jpg`} alt="MOVETOS Operation Control Centre (OCC) Innenansicht" class="w-full rounded-xl shadow-xl mb-8 object-cover max-h-72" loading="lazy" />
         <h2 class="font-display text-2xl font-bold mb-6">Einsatzszenarien</h2>
         <div class="flex flex-col gap-4">
           {[

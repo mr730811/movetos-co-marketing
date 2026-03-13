@@ -61,8 +61,9 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 <div class="divider"></div>
 
 <!-- ===== DAS PROBLEM (ohne Angst) ===== -->
-<section class="py-20 md:py-28">
-  <div class="max-w-[1200px] mx-auto px-6">
+<section class="relative py-20 md:py-28 overflow-hidden">
+  <img src={`${import.meta.env.BASE_URL}/images/crowd-atmosphere.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" loading="lazy" />
+  <div class="max-w-[1200px] mx-auto px-6 relative">
     <div class="max-w-2xl mx-auto text-center">
       <div class="label justify-center">Die Herausforderung</div>
       <div class="section-title mx-auto mt-4">
@@ -347,7 +348,9 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         <span class="font-mono text-[9px] text-text-muted uppercase tracking-wider">MESH</span>
       </div>
 
-      <div class="reveal glass-card p-7" style="transition-delay: 0.1s">
+      <div class="reveal glass-card overflow-hidden" style="transition-delay: 0.1s">
+        <img src={`${import.meta.env.BASE_URL}/images/set-mast.jpg`} alt="MOVETOS SET Mastsystem im Einsatz" class="w-full h-44 object-cover" loading="lazy" />
+        <div class="p-7">
         <div class="flex items-center gap-3 mb-3">
           <h3 class="font-display text-lg font-bold">MOVETOS SET</h3>
           <span class="font-mono text-[9px] px-2 py-0.5 bg-brand-orange-glow text-brand-orange rounded font-medium">HARDWARE</span>
@@ -359,6 +362,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
               <span class="text-accent-green text-xs">&#10003;</span> {f}
             </div>
           ))}
+        </div>
         </div>
       </div>
     </div>
@@ -411,6 +415,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quotePerson="H. Schmitt"
         quoteRole="Veranstalter"
         tags={['MOVETOS SET', 'TerrOps', '20 Kameras', '3x']}
+        image={`${import.meta.env.BASE_URL}/images/ref-bmw.jpg`}
       />
       <ReferenceCard
         name="VW Familie Days Wolfsburg"
@@ -421,6 +426,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quotePerson="H. Holzemer"
         quoteRole="Fachplaner"
         tags={['MOVETOS SET', 'TerrOps', '60 Kameras']}
+        image={`${import.meta.env.BASE_URL}/images/ref-vw.jpg`}
       />
       <ReferenceCard
         name="UCI Rad WM"
@@ -431,6 +437,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quotePerson="Mag. Noggler"
         quoteRole="Leitstelle Tirol"
         tags={['MOVETOS SET', 'TerrOps', '20 Kameras', '7 Tage']}
+        image={`${import.meta.env.BASE_URL}/images/ref-uci.jpg`}
       />
       <ReferenceCard
         name="Flughafen München"
@@ -441,6 +448,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
         quotePerson="R. Götze"
         quoteRole="Airport"
         tags={['TerrOps', 'KRITIS', '40 Kameras', '24/7']}
+        image={`${import.meta.env.BASE_URL}/images/ref-muc.jpg`}
       />
     </div>
 

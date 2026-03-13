@@ -38,7 +38,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           {[
             { label: 'Auflösung', value: 'Full HD 1080p / 4K Ultra HD', desc: 'Gestochen scharfe Bilder bei Tag und Nacht' },
             { label: 'Schutzklasse', value: 'IP67 Wetterfest', desc: 'Regen, Staub, Hitze — kein Problem' },
-            { label: 'Nachtsicht', value: 'IR bis 50m Reichweite', desc: 'Zuverlässige Analyse auch bei Dunkelheit' },
+            { label: 'LED-Beleuchtung', value: 'Farbbilder rund um die Uhr', desc: 'Integrierte LED sorgt für durchgängig farbige Videoanalyse — auch nachts' },
             { label: 'Masthöhe', value: '5,5 Meter', desc: 'Optimale Perspektive für Crowd-Analyse' },
             { label: 'Stromversorgung', value: 'Akkubetrieb bis 72h', desc: 'Unabhängig vom Stromnetz' },
             { label: 'Anbindung', value: 'MOVETOS Mesh-Netzwerk', desc: 'Automatische Verbindung, kein WLAN nötig' },
@@ -57,6 +57,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <div>
+        <img src={`${import.meta.env.BASE_URL}/images/set-mast.jpg`} alt="MOVETOS SET Mastsystem mit Kamera und LED-Beleuchtung" class="w-full rounded-xl shadow-xl mb-8 object-cover max-h-72" loading="lazy" />
         <h2 class="font-display text-2xl font-bold mb-6">Im Zusammenspiel mit TerrOps</h2>
         <div class="glass-card p-6 mb-6">
           <p class="text-sm text-text-secondary leading-relaxed">

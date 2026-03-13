@@ -3,46 +3,40 @@
 <div class="roi-calc bg-white border border-dark-border rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
   <div class="grid grid-cols-3 gap-4 mb-6">
     <div>
-      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Erwartete Besucher</label>
-      <input type="number" id="roi-visitors" value="50000" class="w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
+      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Geländefläche (m²)</label>
+      <input type="number" id="eff-area" value="50000" class="w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
     </div>
     <div>
-      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Ticketpreis (Ø)</label>
-      <div class="relative">
-        <input type="number" id="roi-ticket" value="35" class="w-full px-3.5 py-2.5 pr-9 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
-        <span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-sm text-text-muted">€</span>
-      </div>
+      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Sicherheitspersonal</label>
+      <input type="number" id="eff-staff" value="40" class="w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
     </div>
     <div>
-      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Gastro / Besucher</label>
-      <div class="relative">
-        <input type="number" id="roi-gastro" value="12" class="w-full px-3.5 py-2.5 pr-9 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
-        <span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-sm text-text-muted">€</span>
-      </div>
+      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">Event-Dauer (Tage)</label>
+      <input type="number" id="eff-days" value="3" class="w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
     </div>
   </div>
 
   <div class="border-t border-dark-border pt-5 mt-2">
-    <p class="font-mono text-[10px] uppercase tracking-widest text-text-muted mb-4">Bei 10% besserer Kapazitätsauslastung</p>
+    <p class="font-mono text-[10px] uppercase tracking-widest text-text-muted mb-4">Ihr Effizienzgewinn mit MOVETOS</p>
 
     <div class="flex flex-col gap-2">
       <div class="flex items-center gap-2 text-sm text-text-secondary">
         <span class="text-accent-green text-xs">&#10003;</span>
-        <span>+ <span id="roi-add-visitors">5.000</span> zusätzliche Besucher</span>
+        <span><span id="eff-hours" class="font-semibold text-text-primary">60</span> Koordinationsstunden gespart</span>
       </div>
       <div class="flex items-center gap-2 text-sm text-text-secondary">
         <span class="text-accent-green text-xs">&#10003;</span>
-        <span>+ <span id="roi-ticket-rev">175.000</span> € Ticket-Mehrerlös</span>
+        <span><span id="eff-saved" class="font-semibold text-text-primary">6</span> Sicherheitskräfte weniger nötig</span>
       </div>
       <div class="flex items-center gap-2 text-sm text-text-secondary">
         <span class="text-accent-green text-xs">&#10003;</span>
-        <span>+ <span id="roi-gastro-rev">60.000</span> € Gastro-Mehrerlös</span>
+        <span>Ø <strong class="text-text-primary">8 Min.</strong> schnellere Reaktion durch Echtzeit-Alerts</span>
       </div>
     </div>
 
     <div class="mt-5 pt-4 border-t-2 border-brand-orange flex justify-between items-baseline">
-      <span class="font-display text-sm font-semibold text-text-primary">Geschätzter Mehrerlös pro Event</span>
-      <span class="font-display text-[28px] font-800 text-accent-green"><span id="roi-total">235.000</span> €</span>
+      <span class="font-display text-sm font-semibold text-text-primary">Weniger Aufwand, mehr Kontrolle</span>
+      <span class="font-display text-lg font-800 text-accent-green">Effizienter</span>
     </div>
 
     <a href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary w-full justify-center mt-5">
@@ -52,35 +46,29 @@
 </div>
 
 <script>
-  function initROI() {
-    const visitors = document.getElementById('roi-visitors') as HTMLInputElement;
-    const ticket = document.getElementById('roi-ticket') as HTMLInputElement;
-    const gastro = document.getElementById('roi-gastro') as HTMLInputElement;
+  function initEfficiency() {
+    const area = document.getElementById('eff-area') as HTMLInputElement;
+    const staff = document.getElementById('eff-staff') as HTMLInputElement;
+    const days = document.getElementById('eff-days') as HTMLInputElement;
 
-    if (!visitors || !ticket || !gastro) return;
-
-    const fmt = (n: number) => n.toLocaleString('de-DE');
+    if (!area || !staff || !days) return;
 
     function calc() {
-      const v = Number(visitors.value) || 0;
-      const t = Number(ticket.value) || 0;
-      const g = Number(gastro.value) || 0;
+      const a = Number(area.value) || 0;
+      const s = Number(staff.value) || 0;
+      const d = Number(days.value) || 0;
 
-      const addVisitors = Math.round(v * 0.10);
-      const ticketRev = addVisitors * t;
-      const gastroRev = addVisitors * g;
-      const total = ticketRev + gastroRev;
+      const hoursSaved = Math.round((a / 10000) * d * 4);
+      const staffSaved = Math.round(s * 0.15);
 
-      document.getElementById('roi-add-visitors')!.textContent = fmt(addVisitors);
-      document.getElementById('roi-ticket-rev')!.textContent = fmt(ticketRev);
-      document.getElementById('roi-gastro-rev')!.textContent = fmt(gastroRev);
-      document.getElementById('roi-total')!.textContent = fmt(total);
+      document.getElementById('eff-hours')!.textContent = hoursSaved.toLocaleString('de-DE');
+      document.getElementById('eff-saved')!.textContent = staffSaved.toLocaleString('de-DE');
     }
 
-    visitors.addEventListener('input', calc);
-    ticket.addEventListener('input', calc);
-    gastro.addEventListener('input', calc);
+    area.addEventListener('input', calc);
+    staff.addEventListener('input', calc);
+    days.addEventListener('input', calc);
   }
 
-  initROI();
+  initEfficiency();
 </script>

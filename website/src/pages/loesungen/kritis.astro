@@ -9,9 +9,10 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
 
 <!-- ===== HERO ===== -->
 <section class="relative pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/[0.03] via-transparent to-accent-blue/[0.02] pointer-events-none"></div>
+  <img src={`${import.meta.env.BASE_URL}/images/tile-kritis.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 bg-black/25 pointer-events-none"></div>
   <div class="max-w-[1200px] mx-auto px-6 relative">
-    <div class="max-w-3xl">
+    <div class="max-w-2xl bg-white/90 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-lg border border-white/60">
       <div class="label mb-4">
         <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
         Kritische Infrastruktur
@@ -25,7 +26,7 @@ import ReferenceCard from '../../components/ReferenceCard.astro';
       </p>
       <div class="flex flex-wrap items-center gap-3 mt-8">
         <a href={`${import.meta.env.BASE_URL}/terrops/demo/`} class="btn btn-primary">Beratungsgespräch vereinbaren &rarr;</a>
-        <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
+        <a href="tel:+4981572934870" class="btn btn-ghost bg-white/50">&#9742; 08157 2934870</a>
       </div>
     </div>
   </div>
