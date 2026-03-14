@@ -2,8 +2,8 @@
 // null = no EN equivalent (legal pages stay German-only)
 export const routeMap: Record<string, string | null> = {
   '/': '/',
-  '/terrops/': '/terrops/',
-  '/terrops/demo/': '/terrops/demo/',
+  '/ops/': '/ops/',
+  '/ops/demo/': '/ops/demo/',
   '/loesungen/events/': '/solutions/events/',
   '/loesungen/corporate/': '/solutions/corporate/',
   '/loesungen/kritis/': '/solutions/critical-infrastructure/',

@@ -1,7 +1,7 @@
 {
   "nav": {
     "solutions": "Lösungen",
-    "terrops": "MOVETOS Ops Platform",
+    "ops": "MOVETOS Ops Platform",
     "events": "Events & Festivals",
     "corporate": "Unternehmen",
     "kritis": "Kritische Infrastruktur",
@@ -22,7 +22,7 @@
     "contact": "Kontakt",
     "aboutUs": "Über uns",
     "references": "Referenzen",
-    "terrops": "MOVETOS Ops",
+    "ops": "MOVETOS Ops",
     "setSystem": "SET-System",
     "pa": "Durchsagesysteme",
     "commandCenter": "Mobile Leitstelle",

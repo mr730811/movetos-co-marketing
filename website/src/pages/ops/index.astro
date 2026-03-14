@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import SocialProofBar from '../../../components/SocialProofBar.astro';
-import DashboardMockup from '../../../components/DashboardMockup.astro';
-import FeatureCard from '../../../components/FeatureCard.astro';
-import ReferenceCard from '../../../components/ReferenceCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SocialProofBar from '../../components/SocialProofBar.astro';
+import DashboardMockup from '../../components/DashboardMockup.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ReferenceCard from '../../components/ReferenceCard.astro';
 
 ---
 <BaseLayout
   title="MOVETOS Ops — Operations Intelligence Platform | MOVETOS"
-  description="MOVETOS Ops is the AI-powered Operations Intelligence platform for situational awareness, crowd flow analysis, and operational control — for events, enterprises, and critical infrastructure."
+  description="MOVETOS Ops ist die KI-gestützte Operations Intelligence Plattform für Lagebildführung, Personenstromanalyse und operative Steuerung — für Events, Unternehmen und kritische Infrastruktur."
 >
 
 <!-- ===== HERO ===== -->
@@ -19,9 +19,9 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
         <nav class="flex items-center gap-2 text-xs text-text-muted mb-6">
-          <a  href={`/en/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
+          <a  href={`/`} class="hover:text-text-secondary transition-colors">MOVETOS</a>
           <span>/</span>
-          <a  href={`/en/terrops/`} class="hover:text-text-secondary transition-colors">Solutions</a>
+          <a  href={`/ops/`} class="hover:text-text-secondary transition-colors">Lösungen</a>
           <span>/</span>
           <span class="text-brand-orange">MOVETOS Ops</span>
         </nav>
@@ -34,17 +34,17 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
         <h1 class="font-display text-5xl md:text-6xl font-800 tracking-tight leading-[1.05]">
           MOVETOS <span class="text-brand-orange">Ops</span><br>
           <span class="text-3xl md:text-4xl font-600 text-text-secondary leading-snug block mt-2">
-            Know what's happening.<br>Control what matters.
+            Wissen, was passiert.<br>Steuern, was zählt.
           </span>
         </h1>
 
         <p class="text-base text-text-secondary leading-relaxed mt-6 max-w-lg">
-          The AI platform for operational awareness. Real-time situational awareness, crowd flow analysis, and targeted control — for proactive decisions instead of flying blind.
+          Die KI-Plattform für operative Lageführung. Echtzeit-Lagebild, Personenstromanalyse und gezielte Steuerung — für vorausschauende Entscheidungen statt Blindflug.
         </p>
 
         <div class="flex flex-wrap gap-3 mt-8">
-          <a  href={`/en/terrops/demo/`} class="btn btn-primary">Schedule Live Demo &rarr;</a>
-          <a href="#how" class="btn btn-ghost">How It Works</a>
+          <a  href={`/ops/demo/`} class="btn btn-primary">Live-Demo vereinbaren &rarr;</a>
+          <a href="#how" class="btn btn-ghost">So funktioniert's</a>
         </div>
       </div>
 
@@ -57,29 +57,29 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
 <!-- Social Proof -->
 <div class="divider"></div>
-<SocialProofBar lang="en" compact />
+<SocialProofBar compact />
 <div class="divider"></div>
 
-<!-- ===== THE CHALLENGE ===== -->
+<!-- ===== DAS PROBLEM (ohne Angst) ===== -->
 <section class="relative py-20 md:py-28 overflow-hidden">
   <img src={`/images/crowd-atmosphere.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" loading="lazy" />
   <div class="max-w-[1200px] mx-auto px-6 relative">
     <div class="max-w-2xl mx-auto text-center">
-      <div class="label justify-center">The Challenge</div>
+      <div class="label justify-center">Die Herausforderung</div>
       <div class="section-title mx-auto mt-4">
-        Those responsible for venues and people<br>need more than radio calls.
+        Wer Verantwortung für Gelände und Menschen trägt,<br>braucht mehr als Funksprüche.
       </div>
       <p class="section-desc text-center mx-auto mt-4">
-        Hundreds of decisions per hour — most based on gut feeling and fragmented information.
+        Hunderte Entscheidungen pro Stunde — die meisten auf Basis von Bauchgefühl und fragmentierten Informationen.
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-4 mt-14 max-w-3xl mx-auto">
       {[
-        { q: 'Where is the situation critical?', a: 'Radio call — when it\'s too late' },
-        { q: 'How many people in the area?', a: 'Manual counting, time delay' },
-        { q: 'Is the area at capacity?', a: 'Estimate from security staff' },
-        { q: 'What happened 2 hours ago?', a: 'Nobody knows exactly' },
+        { q: 'Wo ist die Lage kritisch?', a: 'Funkspruch — wenn es zu spät ist' },
+        { q: 'Wie viele Personen im Bereich?', a: 'Manuelle Zählung, Zeitversatz' },
+        { q: 'Ist der Bereich ausgelastet?', a: 'Schätzung vom Sicherheitspersonal' },
+        { q: 'Was ist vor 2 Stunden passiert?', a: 'Niemand weiß es genau' },
       ].map((item, i) => (
         <div class="reveal glass-card p-5" style={`transition-delay: ${i * 0.08}s`}>
           <div class="text-sm font-semibold text-text-primary mb-1">{item.q}</div>
@@ -93,7 +93,7 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
     <div class="reveal text-center mt-10">
       <p class="text-lg font-display font-semibold text-brand-orange">
-        MOVETOS Ops puts an end to flying blind.
+        MOVETOS Ops macht Schluss mit dem Blindflug.
       </p>
     </div>
   </div>
@@ -101,13 +101,13 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
 <div class="divider"></div>
 
-<!-- ===== THE TERROPS LOOP ===== -->
+<!-- ===== DER CROWDOPS-LOOP ===== -->
 <section class="py-20 md:py-28 bg-dark-card" id="how">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label">How It Works</div>
-    <div class="section-title">From detection to control<br>— in real time.</div>
+    <div class="label">So funktioniert's</div>
+    <div class="section-title">Von der Erkennung zur Steuerung<br>— in Echtzeit.</div>
     <p class="section-desc">
-      MOVETOS Ops closes the loop between detection, assessment, and targeted action — automatically or confirmed by the operator.
+      MOVETOS Ops schließt den Regelkreis zwischen Erkennen, Einordnen und gezieltem Handeln — automatisch oder vom Operator bestätigt.
     </p>
 
     <div class="grid md:grid-cols-3 gap-0 mt-14 relative">
@@ -118,27 +118,27 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
         {
           step: '01',
           icon: '<svg class="w-7 h-7 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg>',
-          title: 'Detect',
-          desc: 'MOVETOS Ops captures people counts, capacity levels, and movement patterns across all camera locations — continuously and in real time.',
+          title: 'Erkennen',
+          desc: 'MOVETOS Ops erfasst Personenzahlen, Auslastung und Bewegungsmuster über alle Kamerastandorte — kontinuierlich und in Echtzeit.',
           badge: 'bg-gradient-to-br from-brand-orange/15 to-brand-orange/5 border-brand-orange/20',
         },
         {
           step: '02',
           icon: '<svg class="w-7 h-7 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/></svg>',
-          title: 'Assess',
-          desc: 'The platform automatically evaluates the situation based on configurable thresholds and provides the operations team with clear action recommendations.',
+          title: 'Einordnen',
+          desc: 'Die Plattform bewertet die Lage automatisch anhand konfigurierbarer Schwellenwerte und gibt dem Betriebsteam klare Handlungsempfehlungen.',
           badge: 'bg-gradient-to-br from-accent-blue/15 to-accent-blue/5 border-accent-blue/20',
         },
         {
           step: '03',
           icon: '<svg class="w-7 h-7 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"/></svg>',
-          title: 'Control',
-          desc: 'When needed, MOVETOS Ops triggers targeted measures — from area-specific announcements to evacuation communications. Automatically or via operator.',
+          title: 'Steuern',
+          desc: 'Bei Bedarf löst MOVETOS Ops gezielte Maßnahmen aus — von bereichsspezifischen Durchsagen bis zur Evakuierungskommunikation. Automatisch oder per Operator.',
           badge: 'bg-gradient-to-br from-accent-green/15 to-accent-green/5 border-accent-green/20',
         },
       ].map((item, i) => (
         <div class="reveal text-center px-6" style={`transition-delay: ${i * 0.12}s`}>
-          <div class="font-mono text-[10px] text-text-muted tracking-wider mb-2">STEP {item.step}</div>
+          <div class="font-mono text-[10px] text-text-muted tracking-wider mb-2">SCHRITT {item.step}</div>
           <div class:list={["w-14 h-14 mx-auto mb-5 rounded-2xl flex items-center justify-center text-2xl border relative z-10", item.badge]}>
             <Fragment set:html={item.icon} />
           </div>
@@ -150,7 +150,7 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
     <div class="reveal text-center mt-12 p-5 bg-surface border border-dark-border rounded-xl max-w-2xl mx-auto">
       <p class="text-sm text-text-secondary">
-        <strong class="text-brand-orange">The key:</strong> MOVETOS Ops connects detection and control into a closed-loop system. No media breaks. No delays. Your team stays in control.
+        <strong class="text-brand-orange">Entscheidend:</strong> MOVETOS Ops verbindet Erkennung und Steuerung zu einem geschlossenen Regelkreis. Kein Medienbruch. Keine Verzögerung. Ihr Team behält die Kontrolle.
       </p>
     </div>
   </div>
@@ -162,9 +162,9 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="label">Safety Intelligence</div>
-    <div class="section-title">Safety is not an add-on —<br><span class="text-brand-orange">it's built in.</span></div>
+    <div class="section-title">Sicherheit ist kein Add-on —<br><span class="text-brand-orange">sie ist eingebaut.</span></div>
     <p class="section-desc">
-      MOVETOS Ops detects critical situations before they escalate. MOVETOS SET enables immediate response — targeted, documented, traceable.
+      MOVETOS Ops erkennt kritische Situationen, bevor sie eskalieren. MOVETOS SET ermöglicht sofortige Reaktion — gezielt, dokumentiert, nachvollziehbar.
     </p>
 
     <div class="grid md:grid-cols-3 gap-5 mt-14">
@@ -172,27 +172,27 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Early Warning System</h3>
+        <h3 class="font-display text-base font-bold mb-2">Frühwarnsystem</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Automatic alerts when crowd density increases. Configurable thresholds by zone. Graduated escalation with action recommendations.
+          Automatische Alerts bei steigender Personendichte. Konfigurierbare Schwellenwerte nach Zonen. Stufenweise Eskalation mit Handlungsempfehlungen.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.08s">
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Evacuation Support</h3>
+        <h3 class="font-display text-base font-bold mb-2">Evakuierungsunterstützung</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Targeted announcements to affected areas. Zone-based communication for orderly evacuation. Situational overview for incident command and emergency services.
+          Gezielte Durchsagen an betroffene Bereiche. Zonenbasierte Kommunikation für geordnete Räumung. Lageübersicht für Einsatzleitung und BOS.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.16s">
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Complete Audit Trail</h3>
+        <h3 class="font-display text-base font-bold mb-2">Lückenlose Nachweispflicht</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Every measure is automatically documented. Complete audit trail for authorities. Simplified approval processes through reliable documentation.
+          Jede Maßnahme wird automatisch dokumentiert. Vollständiger Audit-Trail für Behörden. Vereinfachte Genehmigungsprozesse durch belastbare Dokumentation.
         </p>
       </div>
     </div>
@@ -201,13 +201,13 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
 <div class="divider"></div>
 
-<!-- ===== THE VALUE ===== -->
+<!-- ===== WAS CROWDOPS IHNEN BRINGT (Value Proposition) ===== -->
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label">The Value</div>
-    <div class="section-title">What MOVETOS Ops means for<br>your operations.</div>
+    <div class="label">Der Mehrwert</div>
+    <div class="section-title">Was MOVETOS Ops für Ihren<br>Betrieb bedeutet.</div>
     <p class="section-desc">
-      It's not about features — it's about results. MOVETOS Ops transforms how you run your operations.
+      Nicht Features zählen — sondern Ergebnisse. MOVETOS Ops verändert, wie Sie Ihren operativen Betrieb führen.
     </p>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
@@ -215,54 +215,54 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Deploy Staff More Efficiently</h3>
+        <h3 class="font-display text-base font-bold mb-2">Personal effizienter steuern</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Direct security personnel, paramedics, and stewards precisely where they're needed. Reduce staffing costs through data-driven deployment planning.
+          Sicherheitspersonal, Sanitäter und Ordnungsdienst gezielt dorthin steuern, wo sie gebraucht werden. Weniger Personalaufwand durch datenbasierte Einsatzplanung.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.08s">
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Optimize Processes</h3>
+        <h3 class="font-display text-base font-bold mb-2">Abläufe optimieren</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Avoid bottlenecks, improve workflows, deploy resources where needed. Early relief of critical areas.
+          Engpässe vermeiden, Abläufe verbessern, Ressourcen gezielt einsetzen. Frühzeitige Entlastung kritischer Bereiche.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.16s">
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Decide Faster</h3>
+        <h3 class="font-display text-base font-bold mb-2">Schneller entscheiden</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Real-time situational awareness instead of radio calls. Detect and defuse critical situations before they escalate.
+          Echtzeit-Lagebild statt Funksprüche. Kritische Situationen erkennen und entschärfen, bevor sie eskalieren.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.24s">
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Built-in Compliance</h3>
+        <h3 class="font-display text-base font-bold mb-2">Compliance eingebaut</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Complete documentation runs automatically. Safety certifications for approval authorities at the push of a button.
+          Lückenlose Dokumentation läuft automatisch mit. Sicherheitsnachweise für Genehmigungsbehörden auf Knopfdruck.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.32s">
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Empower Your Team</h3>
+        <h3 class="font-display text-base font-bold mb-2">Team befähigen</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          MOVETOS Ops is the co-pilot for your security and operations team. Better information for better decisions — the human stays in control.
+          MOVETOS Ops ist der Co-Pilot für Ihr Sicherheits- und Betriebsteam. Bessere Informationen für bessere Entscheidungen — der Mensch behält die Kontrolle.
         </p>
       </div>
       <div class="reveal glass-card p-7" style="transition-delay: 0.4s">
         <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold mb-2">Privacy by Design</h3>
+        <h3 class="font-display text-base font-bold mb-2">Datenschutz by Design</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          No facial recognition. Configurable privacy zones. Automatic image masking. Data protection is an architectural principle, not an add-on module.
+          Keine Gesichtserkennung. Konfigurierbare Privacy-Zonen. Automatische Bildmaskierung. Datenschutz ist Architekturprinzip, kein Zusatzmodul.
         </p>
       </div>
     </div>
@@ -271,47 +271,47 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
 <div class="divider"></div>
 
-<!-- ===== TERROPS FOR YOUR INDUSTRY ===== -->
+<!-- ===== TERROPS FÜR IHRE BRANCHE ===== -->
 <section class="py-20 md:py-28 bg-dark-card">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label">MOVETOS Ops for Your Industry</div>
-    <div class="section-title">One system.<br>Three areas of application.</div>
+    <div class="label">MOVETOS Ops für Ihre Branche</div>
+    <div class="section-title">Ein System.<br>Drei Einsatzfelder.</div>
     <p class="section-desc">
-      MOVETOS Ops adapts to your scenario — whether large-scale event, corporate event, or critical infrastructure.
+      MOVETOS Ops passt sich Ihrem Szenario an — ob Großveranstaltung, Firmenevent oder kritische Infrastruktur.
     </p>
 
     <div class="grid md:grid-cols-3 gap-6 mt-14">
-      <a href={`/en/solutions/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
+      <a href={`/loesungen/events/`} class="reveal glass-card p-7 border-t-2 border-t-accent-green group no-underline hover:border-accent-green/40 transition-all">
         <div class="w-10 h-10 rounded-xl bg-accent-green-dim flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
         </div>
         <h3 class="font-display text-base font-bold text-text-primary group-hover:text-accent-green transition-colors mb-2">Events & Festivals</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Manage crowd flows in real time, efficiently coordinate response teams, and ensure safety.
+          Besucherströme in Echtzeit steuern, Einsatzkräfte effizient koordinieren, Sicherheit gewährleisten.
         </p>
-        <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-4 group-hover:translate-x-1 transition-transform">Learn more &rarr;</span>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-green font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
       </a>
 
-      <a href={`/en/solutions/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
+      <a href={`/loesungen/corporate/`} class="reveal glass-card p-7 border-t-2 border-t-accent-blue group no-underline hover:border-accent-blue/40 transition-all" style="transition-delay: 0.1s">
         <div class="w-10 h-10 rounded-xl bg-accent-blue-dim flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21"/></svg>
         </div>
         <h3 class="font-display text-base font-bold text-text-primary group-hover:text-accent-blue transition-colors mb-2">Corporate</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          Compliance-ready monitoring for corporate events and plant security. Complete documentation for HSE and authorities.
+          Compliance-konforme Überwachung für Firmenevents und Werkssicherheit. Lückenlose Dokumentation für HSE und Behörden.
         </p>
-        <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-4 group-hover:translate-x-1 transition-transform">Learn more &rarr;</span>
+        <span class="inline-flex items-center gap-1 text-sm text-accent-blue font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
       </a>
 
-      <a href={`/en/solutions/critical-infrastructure/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
+      <a href={`/loesungen/kritis/`} class="reveal glass-card p-7 border-t-2 border-t-brand-orange group no-underline hover:border-brand-orange/40 transition-all" style="transition-delay: 0.2s">
         <div class="w-10 h-10 rounded-xl bg-brand-orange-glow flex items-center justify-center mb-4">
           <svg class="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
         </div>
-        <h3 class="font-display text-base font-bold text-text-primary group-hover:text-brand-orange transition-colors mb-2">Critical Infrastructure</h3>
+        <h3 class="font-display text-base font-bold text-text-primary group-hover:text-brand-orange transition-colors mb-2">Kritische Infrastruktur</h3>
         <p class="text-sm text-text-secondary leading-relaxed">
-          24/7 situational awareness for perimeter protection and operational control. Integration into existing command center systems.
+          24/7-Lagebild für Perimeterschutz und operative Steuerung. Integration in bestehende Leitstellensysteme.
         </p>
-        <span class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-4 group-hover:translate-x-1 transition-transform">Learn more &rarr;</span>
+        <span class="inline-flex items-center gap-1 text-sm text-brand-orange font-medium mt-4 group-hover:translate-x-1 transition-transform">Mehr erfahren &rarr;</span>
       </a>
     </div>
   </div>
@@ -319,36 +319,36 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
 <div class="divider"></div>
 
-<!-- ===== FEATURES ===== -->
+<!-- ===== FUNKTIONSÜBERSICHT ===== -->
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label">Features</div>
-    <div class="section-title">Your early warning system for<br>ongoing operations.</div>
+    <div class="label">Funktionen</div>
+    <div class="section-title">Ihr Frühwarnsystem für den<br>laufenden Betrieb.</div>
     <p class="section-desc">
-      Pre-configured based on international operational standards — ready to deploy, individually customizable.
+      Vorkonfiguriert auf Basis internationaler Betriebsnormen — sofort einsatzbereit, individuell anpassbar.
     </p>
 
     <div class="grid md:grid-cols-2 gap-3 mt-14">
-      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg>' title="Real-time People Analytics" description="People counts, capacity levels, and dwell times across all areas — continuously and in real time." color="green" />
-      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>' title="Crowd Flow Visualization" description="See where people are moving, where congestion occurs, and where relief is possible." color="blue" />
-      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"/></svg>' title="Targeted Control & Announcements" description="Area-specific announcements via MOVETOS BDS speakers. The right information at the right place." color="orange" />
-      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>' title="Operational Real-time Cockpit" description="Your entire site on an interactive map. All KPIs, all systems, one view." color="blue" />
-      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>' title="Documentation That Runs Automatically" description="Automatic logging of all events. Audit trail, export functions, authority reports." color="yellow" />
-      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>' title="Privacy as a Design Principle" description="No facial recognition. Privacy zones. Automatic masking. GDPR-compliant by design." color="red" />
-      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg>' title="Safety Alerts" description="Automatic warnings at critical crowd density. Graduated escalation with action recommendations." color="red" />
-      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>' title="Interfaces & Integration" description="Integration of detection gates (CEIA), people counting (manual clickers), ticket capture, and access management." color="purple" />
+      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg>' title="Echtzeit-Personenanalyse" description="Personenzahlen, Auslastung und Verweildauer über alle Bereiche — kontinuierlich und in Echtzeit." color="green" />
+      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>' title="Personenstrom-Visualisierung" description="Sehen Sie, wohin sich Personen bewegen, wo Stauungen entstehen und wo Entlastung möglich ist." color="blue" />
+      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"/></svg>' title="Gezielte Steuerung & Durchsagen" description="Bereichsspezifische Durchsagen über MOVETOS BDS-Lautsprecher. Die richtige Info am richtigen Ort." color="orange" />
+      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>' title="Operatives Echtzeit-Cockpit" description="Ihr gesamtes Gelände auf einer interaktiven Karte. Alle Kennzahlen, alle Systeme, ein Blick." color="blue" />
+      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>' title="Dokumentation, die mitläuft" description="Automatische Protokollierung aller Vorgänge. Audit-Trail, Exportfunktionen, Behördenberichte." color="yellow" />
+      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>' title="Datenschutz als Designprinzip" description="Keine Gesichtserkennung. Privacy-Zonen. Automatische Maskierung. DSGVO-konform by Design." color="red" />
+      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg>' title="Sicherheits-Alerts" description="Automatische Warnungen bei kritischer Personendichte. Stufenweise Eskalation mit Handlungsempfehlungen." color="red" />
+      <FeatureCard icon='<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>' title="Schnittstellen & Integration" description="Einbindung von Detektions-Gates (CEIA), Personenzählung (Personenklicker), Ticket-Erfassung und Zugangsmanagement." color="purple" />
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ===== INTEGRATION WITH MOVETOS HARDWARE ===== -->
+<!-- ===== INTEGRATION MIT MOVETOS HARDWARE ===== -->
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label">Seamless Integration</div>
-    <div class="section-title">Software and hardware<br>as one system.</div>
-    <p class="section-desc">MOVETOS Ops reaches its full potential in combination with the wireless MOVETOS infrastructure.</p>
+    <div class="label">Nahtlose Integration</div>
+    <div class="section-title">Software und Hardware<br>als ein System.</div>
+    <p class="section-desc">MOVETOS Ops entfaltet sein volles Potenzial im Zusammenspiel mit der kabellosen MOVETOS-Infrastruktur.</p>
 
     <div class="grid lg:grid-cols-[1fr_auto_1fr] gap-6 items-center mt-14">
       <div class="reveal glass-card p-7">
@@ -356,9 +356,9 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
           <h3 class="font-display text-lg font-bold">MOVETOS Ops</h3>
           <span class="font-mono text-[9px] px-2 py-0.5 bg-accent-blue-dim text-accent-blue rounded font-medium">SOFTWARE</span>
         </div>
-        <p class="text-sm text-text-secondary leading-relaxed mb-4">AI people analytics, operations dashboard, PA system control, compliance documentation.</p>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">KI-Personenanalyse, Operations-Dashboard, Durchsage-Steuerung, Compliance-Dokumentation.</p>
         <div class="flex flex-col gap-1.5">
-          {['Real-time analysis of all camera streams', 'Automatic action recommendations', 'Interactive situational map', 'Role-based team management', 'Audit trail & documentation'].map(f => (
+          {['Echtzeit-Analyse aller Kamerastreams', 'Automatische Handlungsempfehlungen', 'Interaktives Lagebild', 'Rollenbasiertes Team-Management', 'Audit-Trail & Dokumentation'].map(f => (
             <div class="flex items-center gap-2 text-xs text-text-secondary">
               <span class="text-accent-green text-xs">&#10003;</span> {f}
             </div>
@@ -378,9 +378,9 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
           <h3 class="font-display text-lg font-bold">MOVETOS SET</h3>
           <span class="font-mono text-[9px] px-2 py-0.5 bg-brand-orange-glow text-brand-orange rounded font-medium">HARDWARE</span>
         </div>
-        <p class="text-sm text-text-secondary leading-relaxed mb-4">10 mast systems (5.5 m) with cameras, LED lighting, speakers, and OCC — wireless, grid-independent, Plug & Play.</p>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">10 Mastsysteme (5,5 m) mit Kameras, LED-Beleuchtung, Lautsprechern und OCC — kabellos, netzautark, Plug & Play.</p>
         <div class="flex flex-col gap-1.5">
-          {['10 mast systems with cameras, LED, and speakers', 'Public Address System (BDS) — individual, wireless', 'Operation Control Centre (OCC)', 'Grid & power independent with dedicated data transmission', 'Plug & Play in under 5 hours'].map(f => (
+          {['10 Mastsysteme mit Kameras, LED und Lautsprechern', 'Besucher-Durchsage-System (BDS) — einzeln, kabellos', 'Operation Control Centre (OCC)', 'Netz- & stromautark mit eigener Datenübertragung', 'Plug & Play in unter 5 Stunden'].map(f => (
             <div class="flex items-center gap-2 text-xs text-text-secondary">
               <span class="text-accent-green text-xs">&#10003;</span> {f}
             </div>
@@ -394,21 +394,21 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
 <div class="divider"></div>
 
-<!-- ===== COMPLIANCE ===== -->
+<!-- ===== COMPLIANCE (dezent) ===== -->
 <section class="py-16">
   <div class="max-w-[1200px] mx-auto px-6">
     <p class="font-mono text-[10px] font-medium uppercase tracking-[2px] text-text-muted text-center mb-5">
-      Built-in, not bolted on
+      Eingebaut, nicht aufgesetzt
     </p>
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
       {[
-        { code: 'MVStättVO', name: 'Assembly Venues' },
-        { code: 'DIN EN 13200', name: 'Spectator Facilities' },
-        { code: 'EN 50518', name: 'Alarm Receiving Centres' },
-        { code: 'VdS 2366', name: 'Video Surveillance' },
+        { code: 'MVStättVO', name: 'Versammlungsstätten' },
+        { code: 'DIN EN 13200', name: 'Zuschaueranlagen' },
+        { code: 'EN 50518', name: 'Alarmempfangsstellen' },
+        { code: 'VdS 2366', name: 'Videoüberwachung' },
         { code: 'ISO 22313', name: 'Business Continuity' },
-        { code: 'DIN 14675', name: 'Fire Alarm Systems' },
-        { code: 'GDPR', name: 'Data Protection' },
+        { code: 'DIN 14675', name: 'Brandmeldeanlagen' },
+        { code: 'DSGVO', name: 'Datenschutzkonform' },
       ].map((norm, i) => (
         <div class="reveal bg-dark-card border border-dark-border rounded-xl py-5 px-4 text-center" style={`transition-delay: ${i * 0.06}s`}>
           <div class="font-mono text-sm font-medium text-text-primary mb-1">{norm.code}</div>
@@ -421,62 +421,62 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
 <div class="divider"></div>
 
-<!-- ===== REFERENCES ===== -->
+<!-- ===== REFERENZEN (Mini Case Studies) ===== -->
 <section class="py-20 md:py-28">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label">Proven in Practice</div>
-    <div class="section-title">MOVETOS Ops in action.</div>
-    <p class="section-desc">From festivals to corporate events to critical infrastructure — MOVETOS Ops is deployed where it matters.</p>
+    <div class="label">Bewährt in der Praxis</div>
+    <div class="section-title">MOVETOS Ops im Einsatz.</div>
+    <p class="section-desc">Von Festivals über Corporate Events bis zur kritischen Infrastruktur — MOVETOS Ops ist dort im Einsatz, wo es zählt.</p>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
       <ReferenceCard
         name="BMW Motorrad Days"
         category="Corporate"
-        visitors="135,000"
-        highlight="Event delivered despite 15% staff shortfall on event day"
-        quote="Security at this technical level is convincing."
+        visitors="135.000"
+        highlight="Veranstaltung trotz 15% Personalausfall am Eventtag"
+        quote="Sicherheit auf dem technischen Niveau ist überzeugend."
         quotePerson="H. Schmitt"
-        quoteRole="Event Organizer"
-        tags={['MOVETOS SET', 'MOVETOS Ops', '20 Cameras', '3x']}
+        quoteRole="Veranstalter"
+        tags={['MOVETOS SET', 'MOVETOS Ops', '20 Kameras', '3x']}
         image={`/images/ref-bmw.jpg`}
       />
       <ReferenceCard
-        name="VW Family Days Wolfsburg"
+        name="VW Familie Days Wolfsburg"
         category="Corporate"
-        visitors="60,000"
-        highlight="Entire corporate campus covered without a single meter of cable"
-        quote="Having such an area in real-time view is something completely new for security planning."
+        visitors="60.000"
+        highlight="Großes Firmenareal ohne einen Meter Kabel voll im Blick"
+        quote="Eine solche Fläche, in Echtzeit im Blick zu haben, ist was völlig neues für die Sicherheitsplanung."
         quotePerson="H. Holzemer"
-        quoteRole="Security Planner"
-        tags={['MOVETOS SET', 'MOVETOS Ops', '60 Cameras']}
+        quoteRole="Fachplaner"
+        tags={['MOVETOS SET', 'MOVETOS Ops', '60 Kameras']}
         image={`/images/ref-vw.jpg`}
       />
       <ReferenceCard
-        name="UCI Road World Championships"
-        category="Sports Event"
-        visitors="1.15M"
-        highlight="Entire city center covered wirelessly, integrated with Tyrol Command Center"
-        quote="Security has never been this easy and reliable."
+        name="UCI Rad WM"
+        category="Sportevent"
+        visitors="1,15 Mio."
+        highlight="Gesamte Innstadt ohne Kabel, Einbindung Leitstelle Tirol"
+        quote="Nie war Sicherheit so einfach und zuverlässig."
         quotePerson="Mag. Noggler"
-        quoteRole="Tyrol Command Center"
-        tags={['MOVETOS SET', 'MOVETOS Ops', '20 Cameras', '7 Days']}
+        quoteRole="Leitstelle Tirol"
+        tags={['MOVETOS SET', 'MOVETOS Ops', '20 Kameras', '7 Tage']}
         image={`/images/ref-uci.jpg`}
       />
       <ReferenceCard
-        name="Munich Airport"
-        category="CRITIS"
-        visitors="Ongoing"
-        highlight="Data transmission across the entire airfield"
-        quote="Operational in two days — we never thought that was possible, with data transmission across the entire airfield."
+        name="Flughafen München"
+        category="KRITIS"
+        visitors="Fortlaufend"
+        highlight="Datenübertragung über das gesamte Flugfeld"
+        quote="In zwei Tagen einsatzbereit, das hätten wir nie gedacht, mit Datenübertragung über das gesamte Flugfeld."
         quotePerson="R. Götze"
         quoteRole="Airport"
-        tags={['MOVETOS Ops', 'CRITIS', '40 Cameras', '24/7']}
+        tags={['MOVETOS Ops', 'KRITIS', '40 Kameras', '24/7']}
         image={`/images/ref-muc.jpg`}
       />
     </div>
 
     <div class="text-center mt-10">
-      <a  href={`/en/references/`} class="btn btn-ghost">View all references &rarr;</a>
+      <a  href={`/referenzen/`} class="btn btn-ghost">Alle Referenzen ansehen &rarr;</a>
     </div>
   </div>
 </section>
@@ -488,12 +488,12 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="reveal bg-gradient-to-br from-brand-orange/[0.06] to-brand-orange/[0.02] border border-brand-orange/10 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
       <div>
-        <h3 class="font-display text-xl font-bold mb-2">No MOVETOS hardware yet?</h3>
+        <h3 class="font-display text-xl font-bold mb-2">Noch keine MOVETOS-Hardware?</h3>
         <p class="text-sm text-text-secondary max-w-lg">
-          MOVETOS Ops reaches its full potential in combination with the MOVETOS SET system — wireless, grid-independent, operational in under 5 hours.
+          MOVETOS Ops entfaltet sein volles Potenzial im Zusammenspiel mit dem MOVETOS SET-System — kabellos, netzautark, in unter 5 Stunden einsatzbereit.
         </p>
       </div>
-      <a  href={`/en/infrastructure/`} class="btn btn-primary btn-sm whitespace-nowrap">Discover MOVETOS SET &rarr;</a>
+      <a  href={`/infrastruktur/`} class="btn btn-primary btn-sm whitespace-nowrap">MOVETOS SET entdecken &rarr;</a>
     </div>
   </div>
 </section>
@@ -503,16 +503,16 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 <!-- ===== CTA ===== -->
 <section class="py-20 md:py-28 text-center">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="label justify-center">Get Started</div>
+    <div class="label justify-center">Jetzt starten</div>
     <div class="section-title mx-auto" style="max-width: 540px;">
-      Experience MOVETOS Ops<br>
+      Erleben Sie MOVETOS Ops<br>
       <span class="text-brand-orange">live.</span>
     </div>
     <p class="section-desc text-center mx-auto mt-4" style="max-width: 420px;">
-      30-minute live demo. We show you MOVETOS Ops with your scenario — no obligation.
+      30 Minuten Live-Demo. Wir zeigen Ihnen MOVETOS Ops mit Ihrem Szenario — unverbindlich.
     </p>
     <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a  href={`/en/terrops/demo/`} class="btn btn-primary">Schedule Demo &rarr;</a>
+      <a  href={`/ops/demo/`} class="btn btn-primary">Demo vereinbaren &rarr;</a>
       <a href="tel:+4981572934870" class="btn btn-ghost">&#9742; 08157 2934870</a>
     </div>
   </div>
@@ -520,7 +520,7 @@ import ReferenceCard from '../../../components/ReferenceCard.astro';
 
 <!-- ===== STICKY MOBILE CTA ===== -->
 <div class="fixed bottom-0 left-0 right-0 lg:hidden bg-white/95 backdrop-blur-lg border-t border-dark-border p-3 z-40">
-  <a  href={`/en/terrops/demo/`} class="btn btn-primary w-full justify-center">Book Demo &rarr;</a>
+  <a  href={`/ops/demo/`} class="btn btn-primary w-full justify-center">Demo buchen &rarr;</a>
 </div>
 
 </BaseLayout>

@@ -1,7 +1,7 @@
 {
   "nav": {
     "solutions": "Solutions",
-    "terrops": "MOVETOS Ops Platform",
+    "ops": "MOVETOS Ops Platform",
     "events": "Events & Festivals",
     "corporate": "Corporate",
     "kritis": "Critical Infrastructure",
@@ -22,7 +22,7 @@
     "contact": "Contact",
     "aboutUs": "About Us",
     "references": "References",
-    "terrops": "MOVETOS Ops",
+    "ops": "MOVETOS Ops",
     "setSystem": "SET System",
     "pa": "PA Systems",
     "commandCenter": "Mobile Command Center",

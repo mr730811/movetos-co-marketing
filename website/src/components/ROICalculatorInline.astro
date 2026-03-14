@@ -7,8 +7,8 @@ const { lang = 'de', segment = 'events' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const demoLink = lang === 'en'
-  ? getLocalizedPath(joinPath(base, '/terrops/demo/'), 'en', base)
-  : joinPath(base, '/terrops/demo/');
+  ? getLocalizedPath(joinPath(base, '/ops/demo/'), 'en', base)
+  : joinPath(base, '/ops/demo/');
 
 const inputClass = "w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange";
 const labelClass = "block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5";
