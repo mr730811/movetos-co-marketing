@@ -16,10 +16,19 @@ const colorMap = {
   yellow: 'bg-accent-yellow-dim',
   purple: 'bg-accent-purple/10',
 };
+
+const textColorMap = {
+  green: 'text-accent-green',
+  blue: 'text-accent-blue',
+  orange: 'text-brand-orange',
+  red: 'text-accent-red',
+  yellow: 'text-accent-yellow',
+  purple: 'text-accent-purple',
+};
 ---
 <div class="reveal flex items-start gap-3.5 bg-dark-card border border-dark-border rounded-xl p-5 hover:border-dark-border-hover hover:translate-x-[3px] transition-all">
-  <div class:list={["w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-base", colorMap[color]]}>
-    {icon}
+  <div class:list={["w-9 h-9 shrink-0 rounded-lg flex items-center justify-center", colorMap[color], textColorMap[color]]}>
+    <Fragment set:html={icon} />
   </div>
   <div>
     <h4 class="font-display text-sm font-semibold mb-0.5">{title}</h4>

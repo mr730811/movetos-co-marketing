@@ -41,15 +41,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div>
         <h2 class="font-display text-xl font-bold text-text-primary mb-4">2. Hosting</h2>
         <p>
-          Diese Website wird über GitHub Pages gehostet, einen Dienst der GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Beim Aufruf dieser Website erfasst GitHub automatisch technische Informationen, insbesondere Ihre IP-Adresse, in Server-Log-Dateien.
+          Diese Website wird über Cloudflare Pages gehostet, einen Dienst der Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA. Beim Aufruf dieser Website werden Ihre Anfragen über das weltweite Content-Delivery-Network (CDN) von Cloudflare geleitet. Dabei erfasst Cloudflare automatisch technische Informationen, insbesondere Ihre IP-Adresse, den aufgerufenen URL, Browsertyp und -version sowie den Zeitpunkt des Zugriffs in Server-Log-Dateien.
         </p>
         <p class="mt-2">
-          Die Nutzung von GitHub Pages erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer zuverlässigen und sicheren Darstellung unserer Website. Weitere Informationen finden Sie in der
-          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:underline">Datenschutzerklärung von GitHub</a>.
+          Die Nutzung von Cloudflare Pages erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer zuverlässigen, sicheren und performanten Darstellung unserer Website. Cloudflare setzt zudem Sicherheitsfunktionen ein (z. B. DDoS-Schutz), die dem Schutz unserer Website und Ihrer Daten dienen. Weitere Informationen finden Sie in der
+          <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:underline">Datenschutzerklärung von Cloudflare</a>.
         </p>
         <p class="mt-2">
-          GitHub, Inc. hat seinen Sitz in den USA. Die Datenübermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln (Standard Contractual Clauses, SCCs) gemäß Art. 46 Abs. 2 lit. c DSGVO. GitHub hat sich zudem dem EU-U.S. Data Privacy Framework angeschlossen. Weitere Informationen hierzu finden Sie unter
-          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-data-protection-agreement" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:underline">GitHub Data Protection Agreement</a>.
+          Cloudflare, Inc. hat seinen Sitz in den USA. Die Datenübermittlung in die USA erfolgt auf Grundlage des EU-U.S. Data Privacy Framework (DPF), dem Cloudflare beigetreten ist, sowie auf Grundlage der EU-Standardvertragsklauseln (Standard Contractual Clauses, SCCs) gemäß Art. 46 Abs. 2 lit. c DSGVO. Weitere Informationen hierzu finden Sie unter
+          <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:underline">Cloudflare Data Processing Addendum</a>.
+        </p>
+
+        <h3 class="font-display text-lg font-bold text-text-primary mb-2 mt-4">E-Mail-Versand (Kontaktformular)</h3>
+        <p>
+          Für den Versand der über das Kontaktformular generierten E-Mails nutzen wir den Dienst Resend der Resend, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA. Wir nutzen dabei die europäische Serverregion von Resend, sodass Ihre Daten innerhalb der EU verarbeitet werden. Wenn Sie unser Kontaktformular absenden, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, ggf. Unternehmen, Einsatz-Typ, erwartete Personenzahl, Nachricht) über die API von Resend als E-Mail an unser Team zugestellt. Resend verarbeitet diese Daten ausschließlich zum Zweck der E-Mail-Zustellung und speichert sie nicht dauerhaft.
+        </p>
+        <p class="mt-2">
+          Die Nutzung von Resend erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie durch Aktivierung der Datenschutz-Checkbox im Kontaktformular erteilen, sowie auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage vorvertraglichen Maßnahmen dient. Resend, Inc. hat seinen Sitz in den USA. Die E-Mail-Verarbeitung erfolgt jedoch über die europäische Serverregion von Resend innerhalb der EU. Ergänzend stützt sich die Datenverarbeitung auf das EU-U.S. Data Privacy Framework (DPF) sowie die EU-Standardvertragsklauseln. Weitere Informationen finden Sie in der
+          <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:underline">Datenschutzerklärung von Resend</a>.
         </p>
 
         <h3 class="font-display text-lg font-bold text-text-primary mb-2 mt-4">Auftragsverarbeiter und Empfänger</h3>
@@ -57,7 +66,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           Wir setzen folgende Auftragsverarbeiter zur Bereitstellung unserer Website und Dienstleistungen ein:
         </p>
         <ul class="list-disc list-inside mt-2 space-y-1">
-          <li><strong>GitHub, Inc.</strong> (88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) — Hosting der Website über GitHub Pages. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</li>
+          <li><strong>Cloudflare, Inc.</strong> (101 Townsend St, San Francisco, CA 94107, USA) — Hosting der Website über Cloudflare Pages sowie Content Delivery und DDoS-Schutz. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</li>
+          <li><strong>Resend, Inc.</strong> (2261 Market Street #5039, San Francisco, CA 94114, USA) — E-Mail-Versand bei Nutzung des Kontaktformulars. Die Verarbeitung erfolgt über die europäische Serverregion von Resend (EU). Rechtsgrundlage: Art. 6 Abs. 1 lit. a und b DSGVO.</li>
         </ul>
         <p class="mt-2">
           Darüber hinaus geben wir Ihre personenbezogenen Daten nur dann an Dritte weiter, wenn Sie ausdrücklich eingewilligt haben (Art. 6 Abs. 1 lit. a DSGVO), die Weitergabe zur Vertragserfüllung erforderlich ist (Art. 6 Abs. 1 lit. b DSGVO), eine rechtliche Verpflichtung besteht (Art. 6 Abs. 1 lit. c DSGVO) oder wir ein berechtigtes Interesse haben (Art. 6 Abs. 1 lit. f DSGVO).
@@ -179,7 +189,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <h3 class="font-display text-lg font-bold text-text-primary mb-2 mt-4">Server-Log-Dateien</h3>
         <p>
-          Der Hosting-Anbieter erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt:
+          Der Hosting-Anbieter (Cloudflare, siehe Abschnitt 2) erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt:
         </p>
         <ul class="list-disc list-inside mt-2 space-y-1">
           <li>Browsertyp und Browserversion</li>
@@ -195,16 +205,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <h3 class="font-display text-lg font-bold text-text-primary mb-2 mt-4">Kontaktformular</h3>
         <p>
-          Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden folgende Daten erhoben: Name, E-Mail-Adresse, ggf. Unternehmen, Einsatz-Typ, erwartete Personenzahl sowie Ihre Nachricht. Zusätzlich wird der Zeitpunkt Ihrer Datenschutz-Einwilligung protokolliert.
+          Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden folgende Daten erhoben: Name, E-Mail-Adresse, ggf. Unternehmen, Einsatz-Typ, erwartete Personenzahl sowie Ihre Nachricht. Zusätzlich wird der Zeitpunkt Ihrer Datenschutz-Einwilligung (Consent-Timestamp), die Version des Einwilligungstextes sowie die Seite, auf der die Einwilligung erteilt wurde, protokolliert. Diese Protokollierung dient dem Nachweis Ihrer Einwilligung gemäß Art. 7 Abs. 1 DSGVO.
         </p>
         <p class="mt-2">
-          Die Formulardaten werden ausschließlich über unseren eigenen Server (API-Endpoint) verarbeitet und direkt als E-Mail an unser Team zugestellt. Es wird kein externer Formular-Dienst eingesetzt. Die Daten werden nicht bei Drittanbietern gespeichert.
+          Die Formulardaten werden über einen API-Endpoint auf unserer Hosting-Plattform (Cloudflare Pages) verarbeitet und über den E-Mail-Dienst Resend (siehe Abschnitt 2) als E-Mail an unser Team zugestellt. Die Daten werden von Resend nicht dauerhaft gespeichert, sondern ausschließlich zum Zweck der E-Mail-Zustellung verarbeitet.
         </p>
         <p class="mt-2">
-          Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie durch Aktivierung der Datenschutz-Checkbox erteilen.
+          Die Verarbeitung dieser Daten erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie durch Aktivierung der Datenschutz-Checkbox erteilen. Sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist, erfolgt die Verarbeitung zusätzlich auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO.
         </p>
         <p class="mt-2">
-          Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.
+          Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Sofern keine Geschäftsbeziehung zustande kommt, werden Anfragedaten spätestens nach 24 Monaten gelöscht. Zwingende gesetzliche Bestimmungen — insbesondere steuer- und handelsrechtliche Aufbewahrungsfristen (6 bzw. 10 Jahre) — bleiben unberührt.
         </p>
       </div>
 
@@ -214,7 +224,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <h3 class="font-display text-lg font-bold text-text-primary mb-2">Google Web Fonts (lokales Hosting)</h3>
         <p>
-          Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Web Fonts. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet nicht statt. Weitere Informationen zu Google Web Fonts finden Sie unter
+          Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Web Fonts (Outfit, Instrument Sans, IBM Plex Mono). Die Google Fonts sind lokal auf unserem Server installiert und werden von dort geladen. Beim Aufruf unserer Website wird <strong>keine Verbindung zu Servern von Google</strong> hergestellt. Es werden keine Daten (insbesondere keine IP-Adressen) an Google übermittelt. Weitere Informationen zu Google Web Fonts finden Sie unter
           <a href="https://developers.google.com/fonts/faq" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:underline">https://developers.google.com/fonts/faq</a>
           und in der Datenschutzerklärung von Google:
           <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:underline">https://policies.google.com/privacy</a>.

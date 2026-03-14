@@ -1,7 +1,7 @@
 {
   "nav": {
     "solutions": "Solutions",
-    "terrops": "TerrOps Platform",
+    "terrops": "MOVETOS Ops Platform",
     "events": "Events & Festivals",
     "corporate": "Corporate",
     "kritis": "Critical Infrastructure",
@@ -22,7 +22,7 @@
     "contact": "Contact",
     "aboutUs": "About Us",
     "references": "References",
-    "terrops": "TerrOps",
+    "terrops": "MOVETOS Ops",
     "setSystem": "SET System",
     "pa": "PA Systems",
     "commandCenter": "Mobile Command Center",
@@ -62,7 +62,7 @@
   },
   "exitIntent": {
     "heading": "Leaving already?",
-    "text": "We'll show you TerrOps in 30 minutes — with your scenario, no strings attached. When works for you?",
+    "text": "We'll show you MOVETOS Ops in 30 minutes — with your scenario, no strings attached. When works for you?",
     "cta": "Schedule Demo",
     "dismiss": "No thanks, maybe later"
   },
@@ -77,7 +77,22 @@
     "fasterResponseTime": "8 min.",
     "lessEffort": "Less effort, more control",
     "moreEfficient": "More Efficient",
-    "requestCalc": "Request Individual Calculation"
+    "requestCalc": "Request Individual Calculation",
+    "accessPointsLabel": "Access Points",
+    "perimeterLabel": "Perimeter Length (km)",
+    "staffPerShiftLabel": "Staff per Shift",
+    "cameraZonesLabel": "Camera Zones",
+    "complianceHoursSaved": "hours compliance documentation automated",
+    "zonesPerOperator": "zones per operator with MOVETOS",
+    "zonesWithout": "without",
+    "patrolHoursSaved": "patrol hours saved per year",
+    "fasterIncidentResponse": "faster incident response",
+    "responsePercent": "40%",
+    "lessEffortCompliant": "Less effort, full compliance",
+    "moreEffCompliant": "Compliant & Efficient",
+    "moreCoverage": "More coverage, fewer patrols",
+    "smarterProtection": "Smarter Protection",
+    "requestCalcKritis": "Schedule Consultation"
   },
   "socialProof": {
     "heading": "Proven in action — trusted by"

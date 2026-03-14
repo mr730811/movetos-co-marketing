@@ -39,7 +39,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             { label: 'Schallpegel', value: '100 dB in 100 m', desc: 'Praxiswert im Freien — deutlich hörbar auch bei Umgebungsgeräusch' },
             { label: 'Steuerung', value: 'Sektoral adressierbar', desc: 'Jeder Lautsprecher einzeln oder in Gruppen ansprechbar' },
             { label: 'Schutzklasse', value: 'IP65+ Wetterfest', desc: 'Zuverlässig bei jeder Witterung' },
-            { label: 'Sprachsynthese', value: 'TTS-Integration', desc: 'Automatische Durchsagen in mehreren Sprachen via TerrOps' },
+            { label: 'Sprachsynthese', value: 'TTS-Integration', desc: 'Automatische Durchsagen in mehreren Sprachen via MOVETOS Ops' },
             { label: 'Vorlagen', value: 'Template-System', desc: 'Vordefinierte Durchsagetexte für typische Szenarien' },
           ].map((spec, i) => (
             <div class="reveal flex items-start gap-4 p-4 bg-dark-card border border-dark-border rounded-xl" style={`transition-delay: ${i * 0.06}s`}>
@@ -57,10 +57,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <div>
         <img src={`/images/bds-system.jpg`} alt="MOVETOS Besucher-Durchsage-System (BDS)" class="w-full rounded-xl shadow-xl mb-8 object-cover max-h-72" loading="lazy" />
-        <h2 class="font-display text-2xl font-bold mb-6">Intelligent mit TerrOps</h2>
+        <h2 class="font-display text-2xl font-bold mb-6">Intelligent mit MOVETOS Ops</h2>
         <div class="glass-card p-6 mb-6">
           <p class="text-sm text-text-secondary leading-relaxed">
-            TerrOps steuert die Durchsagesysteme bereichsgenau. Bei steigender Auslastung kann automatisch eine Wegeempfehlung im betroffenen Sektor ausgelöst werden — oder der Operator bestätigt den Vorschlag per Klick.
+            MOVETOS Ops steuert die Durchsagesysteme bereichsgenau. Bei steigender Auslastung kann automatisch eine Wegeempfehlung im betroffenen Sektor ausgelöst werden — oder der Operator bestätigt den Vorschlag per Klick.
           </p>
         </div>
         <div class="flex flex-col gap-3">

@@ -2,86 +2,183 @@
 import { t, getLocalizedPath, joinPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 
-interface Props { lang?: Lang; }
-const { lang = 'de' } = Astro.props;
+interface Props { lang?: Lang; segment?: 'events' | 'corporate' | 'kritis'; }
+const { lang = 'de', segment = 'events' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const demoLink = lang === 'en'
   ? getLocalizedPath(joinPath(base, '/terrops/demo/'), 'en', base)
   : joinPath(base, '/terrops/demo/');
+
+const inputClass = "w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange";
+const labelClass = "block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5";
+
+const ctaKey = segment === 'kritis' ? 'roi.requestCalcKritis' : 'roi.requestCalc';
+const lessEffortKey = segment === 'corporate' ? 'roi.lessEffortCompliant' : segment === 'kritis' ? 'roi.moreCoverage' : 'roi.lessEffort';
+const moreEfficientKey = segment === 'corporate' ? 'roi.moreEffCompliant' : segment === 'kritis' ? 'roi.smarterProtection' : 'roi.moreEfficient';
 ---
-<div class="roi-calc bg-white border border-dark-border rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(0,0,0,0.06);" data-lang={lang}>
+<div class="roi-calc bg-white border border-dark-border rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(0,0,0,0.06);" data-lang={lang} data-segment={segment}>
   <div class="grid grid-cols-3 gap-4 mb-6">
-    <div>
-      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">{t(lang, 'roi.areaLabel')}</label>
-      <input type="number" id="eff-area" value="50000" class="w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
-    </div>
-    <div>
-      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">{t(lang, 'roi.staffLabel')}</label>
-      <input type="number" id="eff-staff" value="40" class="w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
-    </div>
-    <div>
-      <label class="block font-mono text-[10px] uppercase tracking-wider text-text-muted mb-1.5">{t(lang, 'roi.daysLabel')}</label>
-      <input type="number" id="eff-days" value="3" class="w-full px-3.5 py-2.5 rounded-lg border border-dark-border bg-white text-text-primary font-display text-base font-semibold outline-none transition-colors focus:border-brand-orange" />
-    </div>
+    {segment === 'events' && (
+      <>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.areaLabel')}</label>
+          <input type="number" id="eff-input1" value="50000" class={inputClass} />
+        </div>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.staffLabel')}</label>
+          <input type="number" id="eff-input2" value="40" class={inputClass} />
+        </div>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.daysLabel')}</label>
+          <input type="number" id="eff-input3" value="3" class={inputClass} />
+        </div>
+      </>
+    )}
+    {segment === 'corporate' && (
+      <>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.areaLabel')}</label>
+          <input type="number" id="eff-input1" value="100000" class={inputClass} />
+        </div>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.staffLabel')}</label>
+          <input type="number" id="eff-input2" value="25" class={inputClass} />
+        </div>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.accessPointsLabel')}</label>
+          <input type="number" id="eff-input3" value="6" class={inputClass} />
+        </div>
+      </>
+    )}
+    {segment === 'kritis' && (
+      <>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.perimeterLabel')}</label>
+          <input type="number" id="eff-input1" value="5" class={inputClass} />
+        </div>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.staffPerShiftLabel')}</label>
+          <input type="number" id="eff-input2" value="8" class={inputClass} />
+        </div>
+        <div>
+          <label class={labelClass}>{t(lang, 'roi.cameraZonesLabel')}</label>
+          <input type="number" id="eff-input3" value="12" class={inputClass} />
+        </div>
+      </>
+    )}
   </div>
 
   <div class="border-t border-dark-border pt-5 mt-2">
     <p class="font-mono text-[10px] uppercase tracking-widest text-text-muted mb-4">{t(lang, 'roi.resultHeading')}</p>
 
     <div class="flex flex-col gap-2">
-      <div class="flex items-center gap-2 text-sm text-text-secondary">
-        <span class="text-accent-green text-xs">&#10003;</span>
-        <span><span id="eff-hours" class="font-semibold text-text-primary">60</span> {t(lang, 'roi.hoursSaved')}</span>
-      </div>
-      <div class="flex items-center gap-2 text-sm text-text-secondary">
-        <span class="text-accent-green text-xs">&#10003;</span>
-        <span><span id="eff-saved" class="font-semibold text-text-primary">6</span> {t(lang, 'roi.staffSaved')}</span>
-      </div>
-      <div class="flex items-center gap-2 text-sm text-text-secondary">
-        <span class="text-accent-green text-xs">&#10003;</span>
-        <span>&Oslash; <strong class="text-text-primary">{t(lang, 'roi.fasterResponseTime')}</strong> {t(lang, 'roi.fasterResponse')}</span>
-      </div>
+      {segment === 'events' && (
+        <>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span><span id="eff-out1" class="font-semibold text-text-primary">60</span> {t(lang, 'roi.hoursSaved')}</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span><span id="eff-out2" class="font-semibold text-text-primary">6</span> {t(lang, 'roi.staffSaved')}</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span>&Oslash; <strong class="text-text-primary">{t(lang, 'roi.fasterResponseTime')}</strong> {t(lang, 'roi.fasterResponse')}</span>
+          </div>
+        </>
+      )}
+      {segment === 'corporate' && (
+        <>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span><span id="eff-out1" class="font-semibold text-text-primary">30</span> {t(lang, 'roi.hoursSaved')}</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span><span id="eff-out2" class="font-semibold text-text-primary">5</span> {t(lang, 'roi.staffSaved')}</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span><span id="eff-out3" class="font-semibold text-text-primary">12</span> {t(lang, 'roi.complianceHoursSaved')}</span>
+          </div>
+        </>
+      )}
+      {segment === 'kritis' && (
+        <>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span><span id="eff-out1" class="font-semibold text-text-primary">2</span> {t(lang, 'roi.zonesPerOperator')} <span class="text-text-muted">({t(lang, 'roi.zonesWithout')}: <span id="eff-out1b">1</span>)</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span><span id="eff-out2" class="font-semibold text-text-primary">2.737</span> {t(lang, 'roi.patrolHoursSaved')}</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-text-secondary">
+            <span class="text-accent-green text-xs">&#10003;</span>
+            <span><strong class="text-text-primary">{t(lang, 'roi.responsePercent')}</strong> {t(lang, 'roi.fasterIncidentResponse')}</span>
+          </div>
+        </>
+      )}
     </div>
 
     <div class="mt-5 pt-4 border-t-2 border-brand-orange flex justify-between items-baseline">
-      <span class="font-display text-sm font-semibold text-text-primary">{t(lang, 'roi.lessEffort')}</span>
-      <span class="font-display text-lg font-800 text-accent-green">{t(lang, 'roi.moreEfficient')}</span>
+      <span class="font-display text-sm font-semibold text-text-primary">{t(lang, lessEffortKey)}</span>
+      <span class="font-display text-lg font-800 text-accent-green">{t(lang, moreEfficientKey)}</span>
     </div>
 
     <a href={demoLink} class="btn btn-primary w-full justify-center mt-5">
-      {t(lang, 'roi.requestCalc')} &rarr;
+      {t(lang, ctaKey)} &rarr;
     </a>
   </div>
 </div>
 
 <script>
-  function initEfficiency() {
-    const area = document.getElementById('eff-area') as HTMLInputElement;
-    const staff = document.getElementById('eff-staff') as HTMLInputElement;
-    const days = document.getElementById('eff-days') as HTMLInputElement;
-
-    if (!area || !staff || !days) return;
-
+  function initROICalculator() {
     const roiCalc = document.querySelector('.roi-calc') as HTMLElement;
-    const locale = roiCalc?.dataset.lang === 'en' ? 'en-US' : 'de-DE';
+    if (!roiCalc) return;
+
+    const segment = roiCalc.dataset.segment || 'events';
+    const locale = roiCalc.dataset.lang === 'en' ? 'en-US' : 'de-DE';
+
+    const input1 = document.getElementById('eff-input1') as HTMLInputElement;
+    const input2 = document.getElementById('eff-input2') as HTMLInputElement;
+    const input3 = document.getElementById('eff-input3') as HTMLInputElement;
+
+    if (!input1 || !input2 || !input3) return;
 
     function calc() {
-      const a = Number(area.value) || 0;
-      const s = Number(staff.value) || 0;
-      const d = Number(days.value) || 0;
+      const v1 = Number(input1.value) || 0;
+      const v2 = Number(input2.value) || 0;
+      const v3 = Number(input3.value) || 0;
 
-      const hoursSaved = Math.round((a / 10000) * d * 4);
-      const staffSaved = Math.round(s * 0.15);
-
-      document.getElementById('eff-hours')!.textContent = hoursSaved.toLocaleString(locale);
-      document.getElementById('eff-saved')!.textContent = staffSaved.toLocaleString(locale);
+      if (segment === 'events') {
+        const hoursSaved = Math.round((v1 / 10000) * v3 * 4);
+        const staffSaved = Math.round(v2 * 0.15);
+        document.getElementById('eff-out1')!.textContent = hoursSaved.toLocaleString(locale);
+        document.getElementById('eff-out2')!.textContent = staffSaved.toLocaleString(locale);
+      } else if (segment === 'corporate') {
+        const hoursSaved = Math.round((v1 / 10000) * 3);
+        const staffSaved = Math.round(v2 * 0.20);
+        const complianceHours = Math.round(v3 * 2);
+        document.getElementById('eff-out1')!.textContent = hoursSaved.toLocaleString(locale);
+        document.getElementById('eff-out2')!.textContent = staffSaved.toLocaleString(locale);
+        document.getElementById('eff-out3')!.textContent = complianceHours.toLocaleString(locale);
+      } else if (segment === 'kritis') {
+        const zonesWithout = v2 > 0 ? Math.floor(v3 / v2) : 0;
+        const zonesWith = v2 > 0 ? Math.floor((v3 / v2) * 1.8) : 0;
+        const patrolHoursSaved = Math.floor(v1 * 365 * 1.5);
+        document.getElementById('eff-out1')!.textContent = zonesWith.toLocaleString(locale);
+        document.getElementById('eff-out1b')!.textContent = zonesWithout.toLocaleString(locale);
+        document.getElementById('eff-out2')!.textContent = patrolHoursSaved.toLocaleString(locale);
+      }
     }
 
-    area.addEventListener('input', calc);
-    staff.addEventListener('input', calc);
-    days.addEventListener('input', calc);
+    input1.addEventListener('input', calc);
+    input2.addEventListener('input', calc);
+    input3.addEventListener('input', calc);
   }
 
-  initEfficiency();
+  initROICalculator();
 </script>

@@ -30,29 +30,29 @@ import SocialProofBar from '../../../components/SocialProofBar.astro';
     <div class="grid md:grid-cols-3 gap-6">
       {[
         {
-          icon: '&#128247;',
+          icon: '<svg class="w-7 h-7 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>',
           title: 'MOVETOS SET — Camera System',
           desc: '10 wireless mast systems (5.5 m) with HD cameras, LED lighting and speakers — together with the OCC as one system. Plug & Play, wireless, off-grid.',
           link: `/en/infrastructure/camera-systems/`,
           specs: ['Full HD / 4K', 'Weatherproof IP67', 'LED Lighting', '5.5 m Mast Height'],
         },
         {
-          icon: '&#128227;',
+          icon: '<svg class="w-7 h-7 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38a.75.75 0 0 1-1.021-.27l-.112-.194a12.95 12.95 0 0 1-1.66-5.773m2.928-5.437a12.007 12.007 0 0 1 4.66.91m-4.66-.91V6.758a3.006 3.006 0 0 1 3.352-2.983 11.947 11.947 0 0 1 4.308 1.573m0 6.304a11.965 11.965 0 0 1-4.308 1.573A3.006 3.006 0 0 1 13.27 10.5V8.677" /></svg>',
           title: 'Public Address System (BDS)',
           desc: 'Individual wireless PA systems with speakers, radio-controlled, optionally with LED lighting and dispatcher solution for automated announcements.',
           link: `/en/infrastructure/pa-systems/`,
           specs: ['100V Technology', '100 dB at 100 m', 'Sectoral Control', 'Weatherproof'],
         },
         {
-          icon: '&#127981;',
+          icon: '<svg class="w-7 h-7 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg>',
           title: 'Operation Control Centre (OCC)',
-          desc: 'Your operational hub on site — part of the MOVETOS SET system. Fully equipped with monitors, network and TerrOps access. Optionally with external workstation in a remote command center.',
+          desc: 'Your operational hub on site — part of the MOVETOS SET system. Fully equipped with monitors, network and MOVETOS Ops access. Optionally with external workstation in a remote command center.',
           link: `/en/infrastructure/command-center/`,
           specs: ['Turnkey', 'Multi-Monitor', 'Climate-Controlled', 'Off-grid'],
         },
       ].map((item, i) => (
         <div class="reveal glass-card p-8 group hover:border-brand-orange/20 transition-all" style={`transition-delay: ${i * 0.1}s`}>
-          <div class="text-3xl mb-4"><Fragment set:html={item.icon} /></div>
+          <div class="w-12 h-12 rounded-xl bg-brand-orange-glow flex items-center justify-center mb-4"><Fragment set:html={item.icon} /></div>
           <h3 class="font-display text-xl font-bold mb-3 group-hover:text-brand-orange transition-colors">{item.title}</h3>
           <p class="text-sm text-text-secondary leading-relaxed mb-5">{item.desc}</p>
           <div class="flex flex-wrap gap-1.5 mb-5">
@@ -79,13 +79,13 @@ import SocialProofBar from '../../../components/SocialProofBar.astro';
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
       {[
-        { icon: '&#9889;', title: 'Under 5 Hours', desc: 'From delivery to live operation. Plug & Play without excavation or cabling.' },
-        { icon: '&#128267;', title: 'Off-grid', desc: 'Own power supply, own mesh network. Independent of local infrastructure.' },
-        { icon: '&#127758;', title: 'Deployable Anywhere', desc: 'Meadow, parking lot, city center — wherever your event takes place.' },
-        { icon: '&#128260;', title: 'Modularly Scalable', desc: 'From 5 to 50 masts. The system grows with your event.' },
+        { icon: '<svg class="w-6 h-6 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>', title: 'Under 5 Hours', desc: 'From delivery to live operation. Plug & Play without excavation or cabling.' },
+        { icon: '<svg class="w-6 h-6 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z" /></svg>', title: 'Off-grid', desc: 'Own power supply, own mesh network. Independent of local infrastructure.' },
+        { icon: '<svg class="w-6 h-6 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5a17.92 17.92 0 0 1-8.716-2.247m0 0A8.966 8.966 0 0 1 3 12c0-1.264.26-2.467.732-3.558" /></svg>', title: 'Deployable Anywhere', desc: 'Meadow, parking lot, city center — wherever your event takes place.' },
+        { icon: '<svg class="w-6 h-6 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg>', title: 'Modularly Scalable', desc: 'From 5 to 50 masts. The system grows with your event.' },
       ].map((item, i) => (
         <div class="reveal text-center p-6" style={`transition-delay: ${i * 0.08}s`}>
-          <div class="text-2xl mb-3"><Fragment set:html={item.icon} /></div>
+          <div class="w-10 h-10 rounded-lg bg-brand-orange-glow flex items-center justify-center mb-3"><Fragment set:html={item.icon} /></div>
           <h4 class="font-display text-sm font-bold mb-2">{item.title}</h4>
           <p class="text-xs text-text-muted leading-relaxed">{item.desc}</p>
         </div>
@@ -96,17 +96,17 @@ import SocialProofBar from '../../../components/SocialProofBar.astro';
 
 <div class="divider"></div>
 
-<!-- TerrOps Integration -->
+<!-- MOVETOS Ops Integration -->
 <section class="py-14">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="reveal bg-gradient-to-br from-accent-blue/[0.06] to-accent-blue/[0.02] border border-accent-blue/10 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
       <div>
-        <h3 class="font-display text-xl font-bold mb-2">Even smarter with TerrOps</h3>
+        <h3 class="font-display text-xl font-bold mb-2">Even smarter with MOVETOS Ops</h3>
         <p class="text-sm text-text-secondary max-w-lg">
-          MOVETOS SET provides the eyes and ears. TerrOps provides the brain. Together they create a closed control loop — from detection to action.
+          MOVETOS SET provides the eyes and ears. MOVETOS Ops provides the brain. Together they create a closed control loop — from detection to action.
         </p>
       </div>
-      <a  href={`/en/terrops/`} class="btn btn-primary btn-sm whitespace-nowrap">Discover TerrOps &rarr;</a>
+      <a  href={`/en/terrops/`} class="btn btn-primary btn-sm whitespace-nowrap">Discover MOVETOS Ops &rarr;</a>
     </div>
   </div>
 </section>
